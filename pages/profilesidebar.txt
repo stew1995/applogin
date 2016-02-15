@@ -1,0 +1,85 @@
+  <div class="profilePic">
+  <p>picture</p>
+  </div>
+  <div class="tableWrap"> <!-- For when table is bigger than the sidemenu section -->
+    <table>
+      <tr>
+        <th style="width: 35%; border-top-left-radius: 5px; box-shadow: 0px 2px 0px 0px #C0C0C0 inset;">Name</th>
+        <td>Stewart</td>
+        <td style="width: 15%; text-align: right; border-top-right-radius: 5px;">Edit</td>
+      </tr>
+      <tr>
+        <th>Username</th>
+        <td>........</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Password</th>
+        <td>Updated last week</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Email</th>
+        <td>swflack@gmail.com</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Mobile Number</th>
+        <td>07....</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Home Number</th>
+        <td>01....</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td style="font-style: italic;">Click edit to change </td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th></th>
+        <th>University</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Course</th>
+        <td>Computing</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Year of Study</th>
+        <td>2</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Accomodation</th>
+        <td>Halls</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th></th>
+        <th>About Yourself</th>
+        <th></th>
+      </tr>
+      <tr>
+        <th>Hobbies</th>
+        <td>...</td>
+        <td style="text-align: right;">Edit<td>
+      </tr>
+      <tr>
+        <th>Interests</th>
+        <td>...</td>
+        <td style="text-align: right;">Edit</td>
+      </tr>
+      <tr>
+        <th>Societies</th>
+        <td>...</td>
+        <td  style="text-align: right;">Edit</td>
+      </tr>
+    </table>
+  </div>
+  <p>To edit the whole profile click <a href="#">here</a></p>
+  </div>
+  </div>
