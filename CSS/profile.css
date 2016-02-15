@@ -1,4 +1,4 @@
-.profilePic {
+.sidemenu .profileSide .profilePic {
   background: black;
   width: 50%;
   height: 150px;
@@ -7,10 +7,10 @@
   text-align: center;
 }
 
-.tableWrap {
+.sidemenu .profileSide .tableWrap {
   overflow-x: auto;
 }
-.sidemenu table {
+ .sidemenu .profileSide table {
   margin-top: 5%;
   padding: 0 1%;
   border: 1px solid grey;
@@ -19,56 +19,56 @@
 
 }
 
-.sidemenu td {
+.sidemenu .profileSide td {
   border-bottom: 1px dotted black;
   padding: 0 2%;
   font-size: 18px;
 }
 
-.sidemenu tr:nth-child(even) {
+.sidemenu .profileSide tr:nth-child(even) {
   background: #C0C0C0;
 }
 
-.sidemenu th {
+.sidemenu .profileSide th {
   border-bottom: 1px dotted black;
   background: grey;
   font-size: 18px;
 }
 
-.rightmenu h3 {
+.rightmenu .profileRight h3 {
   text-decoration: underline;
 }
 
-.rightmenu input[name="groupAdd"] {
+.rightmenu  .profileRight input[name="groupAdd"] {
   float: right;
   margin-right: 1%;
 }
 
-.rightmenu input[name="friendAdd"] {
+.rightmenu .profileRight input[name="friendAdd"] {
   float: right;
   margin-right: 1%;
 }
 
-.rightmenu input[name="saveGroup"] {
+.rightmenu  .profileRight input[name="saveGroup"] {
   float: right;
   margin-right: 1%;
 }
 
-.rightmenu input[name="groupName"] {
+.rightmenu .profileRight input[name="groupName"] {
   margin-left: 5%;
 }
 
-.rightmenu input[name="addWho"] {
+.rightmenu .profileRight input[name="addWho"] {
   margin-left: 7%;
 }
 
-.groupContent {
+.rightmenu .profileRight .groupContent {
   border: 1px solid grey;
   margin: 3% 10%;
   height: 150px;
 }
 
-.center h3 {
+.center .profileCenter h3 {
   text-decoration: underline;
   background: red;
   border-radius: 10px;
@@ -76,14 +76,14 @@
 }
 
 
-.center input {
+.center .profileCenter input {
   padding: 0 0 250px 0;
   width: 50%;
   vertical-align: text-top;
   box-sizing: border-box;
 }
 
-.center textarea {
+.center .profileCenter textarea {
   margin: 0 3%;
   margin-top: -2%;
   /* resize: none;*/
