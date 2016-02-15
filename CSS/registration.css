@@ -24,6 +24,7 @@
 
 .registrationFormAboutYourself input[type=text] {
   width: 95%;
+  height: auto;
 }
 
 .registrationFormAboutYourself input[type=submit] {
