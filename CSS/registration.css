@@ -26,6 +26,9 @@
   width: 95%;
 }
 
+.registrationFormAboutYourself input[type=submit] {
+  width: 5%;
+}
 .registrationFormAboutYourself input[type=checkbox] {
   margin-right: 10%;
   margin-left: 2%;
