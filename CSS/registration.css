@@ -1,0 +1,38 @@
+.registrationWrapping {
+  background: #C0C0C0;
+  margin: 0;
+  border-radius: 10px;
+}
+
+.registrationMargin {
+  margin: 1% 25%;
+  padding: 1% 1%;
+  background: #E4E4E4;
+  box-shadow: 2px 3px 5px grey;
+}
+.registrationForm h1 {
+  text-decoration: underline;
+}
+.registrationFormAboutYourself h1 {
+  text-decoration: underline;
+}
+.registrationForm input {
+  margin-right: 10%;
+  width: 95%;
+  border-radius: 5px;
+}
+
+.registrationFormAboutYourself input[type=text] {
+  width: 95%;
+}
+
+.registrationFormAboutYourself input[type=checkbox] {
+  margin-right: 10%;
+  margin-left: 2%;
+}
+
+#FinishRegistration {
+  width: 25%;
+  height: 10%;
+  font-size: 15px;
+}
