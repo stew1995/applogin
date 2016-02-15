@@ -13,7 +13,7 @@ function centerContent() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-xhr.open("GET","housecenter.txt", true);
+xhr.open("GET","pages/housecenter.txt", true);
 xhr.send();
 }
 
@@ -24,7 +24,7 @@ function sideBar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "housesidebar.txt", true);
+  xhr.open("GET", "pages/housesidebar.txt", true);
   xhr.send();
 }
 
@@ -35,7 +35,7 @@ function rightBar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "houserightbar.txt", true);
+  xhr.open("GET", "pages/houserightbar.txt", true);
   xhr.send();
 }
 
