@@ -1,10 +1,12 @@
+<div class="profileCenter">
 <h3>Biography</h3>
 <textarea rows="4" cols="50"> Enter something about yourself </textarea>
-</div>
+
 <h3>Calander</h3>
 <p>This is your personal calander that is linked to your account, you will be
   able to see if you have any event coming up created by friends. House viewings,
   nights out or study sessions can all be seen on here.</p>
+</div>
 <div id="cal">
   <div class="header"> <!-- Holds month and month switchers -->
     <span class="left button" id="prev"> &lang; </span>
