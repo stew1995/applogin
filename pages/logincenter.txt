@@ -1,0 +1,11 @@
+<h1>Log In</h1>
+<p>If you have not registered an account or if you already have an account
+   then you can register or log in using the button below</p>
+
+<form id="login">
+  <input type="text" name="username" value="username">
+  <input type="text" name="password" value="password">
+</form>
+
+<input type="button" class="button" value="Log In" id="loginButton" onclick="show()">
+<input style="float: right;" type="button" class="button" value="Register" onclick="registerContent()">
