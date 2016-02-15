@@ -26,10 +26,6 @@
   width: 80%;
 }
 
-.registrationFormAboutYourself input[type=submit] {
-  width: 25px;
-}
-
 .registration input[type=submit] {
   margin: 0 25% 0 35%;
   width: 25%;
