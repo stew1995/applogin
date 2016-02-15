@@ -1,12 +1,14 @@
-<h3>Housing group</h3>
-<p style="text-decoration: underline;">Group Name: <input type="text" name="groupName"><input type="submit" value="add" name="groupAdd"></p>
-<p style="text-decoration: underline;">Who to add: <input type="text" name="addWho"><input type="submit" value="add" name="friendAdd"></p>
-<p class="groupContent">This is where the group name and when the user adds
-someone to the new group will go (Hide show will be used when a group name is added)
-</p>
-<input type="submit" name="saveGroup" value="Save">
-<h3>Created Groups</h3>
-<p class="groupContent">This is where groups that have already been created will go
-  (Hide show will be used)</p>
-<input type="submit" name="saveGroup" value="Save">
-<p>To get information about estate agents in the area click <a href="#">here</a></p>
+<div class="profileRight">
+  <h3>Housing group</h3>
+  <p style="text-decoration: underline;">Group Name: <input type="text" name="groupName"><input type="submit" value="add" name="groupAdd"></p>
+  <p style="text-decoration: underline;">Who to add: <input type="text" name="addWho"><input type="submit" value="add" name="friendAdd"></p>
+  <p class="groupContent">This is where the group name and when the user adds
+  someone to the new group will go (Hide show will be used when a group name is added)
+  </p>
+  <input type="submit" name="saveGroup" value="Save">
+  <h3>Created Groups</h3>
+  <p class="groupContent">This is where groups that have already been created will go
+    (Hide show will be used)</p>
+  <input type="submit" name="saveGroup" value="Save">
+  <p>To get information about estate agents in the area click <a href="#">here</a></p>
+</div>
