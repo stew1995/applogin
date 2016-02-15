@@ -23,10 +23,13 @@
 }
 
 .registrationFormAboutYourself input[type=text] {
-  width: 95%;
+  width: 90%;
   height: auto;
 }
 
+.registrationFormAboutYourself input[type=submit] {
+  width: 10px;
+}
 
 .registrationFormAboutYourself input[type=checkbox] {
   margin-right: 10%;
