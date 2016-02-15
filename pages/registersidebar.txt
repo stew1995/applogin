@@ -1,0 +1,13 @@
+<form class="registrationForm" >
+  <h1>Register</h1>
+  <p>Enter some basic information about yourself</p>
+
+  <p>First Name<input type="text" name="FName"></p>
+  <p>Last Name<input type="text" name="LName"></p>
+  <p>Date Of Birth<input type="text" name="DOB" maxlength="9" size ="9"></p>
+  <p>Email<input type="text" name="Email"></p>
+  <p>Home Address<input type="text" name="HomeAddress"></p>
+  <p>Postcode<input type="text" name="Postcode" maxlength="7" size="7"></p>
+  <p>Home Number<input type="number" name="HomeNumber"></p>
+  <p>Mobile<input type="number" name="Mobile"></p>
+</form>
