@@ -1,3 +1,4 @@
+<div class="profileSide">
   <div class="profilePic">
   <p>picture</p>
   </div>
@@ -81,5 +82,4 @@
     </table>
   </div>
   <p>To edit the whole profile click <a href="#">here</a></p>
-  </div>
-  </div>
+</div>
