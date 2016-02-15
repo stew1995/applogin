@@ -1,0 +1,212 @@
+body {
+
+}
+
+.navigation nav {
+  border-radius: 10px;
+  background: #C0C0C0;
+  background: -webkit-linear-gradient(#000080, #0000cc); /* For Safari and IE*/
+  background: -o-linear-gradient(#000080, #0000cc); /* For Opera */
+  background: -moz-linear-gradient(#000080, #0000cc); /* For Firefox */
+  background: linear-gradient(#000080, #0000cc); /* Standard syntax */
+  box-shadow: 2px 3px 5px grey;
+}
+
+.navigation nav:after {
+  content: "";
+  display: table;
+  clear:both;
+}
+
+.navigation nav ul {
+  padding: 0;
+  margin:0;
+  list-style: none;
+  position: relative;
+}
+/* Navigation Position*/
+
+.navigation nav ul li {
+  margin: 0;
+  display: inline-block;
+  float: left;
+  background-color: #E4E4E4;
+  background: -webkit-linear-gradient(#000080, #0000cc); /* For Safari and IE*/
+  background: -o-linear-gradient(#000080, #0000cc); /* For Opera */
+  background: -moz-linear-gradient(#000080, #0000cc); /* For Firefox */
+  background: linear-gradient(#000080, #0000cc); /* Standard syntax */
+  border-right: 1px solid inherit;
+  text-align: center;
+  width: auto;
+  border-radius: 10px;
+}
+
+.navigation nav a {
+  display: block;
+  padding: 10px 20px;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.navigation nav a:hover {
+  background-color: blue;
+  color: #E4E4E4;
+}
+
+/* Drop down menu */
+.navigation nav ul ul {
+  display: none;
+  position: absolute;
+}
+
+/*Display Dropdowns on Hover*/
+.navigation nav ul  li:hover > ul {
+  display: inherit;
+}
+
+.navigation nav ul ul li {
+  min-width: 170px;
+  float: none;
+  display: list-item;
+  position: relative;
+  box-shadow: 2px 3px 5px grey;
+  border-bottom: 1px solid black;
+  background: white;
+  border-radius: 0;
+}
+
+.navigation nav ul ul li:nth-child(odd) {
+  background: #d9d9d9;
+}
+
+.navigation nav ul ul li a {
+  color: black;
+}
+
+.dropdown_content {
+  background-color: #F6F6F6;
+}
+
+
+#rightnav {
+  float: right;
+  width: 25%;
+}
+
+#user  {
+  display: none;
+}
+
+#pass {
+  display: none;
+}
+
+#navLog {
+  display: block;
+}
+
+.navSearch {
+  margin-top: -10px;
+  background-color: #E4E4E4;
+  background: -webkit-linear-gradient(#0000cc, #000080); /* For Safari and IE*/
+  background: -o-linear-gradient(#0000cc, #000080); /* For Opera */
+  background: -moz-linear-gradient(#0000cc, #000080); /* For Firefox */
+  background: linear-gradient(#0000cc, #000080); /* Standard syntax */
+  padding: 2px 0px;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 3px 5px grey
+}
+
+.navSearch li {
+  list-style-type: none;
+}
+
+.navSearch input[name="search"] {
+  color: #C0C0C0;
+  font-size: 14px;
+  width: 70%;
+  line-height: 20px;
+  margin: 5px;
+}
+
+.search {
+  font-size: 18px;
+  border-style: none;
+  color: grey;
+  background: #E4E4E4;
+}
+
+
+.advance {
+  padding: 0;
+  padding: 0 10px;
+  font-size: 14px;
+  color: white;
+  text-decoration: underline;
+}
+
+#search {
+  font-size: 20px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  color: white;
+}
+
+#topSearch {
+  display: none;
+}
+
+#searchContent {
+  display: none;
+  margin: 0px 20px;
+}
+
+.advsearchwrap {
+  border: 1px solid black;
+  border-top: none;
+  padding: 30px 1px 20px;
+  box-shadow: 1px 5px 50px 10px red inset;
+  width: 74%;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 3px 5px grey
+}
+
+#searchContent p {
+  display: inline;
+}
+
+#searchContent .advsearchwrap p {
+  margin: 5px 3px;
+  border-right: 1px solid black;
+}
+
+#searchContent input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+#searchContent .buttons {
+  width: 24.5%;
+  float: right;
+  border: 1px solid black;
+  border-top: none;
+  padding: 30px 1px 20px;
+  box-shadow: 1px 5px 50px 10px red inset;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+  box-shadow: 2px 3px 5px grey;
+  z-index: 1;
+}
+
+
+
+#searchContent .buttons input[type="button"] {
+  width: 30%;
+  font-size: 15px;
+  line-height: 150%;
+  margin: -5px 5px 0 5px;
+  padding: 5px;
+  border-radius: 5px;
+}
