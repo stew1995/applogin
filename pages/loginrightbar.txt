@@ -1,0 +1,6 @@
+<h1>What this application enables you to do</h1>
+<p>You can create a profile which is fully customizeable to suit your preference
+as well as being able to search for other students using the app and message the
+people you find. For Halls resisidents you can see the layout of your room aswell
+as other students staying in neighbouring flats. Creating house groups to make it
+easier to organise as well as a map to show you the area.</p>
