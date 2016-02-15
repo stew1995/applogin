@@ -1,0 +1,55 @@
+.containor {
+  margin-top: 1%;
+  width: 100%;
+  background: #C0C0C0;
+  border-radius: 10px;
+  overflow: auto;
+}
+
+
+
+.sidemenuwrap {
+  width: 25%;
+  background: inherit;
+  float: left;
+  border-radius: 10px;
+}
+
+.sidemenu {
+  margin: 1%;
+  height: 100%;
+  background: white;
+  box-shadow: 2px 3px 5px grey;
+  visibility: visible;
+}
+
+.centerwrap {
+  width: 50%;
+  background: inherit;
+  border-radius: 10px;
+  margin: 0 25%;
+  margin-bottom: 1%;
+}
+
+.center {
+  background: white;
+  height: 100%;
+  box-shadow: 2px 3px 5px grey;
+}
+
+.rightmenuwrap {
+  width: 25%;
+  background: inherit;
+  border-radius: 10px;
+  float: right;
+
+}
+
+.rightmenu {
+  margin:1%;
+  background: white;
+  box-shadow: 2px 3px 5px grey;
+  height: 100%;
+
+
+}
