@@ -1,9 +1,12 @@
 <form class="registrationFormAboutYourself">
   <h1>About Yourself</h1>
   <p>This information is used so that you can find similar housemates to you</p>
-  <p>Hobbies <input  type="text" name="Hobbies"><input type="submit" name="addHobbie" value="+"></p> <!-- Make something so youtype a hobbie in and it adds to a list with a button and shows above or below and allows to add more-->
-  <p>Interests<input type="text" name="Interests"><input type="submit" name="addInterest" value="+"></p>
-  <p>Societies<input type="text" name="Societies"><input type="submit" name="addSocieties" value="+"></p>
+  <p>Hobbies <input  type="text" name="Hobbies"></p>
+  <p><input type="submit" name="addHobbie" value="+"></p> <!-- Make something so youtype a hobbie in and it adds to a list with a button and shows above or below and allows to add more-->
+  <p>Interests<input type="text" name="Interests"></p>
+  <p><input type="submit" name="addInterest" value="+"></p>
+  <p>Societies<input type="text" name="Societies"></p>
+  <p><input type="submit" name="addSocieties" value="+"></p>
   <p style="text-decoration: underline;">Do you smoke?</p>
   <p>Smoker<input type="checkbox" name="Smoker">Non-Smoker<input type="checkbox" name="Non-Smoker"> </p>
   <p style="text-decoration: underline;">How often do you see yourself going out?</p>
