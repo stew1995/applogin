@@ -53,7 +53,7 @@ function hallsCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "hallscenter.txt", true);
+  xhr.open("GET", "pages/hallscenter.txt", true);
   xhr.send();
 }
 
@@ -64,7 +64,7 @@ function hallsSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "hallssidebar.txt", true);
+  xhr.open("GET", "pages/hallssidebar.txt", true);
   xhr.send();
 }
 
@@ -75,7 +75,7 @@ function hallsRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "hallsrightbar.txt", true);
+  xhr.open("GET", "pages/hallsrightbar.txt", true);
   xhr.send();
 }
 
@@ -93,7 +93,7 @@ function profileCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "profilecenter.txt", true);
+  xhr.open("GET", "pages/profilecenter.txt", true);
   xhr.send();
 }
 
@@ -104,7 +104,7 @@ function profileSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "profilesidebar.txt", true);
+  xhr.open("GET", "pages/profilesidebar.txt", true);
   xhr.send();
 }
 
@@ -115,7 +115,7 @@ function profileRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "profilerightbar.txt", true);
+  xhr.open("GET", "pages/profilerightbar.txt", true);
   xhr.send();
 }
 // Messages section AJAX
@@ -133,7 +133,7 @@ function messageCentercontent() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-xhr.open("GET","messagecenter.txt", true);
+xhr.open("GET","pages/messagecenter.txt", true);
 xhr.send();
 }
 
@@ -144,7 +144,7 @@ function messageSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "messagesidebar.txt", true);
+  xhr.open("GET", "pages/messagesidebar.txt", true);
   xhr.send();
 }
 
@@ -155,7 +155,7 @@ function messageRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "messagerightbar.txt", true);
+  xhr.open("GET", "pages/messagerightbar.txt", true);
   xhr.send();
 }
 
@@ -174,7 +174,7 @@ function supportCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "supportcenter.txt", true);
+  xhr.open("GET", "pages/supportcenter.txt", true);
   xhr.send();
 }
 
@@ -185,7 +185,7 @@ function supportSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "supportsidebar.txt", true);
+  xhr.open("GET", "pages/supportsidebar.txt", true);
   xhr.send();
 }
 
@@ -196,7 +196,7 @@ function supportRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "supportrightbar.txt", true);
+  xhr.open("GET", "pages/supportrightbar.txt", true);
   xhr.send();
 }
 
@@ -215,7 +215,7 @@ function registerCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "registercenter.txt", true);
+  xhr.open("GET", "pages/registercenter.txt", true);
   xhr.send();
 }
 
@@ -226,7 +226,7 @@ function registerSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "registersidebar.txt", true);
+  xhr.open("GET", "pages/registersidebar.txt", true);
   xhr.send();
 }
 
@@ -237,7 +237,7 @@ function registerRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "registerrightbar.txt", true);
+  xhr.open("GET", "pages/registerrightbar.txt", true);
   xhr.send();
 }
 
@@ -256,7 +256,7 @@ function loginCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "logincenter.txt", true);
+  xhr.open("GET", "pages/logincenter.txt", true);
   xhr.send();
 }
 
@@ -267,7 +267,7 @@ function loginSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "loginsidebar.txt", true);
+  xhr.open("GET", "pages/loginsidebar.txt", true);
   xhr.send();
 }
 
@@ -278,7 +278,7 @@ function loginRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "loginrightbar.txt", true);
+  xhr.open("GET", "pages/loginrightbar.txt", true);
   xhr.send();
 }
 
@@ -297,7 +297,7 @@ function liveCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "livecenter.txt", true);
+  xhr.open("GET", "pages/livecenter.txt", true);
   xhr.send();
 }
 
@@ -308,7 +308,7 @@ function liveSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "livesidebar.txt", true);
+  xhr.open("GET", "pages/livesidebar.txt", true);
   xhr.send();
 }
 
@@ -321,6 +321,6 @@ function liveRightbar() {
       "<p>An error has occured</p>";
     }
   };
-  xhr.open("GET", "liverightbar.txt", true);
+  xhr.open("GET", "pages/liverightbar.txt", true);
   xhr.send();
 }
