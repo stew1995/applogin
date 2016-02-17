@@ -10,7 +10,46 @@ function show() {
   }
 };
 
+function navLogin() {
+  var navBox = document.getElementById("rightnav").style;
+  var navLog = document.getElementById("navLog").style;
+  var username = document.getElementById("user").style;
+  if (username.display === "none") {
+      username.display = "block";
+      navBox.width = "35%";
+      navLog.display = "none";
 
+    }
+      else {
+        username.display = "none";
+      }
+};
+
+function navPassword() {
+  var password = document.getElementById("pass").style;
+  var username = document.getElementById("user").style;
+  if(username.display === "block") {
+    password.display = "block";
+    username.display = "none";
+  }
+    else {
+      password.display = "block";
+    }
+};
+
+function closeNavLogin() {
+  var password = document.getElementById("pass").style;
+  var navBox = document.getElementById("rightnav").style;
+  var navLog = document.getElementById("navLog").style;
+  if(password.display === "none") {
+    password.display = "block";
+  }
+    else {
+      password.display = "none";
+      navBox.width = "25%";
+      navLog.display = "block";
+    }
+};
 
 function advancesrc() {
   var content = document.getElementById("searchContent").style;
