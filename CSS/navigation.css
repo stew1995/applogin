@@ -10,6 +10,7 @@ body {
   background: -moz-linear-gradient(#000080, #0000cc); /* For Firefox */
   background: linear-gradient(#000080, #0000cc); /* Standard syntax */
   box-shadow: 2px 3px 5px grey;
+  font-family: "Arial", Helvetica, sans-serif;
 }
 
 .navigation nav:after {
