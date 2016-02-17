@@ -1,5 +1,9 @@
 .button {
   background: #C0C0C0;
+  background: -webkit-linear-gradient(#000080, #0000cc); /* For Safari and IE*/
+  background: -o-linear-gradient(#000080, #0000cc); /* For Opera */
+  background: -moz-linear-gradient(#000080, #0000cc); /* For Firefox */
+  background: linear-gradient(#000080, #0000cc); /* Standard syntax */
   border: none;
   color: white;
   padding: 5% 7.5%;
@@ -17,4 +21,45 @@
 
 #login {
  display: none;
+}
+
+.longInfo {
+  background: red;
+  background: -webkit-linear-gradient(#ffff33 ,#cccc00); /* For Safari and IE*/
+  background: -o-linear-gradient(#ffff33 ,#cccc00); /* For Opera */
+  background: -moz-linear-gradient(#ffff33 ,#cccc00); /* For Firefox */
+  background: linear-gradient(#ffff33 ,#cccc00); /* Standard syntax */
+  margin: 20% 0 0 0;
+  padding: 2% 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  width: 100%;
+}
+
+.longInfo h3 {
+  text-align: center;
+}
+
+
+#info {
+  margin: 5% 25% 0 25%;
+  background: green;
+  background: -webkit-linear-gradient(#00e600 ,#006600); /* For Safari and IE*/
+  background: -o-linear-gradient(#00e600 ,#006600); /* For Opera */
+  background: -moz-linear-gradient(#00e600 ,#006600); /* For Firefox */
+  background: linear-gradient(#00e600 ,#006600); /* Standard syntax */
+  padding: 2% 0;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+#info h3 {
+  text-align: center;
+}
+
+#searchinfo {
+  background: -webkit-linear-gradient(#cc00cc, #4d004d); /* For Safari and IE*/
+  background: -o-linear-gradient(#cc00cc, #4d004d); /* For Opera */
+  background: -moz-linear-gradient(#cc00cc, #4d004d); /* For Firefox */
+  background: linear-gradient(#cc00cc, #4d004d); /* Standard syntax */
 }
