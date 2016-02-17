@@ -253,11 +253,12 @@ function loginCenter() {
   var xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function() {
     if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
+      var login = document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
   xhr.open("GET", "pages/logincenter.txt", true);
   xhr.send();
+  login.addEventListener("onload", loginCenter);
 }
 
 function loginSidebar() {
