@@ -4,3 +4,8 @@ as well as being able to search for other students using the app and message the
 people you find. For Halls resisidents you can see the layout of your room aswell
 as other students staying in neighbouring flats. Creating house groups to make it
 easier to organise as well as a map to show you the area.</p>
+
+
+<div class="longInfo"  id="searchinfo">
+  <h3>Search</h3>
+<div>
