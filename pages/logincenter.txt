@@ -9,3 +9,8 @@
 
 <input type="button" class="button" value="Log In" id="loginButton" onclick="show()">
 <input style="float: right;" type="button" class="button" value="Register" onclick="registerContent()">
+
+
+<div id="info">
+   <h3>Message</h3>
+</div>
