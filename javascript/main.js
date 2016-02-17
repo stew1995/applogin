@@ -99,3 +99,23 @@ function uncheck(checkEm) {
         }
     }
 };
+
+function socialPadShow() {
+  var social = document.getElementById("navSocial").style;
+  if (social.display = "none") {
+      social.display = "block";
+  }
+  else {
+    social.display = "none";
+  }
+};
+
+
+window.onresize = function() {
+  var i = document.getElementById("info").style;
+  if (window.innerWidth < 700) {
+    i.margin = "0 0 0 0";
+  } else {
+    i.margin = "5% 25% 0 25%";
+  }
+};
