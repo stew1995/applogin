@@ -4,3 +4,8 @@
   of Residents then you will be able to see who you will be living with.</p>
 <p>If you will be staying in private accomodation then you will be able to
   search for other students also looking for housing <p>
+
+
+<div class="longInfo">
+  <h3>Create a profile</h3>
+</div>
