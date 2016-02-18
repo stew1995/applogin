@@ -7,20 +7,29 @@
   border: none;
   color: white;
   padding: 5% 7.5%;
-  margin-top: 5%;
-  margin-bottom: 2%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 5% 10% 2% 10%;
   border-radius: 10px;
 }
 
 #login input {
-  margin: 3% 5% 0 13%;  /* Top, Right, Bottom, Left */
+  margin: 40%;  
   border-radius: 5px;
 }
 
 #login {
  display: none;
+}
+
+#loginUser {
+  margin: 0 2.5%;
+}
+
+#loginPass {
+  margin: 0 2.5%;
+}
+
+#registerButton {
+  float: right;
 }
 
 .longInfo {
