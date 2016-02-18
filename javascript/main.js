@@ -119,3 +119,32 @@ window.onresize = function() {
     i.margin = "5% 25% 0 25%";
   }
 };
+
+window.onresize = function() {
+    var username = document.getElementById("loginUser").style;
+    var password = document.getElementById("loginPass").style;
+    var userBtn = document.getElementById("loginButton").style;
+    var regBtn = document.getElementById("registerButton").style;
+    if(window.innerWidth < 1175) {
+      username.margin = "5% 2.5%";
+      username.width = "95%";
+      password.margin = "5% 2.5%";
+      password.width = "95%";
+      regBtn.float = "none";
+      regBtn.margin = "2.5% 2.5% -10% 2.5%";
+      regBtn.padding = "5% 39%";
+      userBtn.margin = "2.5%";
+      userBtn.padding = "5% 41.5%";
+    }
+    else {
+      username.margin = "0 2.5%";
+      username.width = "40%";
+      password.margin = "0 2.5%";
+      password.width = "40%";
+      regBtn.float = "right";
+      regBtn.margin = "5% 10% 2% 10%";
+      regBtn.padding = "5% 7.5%";
+      userBtn.margin = "5% 10% 2% 10%";
+      userBtn.padding = "5% 7.5%";
+    }
+};
