@@ -112,11 +112,11 @@ show.addEventListener("click", showSearch);
 
 function socialPadShow() {
   var social = document.getElementById("navSocial").style;
-  if (social.display = "none") {
-      social.display = "block";
+  if (social.display === "block") {
+      social.display = "none";
   }
   else {
-    social.display = "none";
+    social.display = "block";
   }
 };
 
