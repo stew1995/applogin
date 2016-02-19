@@ -5,6 +5,8 @@ function houseContent() {
   sideBar();
   rightBar();
 }
+var showHouse = document.getElementById("showHouse");
+showHouse.addEventListener("click", houseContent);
 
 function centerContent() {
   var xhr = new XMLHttpRequest();
