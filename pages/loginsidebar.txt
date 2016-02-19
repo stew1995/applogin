@@ -9,7 +9,7 @@
             <input type="text" name="password" value="password" id="loginPass">
           </form>
 
-          <input type="button" class="button" value="Log In" id="showSideLogin">
+          <input type="button" class="button" value="Log In" id="showSideLogin" onclick="sideLogin()">
           <input type="button" class="button" value="Register" id="sideRegister">
 
 
