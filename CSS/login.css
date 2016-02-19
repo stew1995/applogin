@@ -17,7 +17,7 @@
 }
 
 #login {
- display: none;
+ display: block;
 }
 #loginPass {
   margin: 0 2.5%;
