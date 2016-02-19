@@ -17,7 +17,7 @@
 }
 
 #sideBarLogin {
- display: block;
+ display: none;
 }
 #loginPass {
   margin: 0 2.5%;
