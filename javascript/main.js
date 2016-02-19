@@ -123,7 +123,7 @@ function socialPadShow() {
 var social = document.getElementById("socialPad");
 social.addEventListener("click", socialPadShow);
 
-function show() {
+function initalLogin() {
 
   var login = document.getElementById("login").style;
 
@@ -134,5 +134,5 @@ function show() {
     login.display = "none";
   }
 };
-var btn = document.getElementById("loginButton");
+var btn = document.getElementById("showLogin");
 btn.addEventListener("click", show);
