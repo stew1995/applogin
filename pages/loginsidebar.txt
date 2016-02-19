@@ -9,7 +9,7 @@
           </form>
 
           <input type="button" class="button" value="Log In" id="loginButton">
-          <input type="button" class="button" value="Register" id="registerButton" onclick="registerContent()">
+          <input type="button" class="button" value="Register" id="registerButton">
 
 
           <div class="longInfo">
