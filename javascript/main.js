@@ -126,10 +126,10 @@ social.addEventListener("click", socialPadShow);
 function sideLogin() {
   var content = document.getElementById("sideBarLogin").style;
 
-  if(content.display === "block") {
-    content.display = "none";
-  } else {
+  if(content.display === "none") {
     content.display = "block";
+  } else {
+    content.display = "none";
   }
 };
 
