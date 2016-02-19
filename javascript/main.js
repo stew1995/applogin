@@ -124,14 +124,15 @@ var social = document.getElementById("socialPad");
 social.addEventListener("click", socialPadShow);
 
 function sideLogin() {
-  var content = document.getElementById("login").style;
+  var content = document.getElementById("sideBarLogin").style;
 
-  if(content.display === "none") {
-    content.display = "block";
-  } else {
+  if(content.display === "block") {
     content.display = "none";
+  } else {
+    content.display = "block";
   }
 };
-//Doesnt work with event Listener 
-//var j = document.getElementById("sideBarLogin");
-//j.addEventListener("click", sideLogin);
+
+var show = document.getElementById("showSideLogin");
+show.addEventListener("click", sideLogin);
+
