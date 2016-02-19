@@ -112,11 +112,11 @@ show.addEventListener("click", showSearch);
 
 function socialPadShow() {
   var social = document.getElementById("navSocial").style;
-  if (social.display === "block") {
-      social.display = "none";
+  if (social.display === "none") {
+      social.display = "block";
   }
   else {
-    social.display = "block";
+    social.display = "none";
   }
 };
 
@@ -126,12 +126,12 @@ social.addEventListener("click", socialPadShow);
 function sideLogin() {
   var content = document.getElementById("login").style;
 
-  if(content.display === "block") {
-    content.display = "none";
-  } else {
+  if(content.display === "none") {
     content.display = "block";
+  } else {
+    content.display = "none";
   }
 };
 //Doesnt work with event Listener 
-var j = document.getElementById("sideBarLogin");
-j.addEventListener("click", sideLogin);
+//var j = document.getElementById("sideBarLogin");
+//j.addEventListener("click", sideLogin);
