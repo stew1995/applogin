@@ -11,12 +11,12 @@
   border-radius: 10px;
 }
 
-#login input {
+#sideBarLogin input {
   margin: 40%;  
   border-radius: 5px;
 }
 
-#login {
+#sideBarLogin {
  display: block;
 }
 #loginPass {
