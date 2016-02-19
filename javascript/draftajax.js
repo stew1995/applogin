@@ -44,9 +44,11 @@ function rightBar() {
 // Halls main section Ajax
 function hallsContent() {
   hallsCenter();
-  hallsSidebar();
   hallsRightbar();
+  hallsSidebar();
 }
+var showHalls = document.getElementById("showHalls");
+showHalls.addEventListener("click", hallsContent);
 
 function hallsCenter() {
   var xhr = new XMLHttpRequest();
@@ -87,6 +89,8 @@ function profileContent() {
   profileSidebar();
   profileRightbar();
 }
+var showProfile = document.getElementById("showProfile");
+showProfile.addEventListener("click", profileContent);
 
 function profileCenter() {
   var xhr = new XMLHttpRequest();
@@ -127,6 +131,8 @@ function messageContent() {
   messageSidebar();
   messageRightbar();
 }
+var showMessage = document.getElementById("showMessage");
+showMessage.addEventListener("click", messageContent);
 
 function messageCentercontent() {
   var xhr = new XMLHttpRequest();
@@ -161,6 +167,52 @@ function messageRightbar() {
   xhr.send();
 }
 
+/* Live Feed AJAX */
+
+function liveContent() {
+  liveCenter();
+  liveSidebar();
+  liveRightbar();
+}
+var showLive = document.getElementById("showLive");
+showLive.addEventListener("click", liveContent);
+
+function liveCenter() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+      document.getElementById("textCenter").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open("GET", "pages/livecenter.txt", true);
+  xhr.send();
+}
+
+function liveSidebar() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+      document.getElementById("sideText").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open("GET", "pages/livesidebar.txt", true);
+  xhr.send();
+}
+
+function liveRightbar() {
+  var xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+      document.getElementById("rightText").innerHTML = xhr.responseText;
+    } else {
+      "<p>An error has occured</p>";
+    }
+  };
+  xhr.open("GET", "pages/liverightbar.txt", true);
+  xhr.send();
+}
+
+
 // Support main section Ajax
 
 function supportContent() {
@@ -168,6 +220,8 @@ function supportContent() {
   supportSidebar();
   supportRightbar();
 }
+var showSupport = document.getElementById("showSupport");
+showSupport.addEventListener("click", supportContent);
 
 function supportCenter() {
   var xhr = new XMLHttpRequest();
@@ -209,6 +263,8 @@ function registerContent() {
   registerSidebar();
   registerRightbar();
 }
+var showRegister = document.getElementById("showRegister");
+showRegister.addEventListener("click", registerContent);
 
 function registerCenter() {
   var xhr = new XMLHttpRequest();
@@ -250,6 +306,8 @@ function loginContent() {
   loginSidebar();
   loginRightbar();
 }
+window.addEventListener("load", loginContent);
+
 
 function loginCenter() {
   var xhr = new XMLHttpRequest();
@@ -260,7 +318,6 @@ function loginCenter() {
   };
   xhr.open("GET", "pages/logincenter.txt", true);
   xhr.send();
-  login.addEventListener("onload", loginCenter);
 }
 
 function loginSidebar() {
@@ -282,48 +339,5 @@ function loginRightbar() {
     }
   };
   xhr.open("GET", "pages/loginrightbar.txt", true);
-  xhr.send();
-}
-
-/* Live Feed AJAX */
-
-function liveContent() {
-  liveCenter();
-  liveSidebar();
-  liveRightbar();
-}
-
-function liveCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/livecenter.txt", true);
-  xhr.send();
-}
-
-function liveSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/livesidebar.txt", true);
-  xhr.send();
-}
-
-function liveRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    } else {
-      "<p>An error has occured</p>";
-    }
-  };
-  xhr.open("GET", "pages/liverightbar.txt", true);
   xhr.send();
 }
