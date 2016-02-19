@@ -8,8 +8,8 @@
             <input type="text" name="password" value="password" id="loginPass">
           </form>
 
-          <input type="button" class="button" value="Log In" id="loginButton">
-          <input type="button" class="button" value="Register" id="registerButton">
+          <input type="button" class="button" value="Log In" id="showLogin">
+          <input type="button" class="button" value="Register" id="showRegister">
 
 
           <div class="longInfo">
