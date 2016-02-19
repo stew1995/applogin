@@ -20,14 +20,6 @@
  display: none;
 }
 
-#loginUser {
-  margin: 0 2.5%;
-}
-
-#loginPass {
-  margin: 0 2.5%;
-}
-
 #registerButton {
   float: right;
 }
