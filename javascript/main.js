@@ -1,29 +1,22 @@
 /*Navigation Javascript*/
 
-function show() {
-  var login = document.getElementById("login").style;
-  if (login.display === "block") {
-    login.display = "none";
-  }
-  else {
-    login.display = "block";
-  }
-};
-
 function navLogin() {
   var navBox = document.getElementById("rightnav").style;
-  var navLog = document.getElementById("navLog").style;
+  var navLog = document.getElementById("navLog");
   var username = document.getElementById("user").style;
   if (username.display === "none") {
       username.display = "block";
       navBox.width = "35%";
-      navLog.display = "none";
+      navLog.style.display = "none";
 
     }
       else {
         username.display = "none";
       }
 };
+var navLog = document.getElementById("navLog");
+navLog.addEventListener("click", navLogin);
+
 
 function navPassword() {
   var password = document.getElementById("pass").style;
@@ -36,6 +29,8 @@ function navPassword() {
       password.display = "block";
     }
 };
+var next = document.getElementById("nextLogin");
+next.addEventListener("click", navPassword);
 
 function closeNavLogin() {
   var password = document.getElementById("pass").style;
@@ -50,6 +45,8 @@ function closeNavLogin() {
       navLog.display = "block";
     }
 };
+var close = document.getElementById("closeLogin");
+close.addEventListener("click", closeNavLogin);
 
 function advancesrc() {
   var content = document.getElementById("searchContent").style;
@@ -60,14 +57,30 @@ function advancesrc() {
             content.display="block";
           }
 };
+var advance = document.getElementById("advance");
+advance.addEventListener("click", advancesrc);
 
-function closeadvancesrc(checkEm) {
+function uncheck() {
+    var chk = document.getElementsByTagName('input');
+    for (var i = 0; i < chk.length; i++) {
+        if (chk[i].type == 'checkbox') {
+            if (chk[i].name == 'checklist') {
+                chk[i].checked = false;
+            }
+        }
+    }
+};
+
+var clear = document.getElementById("chkClear");
+clear.addEventListener("click", uncheck);
+
+function closeadvancesrc() {
   var content = document.getElementById("searchContent").style;
   var chk = document.getElementsByTagName('input');
   for (var i = 0; i < chk.length; i++) {
       if (chk[i].type == 'checkbox') {
           if (chk[i].name == 'advancesearch') {
-              chk[i].checked = checkEm;
+              chk[i].checked = false;
           }
       }
   }
@@ -79,6 +92,10 @@ function closeadvancesrc(checkEm) {
     }
 };
 
+//Code breaks everything checkover
+//var q = document.getElementById("chkDone");
+//q.addEventListener("click" closeadvancesrc);
+
 function showSearch() {
   var search = document.getElementById("topSearch").style;
   if (search.display === "block") {
@@ -89,16 +106,9 @@ function showSearch() {
       }
 };
 
-function uncheck(checkEm) {
-    var chk = document.getElementsByTagName('input');
-    for (var i = 0; i < chk.length; i++) {
-        if (chk[i].type == 'checkbox') {
-            if (chk[i].name == 'checklist') {
-                chk[i].checked = checkEm;
-            }
-        }
-    }
-};
+var show = document.getElementById("searchbar");
+show.addEventListener("click", showSearch);
+
 
 function socialPadShow() {
   var social = document.getElementById("navSocial").style;
@@ -110,41 +120,19 @@ function socialPadShow() {
   }
 };
 
+var social = document.getElementById("socialPad");
+social.addEventListener("click", socialPadShow);
 
-window.onresize = function() {
-  var i = document.getElementById("info").style;
-  if (window.innerWidth < 700) {
-    i.margin = "0 0 0 0";
-  } else {
-    i.margin = "5% 25% 0 25%";
+function show() {
+
+  var login = document.getElementById("login").style;
+
+  if (login.display === "none") {
+    login.display = "block";
+  }
+  else {
+    login.display = "none";
   }
 };
-
-window.onresize = function() {
-    var username = document.getElementById("loginUser").style;
-    var password = document.getElementById("loginPass").style;
-    var userBtn = document.getElementById("loginButton").style;
-    var regBtn = document.getElementById("registerButton").style;
-    if(window.innerWidth < 1175) {
-      username.margin = "5% 2.5%";
-      username.width = "95%";
-      password.margin = "5% 2.5%";
-      password.width = "95%";
-      regBtn.float = "none";
-      regBtn.margin = "2.5% 2.5% -10% 2.5%";
-      regBtn.padding = "5% 39%";
-      userBtn.margin = "2.5%";
-      userBtn.padding = "5% 41.5%";
-    }
-    else {
-      username.margin = "0 2.5%";
-      username.width = "40%";
-      password.margin = "0 2.5%";
-      password.width = "40%";
-      regBtn.float = "right";
-      regBtn.margin = "5% 10% 2% 10%";
-      regBtn.padding = "5% 7.5%";
-      userBtn.margin = "5% 10% 2% 10%";
-      userBtn.padding = "5% 7.5%";
-    }
-};
+var btn = document.getElementById("loginButton");
+btn.addEventListener("click", show);
