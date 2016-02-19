@@ -19,6 +19,13 @@
 #login {
  display: none;
 }
+#loginPass {
+  margin: 0 2.5%;
+}
+
+#loginUser {
+  margin: 0 2.5%;
+}
 
 #registerButton {
   float: right;
