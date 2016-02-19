@@ -2,8 +2,8 @@ window.onresize = function() {
     // Initial load page side bar
     var username = document.getElementById("loginUser").style;
     var password = document.getElementById("loginPass").style;
-    var userBtn = document.getElementById("loginButton").style;
-    var regBtn = document.getElementById("registerButton").style;
+    var userBtn = document.getElementById("showSideLogin").style;
+    var regBtn = document.getElementById("sideRegister").style;
       if(window.innerWidth < 1175) {
         username.margin = "5% 2.5%";
         username.width = "95%";
