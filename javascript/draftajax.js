@@ -341,3 +341,12 @@ function loginRightbar() {
   xhr.open("GET", "pages/loginrightbar.txt", true);
   xhr.send();
 }
+
+//Initial Load Register Button AJAX
+function initialLoadRegisterContent() {
+  RegisterCenter();
+  RegisterSidebar();
+  RegisterRightbar();
+}
+  var showRegister = document.getElementById("sideRegister");
+  showRegister.addEventListener("click", registerContent);
