@@ -6,9 +6,6 @@
   <link rel="stylesheet" type="text/css" href="CSS\profile.css">
   <link rel="stylesheet" type="text/css" href="CSS\registration.css">
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
-  <script src="javascript/main.js"></script>
-  <script src="javascript/draftajax.js"></script>
-  <script type="text/javascript"> 
     window.addEventListener('load', function(){
     loginCenter();
     loginSidebar();
@@ -17,11 +14,10 @@
   </script>
 
 </head>
-<body>
   <div class="navigation">
   <nav>
     <ul class="firstnav"> <!-- first unordered list -->
-      <li><a onclick="showSearch()">&#128269</a></li>
+      <li id="searchbar"><a>&#128269</a></li>
       <li><a onclick="houseContent()">House</a>
 
         <ul>
@@ -39,15 +35,13 @@
           <li><a href="#">Your Room</a></li>
         </ul>
       </li>
-      
       <li><a onclick="profileContent()">Profile</a>
         <ul class="dropdown_content">
           <li><a href="#">View Profile</a></li>
           <li><a href="#">Edit Profile</a></li>
         </ul>
       </li>
-      
-      <li><a onclick="socialPadShow()">Social Pad &rang;</a></li>
+      <li id="socialPad"><a>Social Pad &rang;</a></li>
       <div id="navSocial">
         <li><a onclick="messageContent()">Messages</a></li>
         <li><a onclick="liveContent()">Live Feed</a></li>
@@ -62,9 +56,9 @@
         </ul>
       </li>
       <li><a onclick="registerContent()">Register</a></li>
-      <div id="user"><li><a><input type="text" value="username"><input type="button" value="->" onclick="navPassword()"></a></li></div>
-      <div id="pass"><li><a><input id="password" type="text" value="password"><input type="button" value="->" onclick="closeNavLogin()"></a></li></div>
-      <li id="navLog"><a onclick="navLogin()">Login</a></li> <!-- Change this so when the user clicks the button username and then password will show -->
+      <div id="user"><li><a><input type="text" value="username"><input type="button" value="->" id="nextLogin"></a></li></div>
+      <div id="pass"><li><a><input id="password" type="text" value="password"><input type="button" value="->" id="closeLogin"></a></li></div>
+      <li id="navLog"><a>Login</a></li> <!-- Change this so when the user clicks the button username and then password will show -->
     </div>
   </nav>
 </div>
@@ -72,13 +66,13 @@
     <div class="navSearch" id="topSearch">
        <form>
          <input class="search_box" type="text" name="search">
-         <input type="checkbox" name="advancesearch" id='advance' onclick="advancesrc()"><span class="advance">Advanced Search</span>
+         <input type="checkbox" name="advancesearch" id='advance'><span class="advance">Advanced Search</span>
       </form>
   </div>
 
     <div id="searchContent">
       <div class="buttons">
-      <input style="float: right;" type="button" value="Clear" onclick="uncheck(false);">  <input type="button" value="Done" onclick="closeadvancesrc(false)">
+      <input style="float: right;" type="button" value="Clear" id="chkClear">  <input type="button" value="Done" id="chkDone">
       </div>
 
       <div class="advsearchwrap">
@@ -115,5 +109,9 @@
   </div>
   </div>
   
+  <!--Javascript files -->
+  <script src="javascript/main.js"></script>
+  <script src="javascript/draftajax.js"></script>
+  <script type="text/javascript"> 
 </body>
 </html>
