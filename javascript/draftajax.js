@@ -342,7 +342,7 @@ function loginRightbar() {
   xhr.send();
 }
 
-//Initial Load Register Button AJAX
+//Initial Load Register Button AJAX - doesnt work look into
 function initialLoadRegisterContent() {
   RegisterCenter();
   RegisterSidebar();
