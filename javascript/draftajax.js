@@ -284,7 +284,7 @@ function registerSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/registersidebar.txt", true);
+  xhr.open("GET", "pages/registersidebar.php", true);
   xhr.send();
 }
 
