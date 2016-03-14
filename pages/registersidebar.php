@@ -1,4 +1,4 @@
-        <form class="registrationForm" method="post" action="lib/register.php">
+        <form class="registrationForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <h1>Register</h1>
             <p>Enter some basic information about yourself</p>
 
