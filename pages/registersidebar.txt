@@ -12,4 +12,5 @@
             <p>Postcode<input type="text" name="Postcode" maxlength="7" size="7"><span class="required">*<?php echo $nameErr;?></span></p>
             <p>Home Number<input type="number" name="HomeNumber"></p>
             <p>Mobile<input type="number" name="Mobile"><span class="required">*<?php echo $nameErr;?></span></p>
+            <p><input type="submit"></p>
           </form>
