@@ -1,4 +1,4 @@
-          <form class="registrationForm" action="register.php" method="post">
+          <form class="registrationForm" action="lib/register.php" method="post">
             <h1>Register</h1>
             <p>Enter some basic information about yourself</p>
 
