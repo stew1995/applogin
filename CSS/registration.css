@@ -37,6 +37,10 @@
   margin-left: 2%;
 }
 
+.required {
+  color: #FF0000;
+}
+
 #FinishRegistration {
   width: 25%;
   height: 10%;
