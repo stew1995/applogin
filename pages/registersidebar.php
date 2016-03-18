@@ -83,12 +83,3 @@ function test_input($data) {
             <p>Mobile<input type="number" name="Mobile"><span class="required">*<?php echo $nameErr;?></span></p>
             <p><input type="submit" name="completeBasic" value="Submit"></p>
           </form>
-          
-          <?php
-          echo "<p>the input</p>";
-          echo $name;
-          echo $surname;
-          echo $email;
-          echo $DOB;
-          echo $address;
-          ?>
