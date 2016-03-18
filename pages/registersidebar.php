@@ -64,9 +64,6 @@ function test_input($data) {
   return $data;
 }
 ?>
-
-        
-        
         <form class="registrationForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <h1>Register</h1>
             <p>Enter some basic information about yourself</p>
