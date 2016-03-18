@@ -3,7 +3,7 @@
 
 
 //define variables and set to empty values
-$name = $surname = $DOB = $email = $password $address = $postcode = $homeNumber = $mobile = "";
+$name = $surname = $DOB = $email = $password = $address = $postcode = $homeNumber = $mobile = "";
 //defined error variables
 $nameErr = $surnameErr = $DOBErr = $emailErr = $passwordErr = $addressErr = $postcodeErr = $mobileErr = "";
 if($_SERVER["REQUEST_METHOD"] == "POST") {
