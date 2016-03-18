@@ -4,7 +4,7 @@ $name = $surname = $DOB = $email = $address = $postcode = $homeNumber = $mobile 
 //defined error variables
 $nameErr = $surnameErr = $DOBErr = $emailErr = $addressErr = $postcodeErr = $mobileErr = "";
 
-if($_SERVER["REQUEST_METHOD"] == "POST") {
+if(isset($_POST['completeBasic'])) {
   if(empty($_POST["FName"])) {
     $nameErr = "Name is required";
   } else {
@@ -67,7 +67,7 @@ function test_input($data) {
 
         
         
-        <form class="registrationForm" method="post" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
+        <form class="registrationForm" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]);?>">
             <h1>Register</h1>
             <p>Enter some basic information about yourself</p>
 
@@ -81,7 +81,7 @@ function test_input($data) {
             <p>Postcode<input type="text" name="Postcode" maxlength="7" size="7"><span class="required">*<?php echo $nameErr;?></span></p>
             <p>Home Number<input type="number" name="HomeNumber"></p>
             <p>Mobile<input type="number" name="Mobile"><span class="required">*<?php echo $nameErr;?></span></p>
-            <p><input type="submit"></p>
+            <p><input type="submit" name="completeBasic" value="Submit"></p>
           </form>
           
           <?php
