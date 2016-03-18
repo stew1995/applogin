@@ -351,15 +351,4 @@ function initialLoadRegisterContent() {
   var showRegister = document.getElementById("sideRegister");
   showRegister.addEventListener("click", registerContent);
   
-    //Load register validation php
-function loadValidation() {
-  var xhr = XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("basicForm").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "lib/register.php", true);
-  xhr.send();
-}
   
