@@ -4,7 +4,7 @@ $name = $surname = $DOB = $email = $address = $postcode = $homeNumber = $mobile 
 //defined error variables
 $nameErr = $surnameErr = $DOBErr = $emailErr = $addressErr = $postcodeErr = $mobileErr = "";
 
-if(isset($_POST['completeBasic'])) {
+if($_SERVER["REQUEST_METHOD"] == "POST")) {
   if(empty($_POST["FName"])) {
     $nameErr = "Name is required";
   } else {
