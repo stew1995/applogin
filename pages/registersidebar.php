@@ -21,5 +21,5 @@
       <p>Home Number<input type="number" name="HomeNumber"></p>
       <p>Mobile<input type="number" name="Mobile"></p>
       <p><span class="required">*<?php echo $mobileErr;?></span></p>
-      <p><input type="submit"></p>
+      <p><input type="submit" id="checkValidation"></p>
 </form>
