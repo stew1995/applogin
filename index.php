@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="CSS\registration.css">
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
   
-  <script src="javascript/validation.js"></script>
+  
 </head>
   <div class="navigation">
   <nav>
