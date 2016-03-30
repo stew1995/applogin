@@ -195,9 +195,6 @@ var reqhobbie = document.getElementById("reqhobbie").style;
 var society = document.getElementById("societyList");
 var reqsociety = document.getElementById("reqsociety").style;
 
-var interest = document.getElementById("interestList");
-var reqinterest = document.getElementById("reqinterest").style;
-
   if(hobbie.value == "") {
     hobbieErr.innerHTML = "Choose your hobbies";
     hobbie.focus();
