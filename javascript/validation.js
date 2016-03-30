@@ -215,8 +215,10 @@ var reqsociety = document.getElementById("reqsociety").style;
     reqsociety.display = "none";
   }
 }
-var button = document.getElementById("checkValidation");
-button.addEventListener("click", formValidation);
+
+
+var completeValidation = document.getElementById("completeValidation");
+completeValidation.addEventListener("click", formValidation);
 
 
 
