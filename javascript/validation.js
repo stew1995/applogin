@@ -1,4 +1,4 @@
-window.onload = function(){
+function checkValidation(){
   //Shortcut to form
   var form = document.forms.basicRegister;
   //User input from form
