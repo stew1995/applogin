@@ -6,6 +6,8 @@
   <link rel="stylesheet" type="text/css" href="CSS\profile.css">
   <link rel="stylesheet" type="text/css" href="CSS\registration.css">
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
+  
+  <script src="javascript/validation.js"></script>
 </head>
   <div class="navigation">
   <nav>
@@ -106,6 +108,6 @@
   <script src="javascript/main.js"></script>
   <script src="javascript/draftajax.js"></script>
   <script src="javascript/windowSizing.js"></script>
-  <script src="javascript/validation.js"></script>
+  
 </body>
 </html>
