@@ -273,7 +273,7 @@ function registerCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/registercenter.txt", true);
+  xhr.open("GET", "pages/registercenter.php", true);
   xhr.send();
 }
 
@@ -295,7 +295,7 @@ function registerRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/registerrightbar.txt", true);
+  xhr.open("GET", "pages/registerrightbar.php", true);
   xhr.send();
 }
 
