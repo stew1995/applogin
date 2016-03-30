@@ -1,5 +1,0 @@
-<form class="registrationForm">
-  <h1>University Information</h1>
-  <p>Course<input type="text" name="Course">Year of Study<input type="text" name="StudyYear"></p>
-  <p>Halls of Residents<input type="checkbox" name="Halls">Private Accomodation<input type="checkbox" name="House"></p>
-</form>
