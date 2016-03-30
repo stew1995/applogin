@@ -24,3 +24,6 @@
                         <p id="reqmobile"><span class="required">*<span id="mobileErr"> </span></span></p>
                         <p><input type="button" value="Complete" id="checkValidation"></p>
                     </form>
+
+
+<script src="javascript/validation.js"></script>
