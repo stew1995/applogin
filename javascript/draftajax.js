@@ -284,7 +284,7 @@ function registerSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/registersidebar.txt", true);
+  xhr.open("GET", "pages/registersidebar.php", true);
   xhr.send();
 }
 
@@ -350,3 +350,17 @@ function initialLoadRegisterContent() {
 }
   var showRegister = document.getElementById("sideRegister");
   showRegister.addEventListener("click", registerContent);
+  
+  function loadValidation() {
+  var xhr = XMLHttpRequest();
+  xhr.onreadystatechange = function() {
+    if(xhr.readyState == 4 && xhr.status == 200) {
+      document.getElementById("basicForm").innerHTML = xhr.responseText;
+    }
+  };
+  xhr.open("GET", "register.php", true);
+  xhr.send();
+}
+
+var checkValidation = document.getElementById("checkValidation");
+checkValidation.addEventListener("click", loadValidation);
