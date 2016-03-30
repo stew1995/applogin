@@ -217,8 +217,8 @@ var reqsociety = document.getElementById("reqsociety").style;
 }
 
 
-//var button = document.getElementById("checkValidation");
-//button.addEventListener("click", registerValidation);
+var button = document.getElementsByName("checkValidation");
+button.addEventListener("click", formValidation);
 
 
 
