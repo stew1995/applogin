@@ -1,4 +1,4 @@
-function formValidation(){
+function registerValidation(){
   //Shortcut to form
   var form = document.forms.basicRegister;
   //User input from form
@@ -218,7 +218,7 @@ var reqsociety = document.getElementById("reqsociety").style;
 
 
 var completeValidation = document.getElementById("completeValidation");
-completeValidation.addEventListener("click", formValidation);
+completeValidation.addEventListener("click", registerValidation);
 
 
 
