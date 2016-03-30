@@ -218,7 +218,7 @@ var reqsociety = document.getElementById("reqsociety").style;
 
 
 var button = document.getElementById("checkValidation");
-button.addEventListener("click", formValidation);
+button.addEventListener("click", checkValidation);
 
 
 
