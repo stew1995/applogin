@@ -26,6 +26,14 @@
   width: 80%;
 }
 
+.registrationFormUni h1 {
+  text-decoration: underline;
+}
+
+.aboutChoices {
+  margin: 2.5%;
+}
+
 .registration input[type=submit] {
   margin: 0 25% 0 35%;
   width: 25%;
@@ -39,10 +47,36 @@
 
 .required {
   color: #FF0000;
+  font-size: 12px;
 }
 
 #FinishRegistration {
   width: 25%;
   height: 10%;
   font-size: 15px;
+}
+
+#reqname, #reqlname, #reqdob, #reqemail, #reqpass, #reqaddress, #reqpost,
+#reqhome, #reqmobile, #reqsmoker, #reqsocial,#reqmess, #reqgym, #reqcourse,
+#reqyear, #reqaccom, #reqbasic, #requni {display: none;}
+#reqabout, #reqhobbie, #reqsociety, #reqinterest {display: none;}
+
+#courseList {
+  width: 65%;
+}
+
+#StudyYear {
+  width: 65%;
+}
+
+#Accomodation {
+  width: 65%;
+}
+
+#hobbieList {
+  width: 65%;
+}
+
+#societyList {
+  width: 65%;
 }
