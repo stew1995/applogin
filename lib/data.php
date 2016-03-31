@@ -11,6 +11,10 @@ if($conn) {
   die("Connection to database failed". mysqli_connect_error());
 }
 
+// Select a database to work with 
+$select = mysql_select_db("web", $conn)
+  or die ("Could not connect to web database ")
+
 //SQL to Create tables
 //Hobbies
 $sql =
