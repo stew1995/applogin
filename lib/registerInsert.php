@@ -27,8 +27,8 @@ if(isset($_POST['checkValidation'])){
   $accom = $_POST['accomList'];
   $hobbie = $_POST['Hobbies'];
   $society = $_POST['Society'];
-  $smoke = $_POST['Smoker']
-  $outgoing =$_POST['Social'];
+  $smoke = $_POST['Smoker'];
+  $outgoing = $_POST['Social'];
   $mess = $_POST['Mess'];
   $gym = $_POST['Gym'];
 
