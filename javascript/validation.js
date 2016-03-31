@@ -1,4 +1,4 @@
-function checkValidation(){
+function formValidation(){
   //Shortcut to form
   var form = document.forms.basicRegister;
   //User input from form
@@ -55,9 +55,12 @@ function checkValidation(){
     fname.focus();
     reqbasic.display = "block";
     reqname.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqname.display = "none";
+
+    // Database stuff
   }
 
   if(lname.value == "" || !lnamePatt.test(lname.value)) {
@@ -65,6 +68,7 @@ function checkValidation(){
     lname.focus();
     reqbasic.display = "block";
     reqlname.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqlname.display = "none";
@@ -75,6 +79,7 @@ function checkValidation(){
     dob.focus();
     reqbasic.display = "block";
     reqdob.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqdob.display = "none";
@@ -85,6 +90,7 @@ function checkValidation(){
     email.focus();
     reqbasic.display = "block";
     reqemail.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqemail.display = "none";
@@ -95,6 +101,7 @@ function checkValidation(){
     password.focus();
     reqbasic.display = "block";
     reqpass.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqpass.display = "none";
@@ -105,6 +112,7 @@ function checkValidation(){
     address.focus();
     reqbasic.display = "block";
     reqaddress.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqaddress.display = "none";
@@ -115,6 +123,7 @@ function checkValidation(){
     postcode.focus();
     reqbasic.display = "block";
     reqpost.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqpost.display = "none";
@@ -125,6 +134,7 @@ function checkValidation(){
     home.focus();
     reqbasic.display = "block";
     reqhome.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqhome.display = "none";
@@ -135,6 +145,7 @@ function checkValidation(){
     mobile.focus();
     reqbasic.display = "block";
     reqmobile.display = "block";
+    return false;
   } else {
     reqbasic.display = "none";
     reqmobile.display = "none";
@@ -161,8 +172,10 @@ if(course.value == ""){
   course.focus();
   requni.display = "block";
   reqcourse.display = "block";
+  return false;
 } else {
   requni.display = "none";
+  reqcourse.display = "none";
 }
 
 if(year.value == "") {
@@ -170,6 +183,7 @@ if(year.value == "") {
   year.focus();
   requni.display = "block";
   reqyear.display = "block";
+  return false;
 } else {
   requni.display = "none";
   reqyear.display = "none";
@@ -180,6 +194,7 @@ if(accom.value == "") {
   accom.focus();
   requni.display = "block";
   reqaccom.display = "block";
+  return false;
 } else {
   requni.display = "none";
   reqaccom.display = "none";
@@ -195,11 +210,15 @@ var reqhobbie = document.getElementById("reqhobbie").style;
 var society = document.getElementById("societyList");
 var reqsociety = document.getElementById("reqsociety").style;
 
+var interest = document.getElementById("interestList");
+var reqinterest = document.getElementById("reqinterest").style;
+
   if(hobbie.value == "") {
     hobbieErr.innerHTML = "Choose your hobbies";
     hobbie.focus();
     reqabout.display = "block";
     reqhobbie.display = "block";
+    return false;
   } else {
     reqabout.display = "none";
     reqhobbie.display = "none";
@@ -210,15 +229,15 @@ var reqsociety = document.getElementById("reqsociety").style;
     society.focus();
     reqabout.display = "block";
     reqsociety.display = "block";
+    return false;
   } else {
     reqabout.display = "none";
     reqsociety.display = "none";
   }
+  return true;
 }
-
-
-var check = document.getElementById("checkValidation");
-check.addEventListener("click", checkValidation);
+//var button = document.getElementsByName("checkValidation");
+//button.addEventListener("click", formValidation);
 
 
 
@@ -244,8 +263,8 @@ function checkSmoke(){
   }
 }
 
-var button = document.getElementById("checkValidation");
-button.addEventListener("click", checkSmoke);
+//var button = document.getElementById("checkValidation");
+//button.addEventListener("click", checkSmoke);
 
 function checkSocial() {
   var reqabout = document.getElementById("reqabout").style;
@@ -263,14 +282,16 @@ function checkSocial() {
     socialErr.innerHTML = "Please choose one of the options";
     reqsocial.display = "block";
     reqabout.display = "block";
+    return false
   } else {
     reqsocial.display = "none";
     reqabout.display = "none";
   }
+  return true;
 }
 
-var button = document.getElementById("checkValidation");
-button.addEventListener("click", checkSocial);
+//var button = document.getElementById("checkValidation");
+//button.addEventListener('onsubmit', return checkSocial);
 
 function checkMess() {
   var reqabout = document.getElementById("reqabout").style;
@@ -288,14 +309,16 @@ function checkMess() {
     messErr.innerHTML = "Please choose one of the options";
     reqmess.display = "block";
     reqabout.display = "block";
+    return false;
   } else {
     reqmess.display = "none";
     reqabout.display = "none";
 }
+return true;
 }
 
-var button = document.getElementById("checkValidation");
-button.addEventListener("click", checkMess);
+//var button = document.getElementById("checkValidation");
+//button.addEventListener("click", checkMess);
 
 function checkGym() {
   var reqabout = document.getElementById("reqabout").style;
@@ -313,14 +336,16 @@ function checkGym() {
     gymErr.innerHTML = "Please choose one of the options";
     reqgym.display = "block";
     reqabout.display = "block";
+    return false;
   } else {
     reqgym.display = "none";
     reqabout.display = "none";
   }
+  return true;
 }
 
-var button = document.getElementById("checkValidation");
-button.addEventListener("click", checkGym);
+//var button = document.getElementById("checkValidation");
+//button.addEventListener("click", checkGym);
 
 //Hobbie List
 function showHobbie(str) {
@@ -345,8 +370,8 @@ function showHobbie(str) {
     }
 }
 
-var hobbieList = document.getElementById("hobbieList");
-hobbieList.addEventListener("change", showHobbie);
+//var hobbieList = document.getElementById("hobbieList");
+//hobbieList.addEventListener("change", showHobbie);
 
 //Course List
 function showCourse(str) {
@@ -371,8 +396,8 @@ function showCourse(str) {
     }
 }
 
-var courseList = document.getElementById("courseList");
-courseList.addEventListener("change", showCourse);
+//var courseList = document.getElementById("courseList");
+//courseList.addEventListener("change", showCourse);
 
 
 //Society List
@@ -398,5 +423,5 @@ function showSociety(str) {
     }
 }
 
-var societyList = document.getElementById("societyList");
-societyList.addEventListener("change", showSociety);
+//var societyList = document.getElementById("societyList");
+//societyList.addEventListener("change", showSociety);
