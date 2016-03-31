@@ -24,5 +24,5 @@
     <p id="reqhome"><span class="required">*<span id="homeErr"> </span></span></p>
     <p>Mobile<input type="number" name="Mobile" id="Mobile"></p>
     <p id="reqmobile"><span class="required">*<span id="mobileErr"> </span></span></p>
-    <p><input type="button" name="checkValidation" value="Complete" id="checkValidation" onsubmit="formValidation"></p>
+    <p><input type="button" name="checkValidation" value="Complete" id="checkValidation"></p>
 </form>
