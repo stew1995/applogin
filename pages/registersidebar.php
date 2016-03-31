@@ -1,4 +1,4 @@
-<form name="basicRegister" class="registrationForm" id="basicForm" action="lib/registerInsert.php" onsubmit="return formValidation();">
+<form name="basicRegister" class="registrationForm" id="basicForm" action="lib/registerInsert.php" method="POST" onsubmit="return formValidation();">
   <h1>Register</h1>
     <p>Enter some basic information about yourself</p>
 
