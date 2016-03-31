@@ -16,7 +16,7 @@ if($conn) {
 $sql =
 "CREATE TABLE hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE NOT NULL
+  name VARCHAR(30) UNIQUE
 )";
 
 //Check if hobbie table has been created
@@ -30,7 +30,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE society (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE NOT NULL
+  name VARCHAR(30) UNIQUE
 )";
 
 //Check if society table has been created
@@ -214,6 +214,7 @@ VALUES (`Drawing`),
 (`Sudoku`),
 (`Astronomy`),
 (`Squash`)";
+
 //check if data has been inserted in to hobbie table
 mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
@@ -228,7 +229,7 @@ $sql =
 VALUES (`IT`),
 (`Law`),
 (`Brazilian Ju-Jitsu`),
-(`Catholic`),('Business`),
+(`Catholic`),(`Business`),
 (`Art & Design`),
 (`Lego`),
 (`Karting`),
@@ -255,13 +256,13 @@ if(mysqli_query($conn, $sql)) {
 
 //Data for halls table
 $sql =
-"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (1, `Margaret Rule Hall`,`Margaret Rule Hall, Isambard Brunel Rd, Portsmouth`, `PO1 2DS`),
-(2, `Harry Law Hall`, `Harry Law Hall, Portsmouth`, `PO1 2SP`),
-(3, `James Watson Hall`, `James Watson Hall, 28 Guildhall Walk, Portsmouth`, `PO1 2DD`),
-(4, `Langstone`, `Langstone Campus, Furze Lane, Southsea`, `PO4 8LW`),
-(5, `Trafalgar Hall`, `Trafalgar Hall, Portsmouth, Southsea, Portsmouth`, `PO5 4AY`),
-("6", "Bateson Hall", "Bateson Hall, Portsmouth", "PO1 2BL"),
-("7", "Rees Hall", "Southsea Terrace,Southsea", "PO5 3AP")";
+"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (`1`, `Margaret Rule Hall`,`Margaret Rule Hall, Isambard Brunel Rd, Portsmouth`, `PO1 2DS`),
+(`2`, `Harry Law Hall`, `Harry Law Hall, Portsmouth`, `PO1 2SP`),
+(`3`, `James Watson Hall`, `James Watson Hall, 28 Guildhall Walk, Portsmouth`, `PO1 2DD`),
+(`4`, `Langstone`, `Langstone Campus, Furze Lane, Southsea`, `PO4 8LW`),
+(`5`, `Trafalgar Hall`, `Trafalgar Hall, Portsmouth, Southsea, Portsmouth`, `PO5 4AY`),
+(`6`, `Bateson Hall`, `Bateson Hall, Portsmouth`, `PO1 2BL`),
+(`7`, `Rees Hall`, `Southsea Terrace,Southsea`, `PO5 3AP`)";
 
 mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
@@ -273,26 +274,26 @@ if(mysqli_query($conn, $sql)) {
 //Data for user table - pre loaded data
 $sql =
 "INSERT INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
-("Martha", "Chapman","Female","clopez0@theguardian.com","D7z6WUN7pbrX","19980522","73 Marquette Junction","FK198PE","02086680851","07984512477", "FALSE"),
-("Linda", "Baker","Female","hgibson1@salon.com","XVxgAcYb","19940717","077 2nd Point","HP225LQ","08006482133","07001876371",TRUE),
-("Patrick", "Warren","Male","vday2@qq.com","fzqz89rUCkSI","19950810","21877 Goodland Lane","M20 1QF","","07624604665",FALSE),
-("James", "Walker","Male","jgrant3@nasa.gov","rRU9M6gE","19921209","63 Bartelt Park","IP20 2NT","02249632976","07458350751",FALSE),
-("Christina", "Carpenter","Female","ehamilton4@reverbnation.com","nwFGmi28D8Q","19960522","982 Dakota Alley","GL12 8UU","01697740417","07006302433",TRUE),
-("Justin", "Hunter","Male","mcunningham5@tinyurl.com","uMRSCd4E","19930506","96 New Castle Road","AB15 6BS","","07085838302",FALSE),
-("Diane", "Knight","Female","kfrazier6@dropbox.com","6oM62CV","19921206","81296 Lerdahl Road","GU15 2HB","","07924239556",TRUE),
-("Kenneth", "Schmidt","Male","wperry7@earthlink.net","VRhKpJ5Gc","19930328","5 Clarendon Drive","HD3 3DW","01697738844","07736671689",FALSE),
-("Stephanie", "Banks","Female","pfreeman8@mail.ru","UgWhiDT","19930712","69 Rutledge Point","DN40 3JY","01346468986","07666668122",TRUE),
-("Shirley", "Moreno","Female","pkelley9@businessweek.com","oqbUXo2fsfOa","19920330","1 Burrows Park","05662999240","","07590528549",TRUE),
-("Brenda", "Lynch","Female","wvasqueza@reverbnation.com","YM62TThN","19920117","16083 Summit Pass","01410571058","","07585357063",FALSE),
-("Jessica","Baker","Female","jvasquezc@etsy.com","Xq0O3ZTc","19970113","34796 American Ash Drive","S14 1AA","09826903102", "07010810365",TRUE),
-("Peter", "Pierce","Male","pperryb@altervista.org","H8vfFkqIfj6","19950129","724 Bluejay Circle","SN9 6EB","05001704349","07662424580",FALSE),
-("Bobby", "Collins","Male","jfergusond@nih..com","iSZoJAy","19940226","261 Meadow Valley Avenue","NG20 0QY","","07065683989",TRUE),
-("Frank", "Bradley","Male","esmithe@oakley.com","tU9mlcNgHPZg","19920725","23 Rutledge Court","GU21 5EU","01697712728","07624637843",FALSE),
-("Rachel", "Anderson","Female","creynoldsf@mapquest.com","OIP3kaw8DkS","19950802","6079 Eggendart Terrace","SE1P 4UP","05500825856","07829760096",TRUE),
-("Justin", "Sullivan","Male","dpierceg@irs.gov","e6qaWkXpb5","19940625","4919 Gale Center","LL62 5BD","","07624408328",TRUE),
-("Joshua", "Fowler","Male","rruizh@istockphoto.com","uU5e5XD","19961120","59 Rusk Drive","SW10 0YQ","03433324128","07603751985",FALSE),
-("Anne", "Bryant","Female","jlawsoni@google.cn","JfWk9amz0", "19950417", "30 Grim Lane","N13 6JE","08001111789","07624498591",TRUE),
-("Joshua", "Morrison","Male","kcarrj@businessinsider.com","y4kZef", "19910311", "8 Grover Alley","TA8 2RB","05659370963","07804992674",FALSE);
+(`Martha`, `Chapman`,`Female`,`clopez0@theguardian.com`,`D7z6WUN7pbrX`,`19980522`,`73 Marquette Junction`,`FK198PE`,`02086680851`,`07984512477`, `FALSE`),
+(`Linda`, `Baker`,`Female`,`hgibson1@salon.com`,`XVxgAcYb`,`19940717`,`077 2nd Point`,`HP225LQ`,`08006482133`,`07001876371`,TRUE),
+(`Patrick`, `Warren`,`Male`,`vday2@qq.com`,`fzqz89rUCkSI`,`19950810`,`21877 Goodland Lane`,`M20 1QF`,``,`07624604665`,FALSE),
+(`James`, `Walker`,`Male`,`jgrant3@nasa.gov`,`rRU9M6gE`,`19921209`,`63 Bartelt Park`,`IP20 2NT`,`02249632976`,`07458350751`,FALSE),
+(`Christina`, `Carpenter`,`Female`,`ehamilton4@reverbnation.com`,`nwFGmi28D8Q`,`19960522`,`982 Dakota Alley`,`GL12 8UU`,`01697740417`,`07006302433`,TRUE),
+(`Justin`, `Hunter`,`Male`,`mcunningham5@tinyurl.com`,`uMRSCd4E`,`19930506`,`96 New Castle Road`,`AB15 6BS`,``,`07085838302`,FALSE),
+(`Diane`, `Knight`,`Female`,`kfrazier6@dropbox.com`,`6oM62CV`,`19921206`,`81296 Lerdahl Road`,`GU15 2HB`,``,`07924239556`,TRUE),
+(`Kenneth`, `Schmidt`,`Male`,`wperry7@earthlink.net`,`VRhKpJ5Gc`,`19930328`,`5 Clarendon Drive`,`HD3 3DW`,`01697738844`,`07736671689`,FALSE),
+(`Stephanie`, `Banks`,`Female`,`pfreeman8@mail.ru`,`UgWhiDT`,`19930712`,`69 Rutledge Point`,`DN40 3JY`,`01346468986`,`07666668122`,TRUE),
+(`Shirley`, `Moreno`,`Female`,`pkelley9@businessweek.com`,`oqbUXo2fsfOa`,`19920330`,`1 Burrows Park`,`05662999240`,``,`07590528549`,TRUE),
+(`Brenda`, `Lynch`,`Female`,`wvasqueza@reverbnation.com`,`YM62TThN`,`19920117`,`16083 Summit Pass`,`01410571058`,``,`07585357063`,FALSE),
+(`Jessica`,`Baker`,`Female`,`jvasquezc@etsy.com`,`Xq0O3ZTc`,`19970113`,`34796 American Ash Drive`,`S14 1AA`,`09826903102`, `07010810365`,TRUE),
+(`Peter`, `Pierce`,`Male`,`pperryb@altervista.org`,`H8vfFkqIfj6`,`19950129`,`724 Bluejay Circle`,`SN9 6EB`,`05001704349`,`07662424580`,FALSE),
+(`Bobby`, `Collins`,`Male`,`jfergusond@nih..com`,`iSZoJAy`,`19940226`,`261 Meadow Valley Avenue`,`NG20 0QY`,``,`07065683989`,TRUE),
+(`Frank`, `Bradley`,`Male`,`esmithe@oakley.com`,`tU9mlcNgHPZg`,`19920725`,`23 Rutledge Court`,`GU21 5EU`,`01697712728`,`07624637843`,FALSE),
+(`Rachel`, `Anderson`,`Female`,`creynoldsf@mapquest.com`,`OIP3kaw8DkS`,`19950802`,`6079 Eggendart Terrace`,`SE1P 4UP`,`05500825856`,`07829760096`,TRUE),
+(`Justin`, `Sullivan`,`Male`,`dpierceg@irs.gov`,`e6qaWkXpb5`,`19940625`,`4919 Gale Center`,`LL62 5BD`,``,`07624408328`,TRUE),
+(`Joshua`, `Fowler`,`Male`,`rruizh@istockphoto.com`,`uU5e5XD`,`19961120`,`59 Rusk Drive`,`SW10 0YQ`,`03433324128`,`07603751985`,FALSE),
+(`Anne`, `Bryant`,`Female`,`jlawsoni@google.cn`,`JfWk9amz0`, `19950417`, `30 Grim Lane`,`N13 6JE`,`08001111789`,`07624498591`,TRUE),
+(`Joshua`, `Morrison`,`Male`,`kcarrj@businessinsider.com`,`y4kZef`, `19910311`, `8 Grover Alley`,`TA8 2RB`,`05659370963`,`07804992674`,FALSE);
 ";
 
 mysqli_select_db("web");
@@ -306,31 +307,31 @@ if(mysqli_query($conn, $sql)) {
 
 $sql =
 "INSERT INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
-("1.0","1","6"),
-("1.1","1","6"),
-("1.2","1","6"),
-("1.3","1","5"),
-("1.4","2","4"),
-("1.5","2","6"),
-("1.6","2","5"),
-("2.0","3","6"),
-("2.1","3","6"),
-("2.2","3","6"),
-("2.3","3","6"),
-("2.4","3","5"),
-("2.5","4","5"),
-("2.6","4","6"),
-("3.0","4","6"),
-("3.1","4","5"),
-("3.2","5","5"),
-("3.3","5","5"),
-("3.4","5","4"),
-("3.5","6","6"),
-("3.6","6","6"),
-("4.0","6","6"),
-("4.1","7","5"),
-("4.2","7","4"),
-("4.3","7","5")";
+(`1.0`,`1`,`6`),
+(`1.1`,`1`,`6`),
+(`1.2`,`1`,`6`),
+(`1.3`,`1`,`5`),
+(`1.4`,`2`,`4`),
+(`1.5`,`2`,`6`),
+(`1.6`,`2`,`5`),
+(`2.0`,`3`,`6`),
+(`2.1`,`3`,`6`),
+(`2.2`,`3`,`6`),
+(`2.3`,`3`,`6`),
+(`2.4`,`3`,`5`),
+(`2.5`,`4`,`5`),
+(`2.6`,`4`,`6`),
+(`3.0`,`4`,`6`),
+(`3.1`,`4`,`5`),
+(`3.2`,`5`,`5`),
+(`3.3`,`5`,`5`),
+(`3.4`,`5`,`4`),
+(`3.5`,`6`,`6`),
+(`3.6`,`6`,`6`),
+(`4.0`,`6`,`6`),
+(`4.1`,`7`,`5`),
+(`4.2`,`7`,`4`),
+(`4.3`,`7`,`5`)";
 
 mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
@@ -342,26 +343,26 @@ if(mysqli_query($conn, $sql)) {
 //Data for uni table
 $sql =
 "INSERT INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
-VALUES (5,1,3,"Halls","1.1"),
-(2,14,2,"Halls","1.1"),
-(20,13,3,"Halls","1.1"),
-(8,23,1,"Private",NULL),
-(19,10,3,"Halls","1.1"),
-(16,3,3,"Private",NULL),
-(12,21,3,"Halls","1.1"),
-(13,28,1,"Halls","1.1"),
-(9,8,3,"Halls","1.4"),
-(15,20,2,"Private",NULL),
-(4,22,2,"Halls","1.4"),
-(10,18,1,"Halls","1.4"),
-(14,17,2,"Halls","1.4"),
-(6,9,2,"Private",NULL),
-(3,13,1,"Private",NULL),
-(11,29,3,"Halls","1.4"),
-(18,2,3,"Halls","4.2"),
-(17,16,1,"Halls","4.2"),
-(1,8,2,"Halls","4.2"),
-(7,19,1,"Halls","4.2")";
+VALUES (5,1,3,`Halls`,`1.1`),
+(2,14,2,`Halls`,`1.1`),
+(20,13,3,`Halls`,`1.1`),
+(8,23,1,`Private`,NULL),
+(19,10,3,`Halls`,`1.1`),
+(16,3,3,`Private`,NULL),
+(12,21,3,`Halls`,`1.1`),
+(13,28,1,`Halls`,`1.1`),
+(9,8,3,`Halls`,`1.4`),
+(15,20,2,`Private`,NULL),
+(4,22,2,`Halls`,`1.4`),
+(10,18,1,`Halls`,`1.4`),
+(14,17,2,`Halls`,`1.4`),
+(6,9,2,`Private`,NULL),
+(3,13,1,`Private`,NULL),
+(11,29,3,`Halls`,`1.4`),
+(18,2,3,`Halls`,`4.2`),
+(17,16,1,`Halls`,`4.2`),
+(1,8,2,`Halls`,`4.2`),
+(7,19,1,`Halls`,`4.2`)";
 
 mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
