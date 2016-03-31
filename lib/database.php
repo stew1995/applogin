@@ -1,6 +1,6 @@
 <?php
 
-$servername = "http://130.211.85.219/";
+$servername = "130.211.85.219";
 $username = "up703451";
 $password = "amber1995";
 
