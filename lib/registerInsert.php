@@ -20,7 +20,7 @@ if(isset($_POST['checkValidation'])){
   $password = $_POST['Password'];
   $address = $_POST['Address'];
   $postcode = $_POST['Postcode'];
-  $homeNumber $_POST['HomeNumber'];
+  $homeNumber = $_POST['HomeNumber'];
   $mobile = $_POST['Mobile'];
   $course = $_POST['courseList'];
   $studyYear = $_POST['yearList'];
