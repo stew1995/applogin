@@ -16,7 +16,7 @@ if($conn) {
 $sql =
 "CREATE TABLE hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE
+  name VARCHAR(30)
 )";
 
 //Check if hobbie table has been created
