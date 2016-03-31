@@ -16,7 +16,7 @@ if($conn) {
 $sql =
 "CREATE TABLE hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30)
+  name VARCHAR(30) UNIQUE NOT NULL
 )";
 
 //Check if hobbie table has been created
@@ -30,7 +30,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE society (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE
+  name VARCHAR(30) UNIQUE NOT NULL
 )";
 
 //Check if society table has been created
@@ -176,7 +176,7 @@ if(mysqli_query($conn, $sql)) {
 //Data for hobbie table on load up
 $sql =
 "INSERT INTO `hobbie` (`name`)
-VALUES ("Drawing"),
+VALUES (`Drawing`),
 ("Swimming"),
 ("Magic"),
 ("Computer Programming"),
