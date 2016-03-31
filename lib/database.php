@@ -2,10 +2,9 @@
 
 $servername = "localhost";
 $username = "up703451";
-$password = "amber1995";
 
 // Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username);
 //Check connection
 if(!$conn) {
   die("Connection to database failed: ". mysqli_connect_error());
