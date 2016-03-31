@@ -228,7 +228,7 @@ $sql =
 VALUES (`IT`),
 (`Law`),
 (`Brazilian Ju-Jitsu`),
-(`Catholic`),("Business`),
+(`Catholic`),('Business`),
 (`Art & Design`),
 (`Lego`),
 (`Karting`),
@@ -255,11 +255,11 @@ if(mysqli_query($conn, $sql)) {
 
 //Data for halls table
 $sql =
-"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES ("1", "Margaret Rule Hall","Margaret Rule Hall, Isambard Brunel Rd, Portsmouth", "PO1 2DS"),
-("2", "Harry Law Hall", "Harry Law Hall, Portsmouth", "PO1 2SP"),
-("3", "James Watson Hall", "James Watson Hall, 28 Guildhall Walk, Portsmouth", "PO1 2DD"),
-("4", "Langstone", "Langstone Campus, Furze Lane, Southsea", "PO4 8LW"),
-("5", "Trafalgar Hall", "Trafalgar Hall, Portsmouth, Southsea, Portsmouth", "PO5 4AY"),
+"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (1, `Margaret Rule Hall`,`Margaret Rule Hall, Isambard Brunel Rd, Portsmouth`, `PO1 2DS`),
+(2, `Harry Law Hall`, `Harry Law Hall, Portsmouth`, `PO1 2SP`),
+(3, `James Watson Hall`, `James Watson Hall, 28 Guildhall Walk, Portsmouth`, `PO1 2DD`),
+(4, `Langstone`, `Langstone Campus, Furze Lane, Southsea`, `PO4 8LW`),
+(5, `Trafalgar Hall`, `Trafalgar Hall, Portsmouth, Southsea, Portsmouth`, `PO5 4AY`),
 ("6", "Bateson Hall", "Bateson Hall, Portsmouth", "PO1 2BL"),
 ("7", "Rees Hall", "Southsea Terrace,Southsea", "PO5 3AP")";
 
