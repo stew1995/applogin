@@ -55,7 +55,7 @@ function formValidation(){
     fname.focus();
     reqbasic.display = "block";
     reqname.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqname.display = "none";
@@ -68,7 +68,7 @@ function formValidation(){
     lname.focus();
     reqbasic.display = "block";
     reqlname.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqlname.display = "none";
@@ -90,7 +90,7 @@ function formValidation(){
     email.focus();
     reqbasic.display = "block";
     reqemail.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqemail.display = "none";
@@ -101,7 +101,7 @@ function formValidation(){
     password.focus();
     reqbasic.display = "block";
     reqpass.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqpass.display = "none";
@@ -112,7 +112,7 @@ function formValidation(){
     address.focus();
     reqbasic.display = "block";
     reqaddress.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqaddress.display = "none";
@@ -123,7 +123,7 @@ function formValidation(){
     postcode.focus();
     reqbasic.display = "block";
     reqpost.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqpost.display = "none";
@@ -134,7 +134,7 @@ function formValidation(){
     home.focus();
     reqbasic.display = "block";
     reqhome.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqhome.display = "none";
@@ -145,7 +145,7 @@ function formValidation(){
     mobile.focus();
     reqbasic.display = "block";
     reqmobile.display = "block";
-    return false;
+    //return false;
   } else {
     reqbasic.display = "none";
     reqmobile.display = "none";
@@ -172,7 +172,7 @@ if(course.value == ""){
   course.focus();
   requni.display = "block";
   reqcourse.display = "block";
-  return false;
+  //return false;
 } else {
   requni.display = "none";
   reqcourse.display = "none";
@@ -183,7 +183,7 @@ if(year.value == "") {
   year.focus();
   requni.display = "block";
   reqyear.display = "block";
-  return false;
+  //return false;
 } else {
   requni.display = "none";
   reqyear.display = "none";
@@ -194,7 +194,7 @@ if(accom.value == "") {
   accom.focus();
   requni.display = "block";
   reqaccom.display = "block";
-  return false;
+  //return false;
 } else {
   requni.display = "none";
   reqaccom.display = "none";
@@ -218,7 +218,7 @@ var reqinterest = document.getElementById("reqinterest").style;
     hobbie.focus();
     reqabout.display = "block";
     reqhobbie.display = "block";
-    return false;
+    //return false;
   } else {
     reqabout.display = "none";
     reqhobbie.display = "none";
@@ -229,7 +229,7 @@ var reqinterest = document.getElementById("reqinterest").style;
     society.focus();
     reqabout.display = "block";
     reqsociety.display = "block";
-    return false;
+    //return false;
   } else {
     reqabout.display = "none";
     reqsociety.display = "none";
