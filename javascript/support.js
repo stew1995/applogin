@@ -187,7 +187,7 @@ function backgroundChange(){
 }
 
 var change = document.getElementById("colours");
-colours.addEventListener("click", backgroundChange);
+change.addEventListener("click", backgroundChange);
 
 //Show contact details
 function showUnionDetails(){
