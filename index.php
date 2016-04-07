@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script src="javascript/draftajax.js"></script>
+  <script type="text/javascript" src="javascript/support.js"></script>
+  
   <link rel="stylesheet" type="text/css" href="CSS\navigation.css">
   <link rel="stylesheet" type="text/css" href="CSS\template.css">
   <link rel="stylesheet" type="text/css" href="CSS\profile.css">
@@ -107,11 +108,12 @@
 </body>
   <!--Javascript files -->
   <?php
+  echo '<script src="javascript/draftajax.js"></script>'
   echo '<script src="javascript/windowSizing.js"></script>';
   echo '<script src="javascript/main.js"></script>';
   echo '<script src="javascript/changeLayout.js"></script>';
   echo '<script src="javascript/validation.js"></script>';
   ?>
-  <script type="text/javascript" src="javascript/support.js"></script>
+  
   
 </html>
