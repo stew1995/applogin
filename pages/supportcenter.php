@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script type="text/javascript" src="javascript/support.js"></script>
+    
   </head>
   <body>
     <div class="supportcenter">
@@ -260,6 +260,6 @@
         </div>
     </div>
 </div>
-  
+  <script type="text/javascript" src="javascript/support.js"></script>
   </body>
 </html>
