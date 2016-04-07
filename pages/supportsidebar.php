@@ -1,4 +1,4 @@
-<!DOCTYPE>
+<!DOCTYPE html>
 <html>
   <body>
   <div class="supportside">
@@ -30,5 +30,5 @@
   </div>
   <p><input type="button" value="Go Offline" id="chatGoOfflineBtn"></p>
 </div>
-  </body>
+</body>
 </html>
