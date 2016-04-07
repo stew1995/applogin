@@ -533,7 +533,7 @@ function changeLayout(){
         document.getElementById("sideText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportsidebar.txt", true);
+    xhr.open("GET", "supportsidebar.php", true);
     xhr.send();
   }
 
@@ -545,7 +545,7 @@ function changeLayout(){
         document.getElementById("textCenter").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportsidebar.txt", true);
+    xhr.open("GET", "supportsidebar.php", true);
     xhr.send();
   }
 
@@ -557,7 +557,7 @@ function changeLayout(){
         document.getElementById("rightText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportsidebar.txt", true);
+    xhr.open("GET", "supportsidebar.php", true);
     xhr.send();
   }
 
@@ -574,7 +574,7 @@ function changeLayout(){
         document.getElementById("sideText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportcenter.txt", true);
+    xhr.open("GET", "supportcenter.php", true);
     xhr.send();
   }
 
@@ -586,7 +586,7 @@ function changeLayout(){
         document.getElementById("textCenter").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportcenter.txt", true);
+    xhr.open("GET", "supportcenter.php", true);
     xhr.send();
   }
 
@@ -598,7 +598,7 @@ function changeLayout(){
         document.getElementById("rightText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportcenter.txt", true);
+    xhr.open("GET", "supportcenter.php", true);
     xhr.send();
   }
 
@@ -615,7 +615,7 @@ function changeLayout(){
         document.getElementById("sideText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportrightbar.txt", true);
+    xhr.open("GET", "supportrightbar.php", true);
     xhr.send();
   }
 
@@ -627,7 +627,7 @@ function changeLayout(){
         document.getElementById("textCenter").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportrightbar.txt", true);
+    xhr.open("GET", "supportrightbar.php", true);
     xhr.send();
   }
 
@@ -639,7 +639,7 @@ function changeLayout(){
         document.getElementById("rightText").innerHTML = xhr.responseText;
       }
     }
-    xhr.open("GET", "supportrightbar.txt", true);
+    xhr.open("GET", "supportrightbar.php", true);
     xhr.send();
   }
 }
