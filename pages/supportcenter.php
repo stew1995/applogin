@@ -1,3 +1,4 @@
+<body>
 <div class="supportcenter">
   <h1>Customise the look of your profile</h1>
     <h2>Colour</h2>
@@ -254,4 +255,4 @@
         </div>
     </div>
 </div>
-
+</body>
