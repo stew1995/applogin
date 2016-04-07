@@ -1,4 +1,6 @@
-<body>
+<!DOCTYPE>
+<html>
+  <body>
   <div class="supportside">
   <h1>Search Pref</h1>
   <input type="button" value="View search preferences" id="viewSearchPref">
@@ -28,4 +30,5 @@
   </div>
   <p><input type="button" value="Go Offline" id="chatGoOfflineBtn"></p>
 </div>
-</body>
+  </body>
+</html>
