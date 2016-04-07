@@ -1,3 +1,4 @@
+window.onload = function() {
 //Support Javascript
 //Change Background of website
 //Need to add to change navigation bar aswell
@@ -870,3 +871,4 @@ function layoutSupportOptions(){
 
 var supportChoice = document.getElementById("contentLayoutSupport");
 supportChoice.addEventListener("click", layoutSupportOptions);
+}
