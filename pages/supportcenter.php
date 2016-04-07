@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="javascript/support.js"></script>
+    <script type="text/javascript" src="javascript/support.js"></script>
   </head>
   <body>
     <div class="supportcenter">
