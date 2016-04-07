@@ -254,4 +254,4 @@
         </div>
     </div>
 </div>
-<script src="javascript/support.js"></script>
+<?php echo '<script src="javascript/support.js"></script>' ?>
