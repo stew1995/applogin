@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
   <link rel="stylesheet" type="text/css" href="CSS\support.css">
   
-  <script src="javascript/support.js"></script>
   <script src="javascript/changeLayout.js"></script>
 </head>
   <div class="navigation">
