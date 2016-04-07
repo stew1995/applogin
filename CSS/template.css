@@ -1,11 +1,11 @@
-.containor {
+#containor {
   margin-top: 1%;
   width: 100%;
   background: #C0C0C0;
-  background: -webkit-linear-gradient(#0000cc, #000080); /* For Safari and IE*/
-  background: -o-linear-gradient(#0000cc, #000080); /* For Opera */
-  background: -moz-linear-gradient(#0000cc, #000080); /* For Firefox */
-  background: linear-gradient(#0000cc, #000080); /* Standard syntax */
+  background: -webkit-linear-gradient(#f2f2f2, #6666ff, #6666ff, #6666ff, #6666ff); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #6666ff, #6666ff, #6666ff, #6666ff); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #6666ff, #6666ff, #6666ff, #6666ff); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #6666ff, #6666ff, #6666ff, #6666ff); /* Standard syntax */
   border-radius: 10px;
   overflow: auto;
   font-family: "Arial", Helvetica, sans-serif;
@@ -22,9 +22,9 @@
 
 .sidemenu {
   margin: 1%;
-  height: 100%;
-  background: white;
-  box-shadow: 2px 3px 5px grey;
+  min-height: 800px;
+  height: auto;
+  background:  rgba(230, 230, 230, 0.7);
   visibility: visible;
 }
 
@@ -37,9 +37,9 @@
 }
 
 .center {
-  background: white;
-  height: 100%;
-  box-shadow: 2px 3px 5px grey;
+  min-height: 800px;
+  height: auto;
+  background:  rgba(230, 230, 230, 0.7);
 }
 
 .rightmenuwrap {
@@ -52,9 +52,7 @@
 
 .rightmenu {
   margin:1%;
-  background: white;
-  box-shadow: 2px 3px 5px grey;
-  height: 100%;
-
-
+  background:  rgba(230, 230, 230, 0.7); 
+  min-height: 800px;
+  height: auto;
 }
