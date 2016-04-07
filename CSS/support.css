@@ -1,0 +1,259 @@
+#colours {
+margin-left: 8px;
+margin-right: -20px;
+}
+
+#defaultbackground, #redbackground, #greenbackground, #yellowbackground, #orangebackground, #purplebackground, #pinkbackground{
+  padding: 10px 1.5%;
+  font-size: 15px;
+  border: none;
+}
+
+#defaultbackground {
+  background: blue;
+  background: -webkit-linear-gradient(#f2f2f2, #6666ff); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #6666ff); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #6666ff); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #6666ff); /* Standard syntax */
+}
+
+#redbackground {
+  background: red;
+  background: -webkit-linear-gradient(#f2f2f2, #ff6666); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #ff6666); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #ff6666); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #ff6666); /* Standard syntax */
+}
+
+#greenbackground {
+  background: green;
+  background: -webkit-linear-gradient(#f2f2f2, #66ff66); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #66ff66); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #66ff66); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #66ff66); /* Standard syntax */
+}
+
+#yellowbackground {
+  background: yellow;
+  background: -webkit-linear-gradient(#f2f2f2, #ffff66); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #ffff66); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #ffff66); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #ffff66); /* Standard syntax */
+}
+
+#orangebackground {
+  background: orange;
+  background: -webkit-linear-gradient(#f2f2f2, #ffb366); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #ffb366); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #ffb366); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #ffb366); /* Standard syntax */
+}
+
+#purplebackground {
+  background: purple;
+  background: -webkit-linear-gradient(#f2f2f2, #b366ff); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #b366ff); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #b366ff); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #b366ff); /* Standard syntax */
+}
+
+#pinkbackground {
+  background: pink;
+  background: -webkit-linear-gradient(#f2f2f2, #ff66ff); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #ff66ff); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #ff66ff); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #ff66ff); /* Standard syntax */
+}
+
+.supportcenter #layoutOfPages {
+  margin-left: 3px;
+}
+.supportcenter #layoutHouseBtn, #layoutHallsBtn, #layoutProfileBtn, #layoutSocialBtn, #layoutSupportBtn {
+  padding: 10px 1.5%;
+  width: 20.28%;
+  margin: 0 -3px;
+  font-size: 15px;
+}
+
+.supportcenter #contentLayoutHouse, #contentLayoutHalls, #contentLayoutProfile {
+  margin: 0 20%;
+  padding: 10px 3px;
+  background: rgba(204, 204, 255, 0.8);
+}
+
+.supportcenter #contentLayoutSupport {
+  width: 95%;
+  margin: 0 2.5%;
+  padding: 10px 3px;
+  background: rgba(204, 204, 255, 0.8);
+}
+.supportcenter #contentLayoutSocial {
+  margin: 0 29%;
+  padding: 10px 3px ;
+  background: rgba(204, 204, 255, 0.8);
+}
+
+.supportcenter #contentLayoutChoices {
+  margin: 0 25%;
+  padding: 10px 3px;
+  background: rgba(204, 204, 255, 0.8);
+}
+
+#layoutComplete {
+  float: right;
+}
+
+.supportcenter #layoutHouse, #layoutHalls, #layoutProfile, #layoutSocial, #layoutSupport, #layoutChoices {
+  background: white;
+  margin: 2px 0;
+  display: none;
+  padding: 5px 0;
+}
+
+.supportcenter #houseSection1, #houseSection2, #hallsSection1, #hallsSection2, #profileSection1,
+#profileSection2, #socialSection1, #socialSection2, #supportSection1, #supportSection2 {
+  margin: 0 12% 0 1%;
+}
+
+.supportright #contactBackground {
+  background: white;
+}
+.supportright h1, h2, h3 {
+
+}
+
+.supportright p {
+}
+
+#SU, #UL, #UD, #PD, #SH, #Secur, #Estate{
+  border-bottom: 1px solid black;
+}
+
+#SUContent, #ULContent, #UDContent, #PDContent, #SHContent, #SecurContent, #EstateContent {
+  display: block;
+  background: rgba(204, 204, 255, 0.8);
+  margin: -16px 5%;
+}
+
+
+
+#SU {
+
+}
+
+#UL{
+
+}
+
+#UD {
+
+}
+
+#PD {
+
+}
+
+#SH {
+
+}
+
+#Secur {
+
+}
+
+#Estate {
+
+}
+
+.supportcenter input[name="account"]{
+  margin-right: 10px;
+}
+
+#changePassword, #changeEmail, #changeAddress, #changeMobile, #changeHobbie, #changeSociety, #changeYear, #changeCourse, #changeAccom {
+  display: none;
+  background: white;
+  padding: 10px 0;
+}
+
+#verifyemail{
+  float: right;
+  margin-right: 15%;
+}
+
+#formbackground {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 2%;
+  padding: 20px 0;
+}
+
+
+.supportcenter input[value="Done"], input[value="Cancel"]{
+  padding: 10px 30px;
+  margin-top: 30px;
+}
+
+.supportcenter input[value="Done"]{
+  margin: 0 10%;
+  margin-top: 40px;
+}
+
+.supportcenter input[value="Cancel"]{
+  margin: 0 10%;
+  margin-top: 40px;
+  float: right;
+}
+
+.supportcenter select{
+  font-size: 18px;
+  margin: 0 25%;
+  margin-bottom: 20px;
+}
+
+
+#textAlign {
+  margin-left: 3%;
+}
+
+.supportside #viewSearchPref{
+  width: 100%;
+  font-size: 16px;
+  padding: 10px 0;
+}
+
+.supportside .searchWrap {
+  margin: -15px 3%;
+  background: white;
+}
+
+.supportside #searchPref{
+  display: none;
+  background: rgba(204, 204, 255, 0.8);
+  margin: 2%;
+}
+
+.supportside #applySearch{
+  width: 75%;
+  margin: 0 12.5%;
+  padding: 10px 0;
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+
+.supportside #chatSettingsBlock{
+  display: none;
+  background: rgba(204, 204, 255, 0.8);
+  margin: 2%;
+}
+
+.supportside #chatSetBlockBtn, #chatGoOfflineBtn {
+  padding: 10px 0;
+  font-size: 16px;
+  width: 100%;
+}
+
+.supportside #chatSetBlock, #chatCancelBlock{
+  padding: 8px 0;
+  font-size: 12px;
+  width: 40%;
+  margin: 0 5%;
+}
