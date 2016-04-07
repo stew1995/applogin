@@ -111,7 +111,7 @@
   <script src="javascript/draftajax.js"></script>
   <script src="javascript/windowSizing.js"></script>
   <script src="javascript/support.js"></script>
-  <script src="javascript/changeLayout"></script>
+  <script src="javascript/changeLayout.js"></script>
   
 </body>
 </html>
