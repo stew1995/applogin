@@ -106,12 +106,12 @@
   
   <!--Javascript files -->
   <?php 
-  echo '<script src="javascript/validation.js"></script>'
-  echo '<script src="javascript/main.js"></script>'
-  <script src="javascript/draftajax.js"></script>
-  echo '<script src="javascript/windowSizing.js"></script>'
-  echo '<script src="javascript/changeLayout.js"></script>'
-  echo '<script src="javascript/support.js"></script>'
+  echo '<script src="javascript/validation.js"></script>';
+  echo '<script src="javascript/main.js"></script>';
+  echo '<script src="javascript/draftajax.js"></script>';
+  echo '<script src="javascript/windowSizing.js"></script>';
+  echo '<script src="javascript/changeLayout.js"></script>';
+  echo '<script src="javascript/support.js"></script>';
   ?>
   
 </body>
