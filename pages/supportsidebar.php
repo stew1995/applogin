@@ -30,5 +30,6 @@
   </div>
   <p><input type="button" value="Go Offline" id="chatGoOfflineBtn"></p>
 </div>
+<?php echo '<script src="javascript/support.js"></script>'; ?>
 </body>
 </html>
