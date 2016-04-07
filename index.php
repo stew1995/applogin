@@ -108,7 +108,7 @@
 </body>
   <!--Javascript files -->
   <?php
-  echo '<script src="javascript/draftajax.js"></script>'
+  echo '<script src="javascript/draftajax.js"></script>'; 
   echo '<script src="javascript/windowSizing.js"></script>';
   echo '<script src="javascript/main.js"></script>';
   echo '<script src="javascript/changeLayout.js"></script>';
