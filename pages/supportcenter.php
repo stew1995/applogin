@@ -1,5 +1,7 @@
-<body>
-<div class="supportcenter">
+<!DOCTYPE html>
+<html>
+  <body>
+    <div class="supportcenter">
   <h1>Customise the look of your profile</h1>
     <h2>Colour</h2>
       <form name="colours" id="colours">
@@ -255,4 +257,5 @@
         </div>
     </div>
 </div>
-</body>
+  </body>
+</html>
