@@ -254,3 +254,4 @@
         </div>
     </div>
 </div>
+<script src="javascript/support.js"></script>
