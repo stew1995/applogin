@@ -1,5 +1,8 @@
 <!DOCTYPE html>
 <html>
+  <head>
+    <script src="javascript/support.js"></script>
+  </head>
   <body>
     <div class="supportcenter">
   <h1>Customise the look of your profile</h1>
@@ -257,6 +260,6 @@
         </div>
     </div>
 </div>
-  <script src="javascript/support.js"></script>
+  
   </body>
 </html>
