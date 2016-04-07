@@ -1,4 +1,5 @@
-<div class="supportright">
+<body>
+ <div class="supportright">
  <h1>Contact Information</h1>
    <h2>Univeristy contacts</h2>
      <h3 id="SU"><span id="textAlign">Student Union</h3></span>
@@ -47,4 +48,4 @@
        <p>studentpad</p></span>
      </div>
 </div>
-
+</body>
