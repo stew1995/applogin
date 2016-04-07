@@ -111,5 +111,6 @@
   echo '<script src="javascript/main.js"></script>';
   echo '<script src="javascript/changeLayout.js"></script>';
   echo '<script src="javascript/validation.js"></script>';
+  echo '<script type="text/javascript" src="javascript/support.js"></script>'
   ?>
 </html>
