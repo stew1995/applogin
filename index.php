@@ -6,6 +6,7 @@
   <link rel="stylesheet" type="text/css" href="CSS\profile.css">
   <link rel="stylesheet" type="text/css" href="CSS\registration.css">
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
+  <link rel="stylesheet" type="text/css" href="CSS\support.css">
   
   
 </head>
@@ -109,6 +110,8 @@
   <script src="javascript/main.js"></script>
   <script src="javascript/draftajax.js"></script>
   <script src="javascript/windowSizing.js"></script>
+  <script src="javascript/support.js"></script>
+  <script src="javascript/changeLayout"></script>
   
 </body>
 </html>
