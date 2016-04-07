@@ -230,7 +230,7 @@ function supportCenter() {
       document.getElementById("textCenter").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/supportcenter.txt", true);
+  xhr.open("GET", "pages/supportcenter.php", true);
   xhr.send();
 }
 
@@ -241,7 +241,7 @@ function supportSidebar() {
       document.getElementById("sideText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/supportsidebar.txt", true);
+  xhr.open("GET", "pages/supportsidebar.php", true);
   xhr.send();
 }
 
@@ -252,7 +252,7 @@ function supportRightbar() {
       document.getElementById("rightText").innerHTML = xhr.responseText;
     }
   };
-  xhr.open("GET", "pages/supportrightbar.txt", true);
+  xhr.open("GET", "pages/supportrightbar.php", true);
   xhr.send();
 }
 
