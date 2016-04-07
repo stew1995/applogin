@@ -50,6 +50,6 @@
        <p>studentpad</p></span>
      </div>
 </div>
-<?php echo '<script src="javascript/support.js"></script>'; ?>
+<script src="javascript/support.js"></script>
  </body>
 </html>
