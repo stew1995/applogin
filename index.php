@@ -103,7 +103,7 @@
     </div>
   </div>
   </div>
-  
+</body>
   <!--Javascript files -->
   <?php 
   echo '<script src="javascript/validation.js"></script>';
@@ -113,6 +113,4 @@
   echo '<script src="javascript/changeLayout.js"></script>';
   echo '<script src="javascript/support.js"></script>';
   ?>
-  
-</body>
 </html>
