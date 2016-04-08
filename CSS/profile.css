@@ -10,36 +10,120 @@
 .sidemenu .profileSide .tableWrap {
   overflow-x: auto;
 }
- .sidemenu .profileSide table {
+ .sidemenu .profileSide #myTable {
   margin-top: 5%;
   padding: 0 1%;
   border: 1px solid grey;
   box-shadow: 2px 2px 2px 2px #C0C0C0 inset;
   border-collapse: collapse;
-
+  border-radius: 10px;
+  display: block;
 }
 
 .sidemenu .profileSide td {
   border-bottom: 1px dotted black;
   padding: 0 2%;
-  font-size: 18px;
+  font-size: 16px;
 }
 
-.sidemenu .profileSide tr:nth-child(even) {
-  background: #C0C0C0;
+.profileSide tr:nth-child(even) {
+  background: #ccffff;
+}
+
+.profileSide tr:nth-child(odd){
+  background: white;
 }
 
 .sidemenu .profileSide th {
   border-bottom: 1px dotted black;
-  background: grey;
+  background: red;
+  background: -webkit-linear-gradient(#ccffcc, #80ff80); /* For Safari and IE*/
+  background: -o-linear-gradient(#ccffcc, #80ff80); /* For Opera */
+  background: -moz-linear-gradient(#ccffcc, #80ff80); /* For Firefox */
+  background: linear-gradient(#ccffcc, #80ff80); /* Standard syntax */
   font-size: 18px;
+}
+
+.editButtons {
+  border-style: none;
+  font-size: 14px;
+  background: white;
+}
+
+.profileSide input[name="usernameInput"] {
+  border-style: none;
+  background: #ccffff;
+}
+
+#editProfileBtns {display: block;}
+
+#completeChangeBtn {
+  font-size: 20px;
+  width: 50%;
+  margin: 5% 25%;
+  display: none;
+}
+
+.profileSide input[value = "Change"]{
+  margin-left: 4px;
+}
+
+#basicTitle {display: none;}
+#singleNameEdit {display: none;}
+#singleUsernameEdit {display: none;}
+#singlePasswordEdit {display: none;}
+#singleEmailEdit {display: none;}
+#singleMobileEdit {display: none;}
+#singleHomeEdit {display: none;}
+#singleAddressEdit {display: none;}
+
+#uniTitle {display: none;}
+#singleCourseEdit {display: none;}
+#singleYearEdit {display: none;}
+#singleHousingEdit {display: none;}
+
+#aboutTitle {display: none;}
+#singleHobbieEdit {display: none;}
+#singleInterestEdit {display:none;}
+#singleSocietyEdit {display: none;}
+
+#editUniInfo p {
+  font-size: 15px;
+}
+
+#editBasicInfo p {
+  font-size: 15px;
+
+}
+
+#editAboutYourself p {
+  font-size: 15px;
+
+}
+
+#editUniInfo input[type="button"] {
+  font-size: 25px;
+  width: 50%;
+  margin: 0 25%;
+}
+
+#editAboutYourself input[type="button"] {
+  font-size: 25px;
+  width: 50%;
+  margin: 0 25%;
+}
+
+#editBasicInfo input[type="button"] {
+  font-size: 25px;
+  width: 50%;
+  margin: 0 25%;
 }
 
 .rightmenu .profileRight h3 {
   text-decoration: underline;
 }
 
-.rightmenu  .profileRight input[name="groupAdd"] {
+.profileRight #groupNext {
   float: right;
   margin-right: 1%;
 }
@@ -49,13 +133,19 @@
   margin-right: 1%;
 }
 
-.rightmenu  .profileRight input[name="saveGroup"] {
+ .profileRight input[name="saveGroup"] {
   float: right;
-  margin-right: 1%;
+  margin-right: 10%;
+}
+
+.profileRight input[name="deleteGroup"] {
+  float: right;
+  margin-right: 5%;
 }
 
 .rightmenu .profileRight input[name="groupName"] {
-  margin-left: 5%;
+  margin-left: 2.5%;
+  width: 75%;
 }
 
 .rightmenu .profileRight input[name="addWho"] {
@@ -65,30 +155,57 @@
 .rightmenu .profileRight .groupContent {
   border: 1px solid grey;
   margin: 3% 10%;
-  height: 150px;
+  max-height: 150px;
+  max-width: 75%;
 }
 
 .center .profileCenter h3 {
   text-decoration: underline;
-  background: red;
   border-radius: 10px;
   width: 90px;
 }
 
 
-.center .profileCenter input {
-  padding: 0 0 250px 0;
-  width: 50%;
-  vertical-align: text-top;
-  box-sizing: border-box;
+.profileCenter input[type="button"] {
+  margin: 5% 10% 5% 10%;
+  padding: 5px;
+  width: 20%;
+  font-size: 20px;
+}
+
+.profileCenter input[value="Done"] {
+  float: right;
 }
 
 .center .profileCenter textarea {
   margin: 0 3%;
   margin-top: -2%;
-  /* resize: none;*/
+  /* resize: none; */
   max-width: 75%;
   max-height: 300px;
+}
+
+/*Right panel*/
+
+#hideWhoAdd {
+  display: none;
+}
+
+#groupAdding {
+  display: none;
+}
+
+#saveGroup {
+  display: none;
+}
+
+#showCreatedGroups {
+  float: right;
+  margin: 0 2.5% 5% 2.5%;
+}
+
+#createdGroups {
+  display: none;
 }
 
 /*Calendar*/
@@ -99,6 +216,7 @@
     font: 15px/1.5 "Helvetica Neue", Helvatica, Arial, san-serif;
     display:table;
 }
+
 
 /*Header of calender*/
 #cal .header {
@@ -126,6 +244,7 @@
     position:absolute;
 }
 #cal .header .left.button {
+    top: -10;
     left:0;
     border-top-left-radius: 5px;
     border-right:1px solid grey;
