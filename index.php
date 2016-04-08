@@ -1,8 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <script type="text/javascript" src="javascript/support.js"></script>
-  
   <link rel="stylesheet" type="text/css" href="CSS\navigation.css">
   <link rel="stylesheet" type="text/css" href="CSS\template.css">
   <link rel="stylesheet" type="text/css" href="CSS\profile.css">
