@@ -341,26 +341,3 @@ function loginRightbar() {
   xhr.open("GET", "pages/loginrightbar.txt", true);
   xhr.send();
 }
-
-//Initial Load Register Button AJAX - doesnt work look into
-function initialLoadRegisterContent() {
-  RegisterCenter();
-  RegisterSidebar();
-  RegisterRightbar();
-}
-  var showRegister = document.getElementById("sideRegister");
-  showRegister.addEventListener("click", registerContent);
-  
-  function loadValidation() {
-  var xhr = XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("basicForm").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "register.php", true);
-  xhr.send();
-}
-
-var checkValidation = document.getElementById("checkValidation");
-checkValidation.addEventListener("click", loadValidation);
