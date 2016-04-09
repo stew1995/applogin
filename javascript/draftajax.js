@@ -2,8 +2,6 @@
 
 function houseContent() {
   centerContent();
-  sideBar();
-  rightBar();
 }
 var showHouse = document.getElementById("showHouse");
 showHouse.addEventListener("click", houseContent);
@@ -11,26 +9,18 @@ showHouse.addEventListener("click", houseContent);
 function centerContent() {
   ajaxGet("pages/housecenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function sideBar() {
-  ajaxGet("pages/housesidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function rightBar() {
-  ajaxGet("pages/houserightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
+      ajaxGet("pages/housesidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/houserightbar.html", function(data){
+            document.getElementById("rightText").innerHTML = data;
+          });
+      });
   });
 }
 
 // Halls main section Ajax
 function hallsContent() {
   hallsCenter();
-  hallsRightbar();
-  hallsSidebar();
 }
 var showHalls = document.getElementById("showHalls");
 showHalls.addEventListener("click", hallsContent);
@@ -38,26 +28,18 @@ showHalls.addEventListener("click", hallsContent);
 function hallsCenter() {
   ajaxGet("pages/hallscenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function hallsSidebar() {
-  ajaxGet("pages/hallssidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function hallsRightbar() {
-  ajaxGet("pages/hallsrightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
+      ajaxGet("pages/hallssidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/hallsrightbar.html", function(data){
+            document.getElementById("rightText").innerHTML = data;
+          });
+      });
   });
 }
 
 //Profile main section
 function profileContent() {
   profileCenter();
-  profileSidebar();
-  profileRightbar();
 }
 var showProfile = document.getElementById("showProfile");
 showProfile.addEventListener("click", profileContent);
@@ -65,26 +47,22 @@ showProfile.addEventListener("click", profileContent);
 function profileCenter() {
   ajaxGet("pages/profilecenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
+      ajaxGet("pages/profilesidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/profilerightbar.html", function(data){
+            document.getElementById("rightText").innerHTML = data;
+            var si = document.createElement('script');
+            si.src = 'javascript/profile.js';
+            document.head.appendChild(si);
+          });
+      });
   });
 }
 
-function profileSidebar() {
-  ajaxGet("pages/profilesidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function profileRightbar() {
-  ajaxGet("pages/profilerightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
-  });
-}
 // Messages section AJAX
 
 function messageContent() {
   messageCentercontent();
-  messageSidebar();
-  messageRightbar();
 }
 var showMessage = document.getElementById("showMessage");
 showMessage.addEventListener("click", messageContent);
@@ -92,18 +70,12 @@ showMessage.addEventListener("click", messageContent);
 function messageCentercontent() {
   ajaxGet("pages/messagecenter.html",function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function messageSidebar() {
-  ajaxGet("pages/messagesidebar.html", function(date){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function messageRightbar() {
-  ajaxGet("pages/messagerightbar.html", function(date){
-    document.getElementById("rightText").innerHTML = data;
+      ajaxGet("pages/messagesidebar.html", function(date){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/messagerightbar.html", function(date){
+            document.getElementById("rightText").innerHTML = data;
+          });
+      });
   });
 }
 
@@ -111,8 +83,6 @@ function messageRightbar() {
 
 function liveContent() {
   liveCenter();
-  liveSidebar();
-  liveRightbar();
 }
 var showLive = document.getElementById("showLive");
 showLive.addEventListener("click", liveContent);
@@ -120,21 +90,14 @@ showLive.addEventListener("click", liveContent);
 function liveCenter() {
   ajaxGet("pages/livecenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
+      ajaxGet("pages/livesidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/liverightbar.txt", function(data){
+            document.getElementById("rightText").innerHTML = data;
+          });
+      });
   });
 }
-
-function liveSidebar() {
-  ajaxGet("pages/livesidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function liveRightbar() {
-  ajaxGet("pages/liverightbar.txt", function(data){
-    document.getElementById("rightText").innerHTML = data;
-  });
-}
-
 
 // Support main section Ajax
 
@@ -154,6 +117,9 @@ function supportCenter() {
         var si = document.createElement('script');
         si.src = 'javascript/support.js';
         document.head.appendChild(si);
+        var layoutChange = document.createElement('script');
+        layoutChange.src = 'javascript/changeLayout.js';
+        document.head.appendChild(layoutChange);
       });
     });
   });
@@ -163,8 +129,6 @@ function supportCenter() {
 
 function registerContent() {
   registerCenter();
-  registerSidebar();
-  registerRightbar();
 }
 var showRegister = document.getElementById("showRegister");
 showRegister.addEventListener("click", registerContent);
@@ -172,27 +136,22 @@ showRegister.addEventListener("click", registerContent);
 function registerCenter() {
   ajaxGet("pages/registercenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function registerSidebar() {
-  ajaxGet("pages/registersidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function registerRightbar() {
-  ajaxGet("pages/registerrightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
-  });
-}
+      ajaxGet("pages/registersidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/registerrightbar.html", function(data){
+          document.getElementById("rightText").innerHTML = data;
+          var si = document.createElement('script');
+          si.src = 'javascript/validation.js';
+          document.head.appendChild(si);
+        });
+      });
+    });
+  }
 
 // Login section AJAX
 
 function loginContent() {
   loginCenter();
-  loginSidebar();
-  loginRightbar();
 }
 window.addEventListener("load", loginContent);
 
@@ -200,18 +159,12 @@ window.addEventListener("load", loginContent);
 function loginCenter() {
   ajaxGet("pages/logincenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function loginSidebar() {
-  ajaxGet("pages/loginsidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function loginRightbar() {
-  ajaxGet("pages/loginrightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
+      ajaxGet("pages/loginsidebar.html", function(data){
+        document.getElementById("sideText").innerHTML = data;
+          ajaxGet("pages/loginrightbar.html", function(data){
+            document.getElementById("rightText").innerHTML = data;
+          });
+      });
   });
 }
 
