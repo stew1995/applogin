@@ -5,7 +5,7 @@
 function changeLayout(){
   //Radio button variables
   //House
-  var housesection1 = document.getElementById("houseSection1").checked,
+  var housesection1 = document.getElementById("houseSection1").checked;
   var housesection2 = document.getElementById("houseSection2").checked;
   var housesection3 = document.getElementById("houseSection3").checked;
   //Halls
