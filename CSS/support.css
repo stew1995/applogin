@@ -1,6 +1,6 @@
 #colours {
-margin-left: 8px;
-margin-right: -20px;
+width: 100%;
+margin: 0 12.5%;
 }
 
 #defaultbackground, #redbackground, #greenbackground, #yellowbackground, #orangebackground, #purplebackground, #pinkbackground{
@@ -66,7 +66,8 @@ margin-right: -20px;
 }
 
 .supportcenter #layoutOfPages {
-  margin-left: 3px;
+  margin: 0 12.5%;
+  width: 100%;
 }
 .supportcenter #layoutHouseBtn, #layoutHallsBtn, #layoutProfileBtn, #layoutSocialBtn, #layoutSupportBtn {
   padding: 10px 1.5%;
