@@ -163,6 +163,7 @@ $sql =
   message VARCHAR(200) NOT NULL,
   send INT UNSIGNED NOT NULL,
   location INT UNSIGNED NOT NULL,
+  new BOOLEAN NOT NULL,
   CONSTRAINT SendFK FOREIGN KEY (send) REFERENCES user(id),
   CONSTRAINT ReceiveFK FOREIGN KEY (location) REFERENCES user(id)
 )";
