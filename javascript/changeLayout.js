@@ -34,37 +34,37 @@ function changeLayout(){
   //Section 1 Center
   //Section 1 Right
 
-  var el;
+  var el = 'pages/';
   if (housesection1 === true){
-    el = 'housesidebar.html';
+    el += 'housesidebar.html';
   }else if (housesection2 === true){
-    el = 'housecenter.html';
+    el += 'housecenter.html';
   } else if (housesection3 === true){
-    el = 'houserightbar.html';
+    el += 'houserightbar.html';
   } else if (hallsection1 === true){
-    el = 'hallssidebar.html';
+    el += 'hallssidebar.html';
   } else if (hallsection2 === true){
-    el = 'hallscenter.html';
+    el += 'hallscenter.html';
   } else if (hallsection3 === true){
-    el = 'hallsrightbar.html';
+    el += 'hallsrightbar.html';
   } else if (profilesection1 === true){
-    el = 'profilesidebar.html';
+    el += 'profilesidebar.html';
   } else if (profilesection2 === true){
-    el = 'profilecenter.html';
+    el += 'profilecenter.html';
   } else if (profilesection3 === true){
-    el = 'profilerightbar.html';
+    el += 'profilerightbar.html';
   } else if (socialsection1 === true){
-    el = 'socialsidebar.html';
+    el += 'socialsidebar.html';
   } else if (socialsection2 === true){
-    el = 'socialcenter.html';
+    el += 'socialcenter.html';
   } else if (socialsection3 === true){
-    el = 'socialrightbar.html';
+    el += 'socialrightbar.html';
   } else if (supportsection1 === true){
-    el = 'supportsidebar.html';
+    el += 'supportsidebar.html';
   } else if (supportsection2 === true){
-    el = 'supportcenter.html';
+    el += 'supportcenter.html';
   } else if (supportsection3 === true){
-    el = 'supportrightbar.html';
+    el += 'supportrightbar.html';
   }
 
 
@@ -77,7 +77,7 @@ function changeLayout(){
     loc = 'rightText';
   }
 
-  if (el && loc){
+  if (el && el !== 'pages/' && loc){
     ajaxGet(el, function(data){
       document.getElementById(loc).innerHTML = data;
     });
