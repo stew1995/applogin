@@ -151,7 +151,9 @@ function supportCenter() {
       document.getElementById("sideText").innerHTML = data;
       ajaxGet("pages/supportrightbar.html", function(data){
         document.getElementById("rightText").innerHTML = data;
-        document.body.innerHTML += '<script src="javascript/support.js"> </script>';
+        var si = document.createElement('script');
+        si.src = 'javascript/support.js';
+        document.head.appendChild(si);
       });
     });
   });
