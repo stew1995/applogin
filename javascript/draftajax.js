@@ -235,5 +235,5 @@ function ajaxGet(URL, callback) {
    }
    }
   };
-
+  ajaxObj.send();
 }
