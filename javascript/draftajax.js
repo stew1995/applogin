@@ -140,8 +140,6 @@ function liveRightbar() {
 
 function supportContent() {
   supportCenter();
-  supportSidebar();
-  supportRightbar();
 }
 var showSupport = document.getElementById("showSupport");
 showSupport.addEventListener("click", supportContent);
@@ -149,18 +147,13 @@ showSupport.addEventListener("click", supportContent);
 function supportCenter() {
   ajaxGet("pages/supportcenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-  });
-}
-
-function supportSidebar() {
-  ajaxGet("pages/supportsidebar.html", function(data){
-    document.getElementById("sideText").innerHTML = data;
-  });
-}
-
-function supportRightbar() {
-  ajaxGet("pages/supportrightbar.html", function(data){
-    document.getElementById("rightText").innerHTML = data;
+    ajaxGet("pages/supportsidebar.html", function(data){
+      document.getElementById("sideText").innerHTML = data;
+      ajaxGet("pages/supportrightbar.html", function(data){
+        document.getElementById("rightText").innerHTML = data;
+        document.body.innerHTML += '<script src="javascript/support.js"> </script>';
+      });
+    });
   });
 }
 
