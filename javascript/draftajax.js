@@ -9,36 +9,21 @@ var showHouse = document.getElementById("showHouse");
 showHouse.addEventListener("click", houseContent);
 
 function centerContent() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-xhr.open("GET","pages/housecenter.txt", true);
-xhr.send();
+  ajaxGet("pages/housecenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function sideBar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/housesidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/housesidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function rightBar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/houserightbar.txt", true);
-  xhr.send();
+  ajaxGet("pages/houserightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 // Halls main section Ajax
@@ -51,36 +36,21 @@ var showHalls = document.getElementById("showHalls");
 showHalls.addEventListener("click", hallsContent);
 
 function hallsCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/hallscenter.txt", true);
-  xhr.send();
+  ajaxGet("pages/hallscenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function hallsSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/hallssidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/hallssidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function hallsRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/hallsrightbar.txt", true);
-  xhr.send();
+  ajaxGet("pages/hallsrightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 //Profile main section
@@ -93,36 +63,21 @@ var showProfile = document.getElementById("showProfile");
 showProfile.addEventListener("click", profileContent);
 
 function profileCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/profilecenter.txt", true);
-  xhr.send();
+  ajaxGet("pages/profilecenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function profileSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/profilesidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/profilesidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function profileRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/profilerightbar.txt", true);
-  xhr.send();
+  ajaxGet("pages/profilerightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 // Messages section AJAX
 
@@ -135,36 +90,21 @@ var showMessage = document.getElementById("showMessage");
 showMessage.addEventListener("click", messageContent);
 
 function messageCentercontent() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if (xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-xhr.open("GET","pages/messagecenter.txt", true);
-xhr.send();
+  ajaxGet("pages/messagecenter.html",function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function messageSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/messagesidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/messagesidebar.html", function(date){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function messageRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/messagerightbar.txt", true);
-  xhr.send();
+  ajaxGet("pages/messagerightbar.html", function(date){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 /* Live Feed AJAX */
@@ -178,38 +118,21 @@ var showLive = document.getElementById("showLive");
 showLive.addEventListener("click", liveContent);
 
 function liveCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/livecenter.txt", true);
-  xhr.send();
+  ajaxGet("pages/livecenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function liveSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/livesidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/livesidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function liveRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    } else {
-      "<p>An error has occured</p>";
-    }
-  };
-  xhr.open("GET", "pages/liverightbar.txt", true);
-  xhr.send();
+  ajaxGet("pages/liverightbar.txt", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 
@@ -224,36 +147,21 @@ var showSupport = document.getElementById("showSupport");
 showSupport.addEventListener("click", supportContent);
 
 function supportCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/supportcenter.html", true);
-  xhr.send();
+  ajaxGet("pages/supportcenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function supportSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/supportsidebar.html", true);
-  xhr.send();
+  ajaxGet("pages/supportsidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function supportRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/supportrightbar.html", true);
-  xhr.send();
+  ajaxGet("pages/supportrightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 //Register Section AJAX
@@ -267,36 +175,21 @@ var showRegister = document.getElementById("showRegister");
 showRegister.addEventListener("click", registerContent);
 
 function registerCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/registercenter.php", true);
-  xhr.send();
+  ajaxGet("pages/registercenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function registerSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/registersidebar.php", true);
-  xhr.send();
+  ajaxGet("pages/registersidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function registerRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/registerrightbar.php", true);
-  xhr.send();
+  ajaxGet("pages/registerrightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
 }
 
 // Login section AJAX
@@ -310,34 +203,37 @@ window.addEventListener("load", loginContent);
 
 
 function loginCenter() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      var login = document.getElementById("textCenter").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/logincenter.txt", true);
-  xhr.send();
+  ajaxGet("pages/logincenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+  });
 }
 
 function loginSidebar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("sideText").innerHTML = xhr.responseText;
-    }
-  };
-  xhr.open("GET", "pages/loginsidebar.txt", true);
-  xhr.send();
+  ajaxGet("pages/loginsidebar.html", function(data){
+    document.getElementById("sideText").innerHTML = data;
+  });
 }
 
 function loginRightbar() {
-  var xhr = new XMLHttpRequest();
-  xhr.onreadystatechange = function() {
-    if(xhr.readyState == 4 && xhr.status == 200) {
-      document.getElementById("rightText").innerHTML = xhr.responseText;
-    }
+  ajaxGet("pages/loginrightbar.html", function(data){
+    document.getElementById("rightText").innerHTML = data;
+  });
+}
+
+//Get Ajax
+
+
+function ajaxGet(URL, callback) {
+
+
+  var ajaxObj = new XMLHttpRequest();
+  ajaxObj.open("GET", URL, true); // The TRUE implies asynchronous
+  ajaxObj.onreadystatechange = function() {
+    if (ajaxObj.status === 200){
+      if (ajaxObj.readyState === 4){
+        callback(ajaxObj.responseText);
+   }
+   }
   };
-  xhr.open("GET", "pages/loginrightbar.txt", true);
-  xhr.send();
+
 }
