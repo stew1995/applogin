@@ -26,7 +26,7 @@
       $rows = mysqli_num_rows($query);
       if($rows == 1) {
         $_SESSION['login_user']=$username; //Initializing Session
-        header['location: index.html'] //Redirecting to another page - need to look into if this is right
+        header['location: index.php'] //Redirecting to another page - need to look into if this is right
       } else {
         $error = "Username or Password is invalid";
       }
