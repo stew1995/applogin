@@ -1,37 +1,39 @@
+
 <?php
-  session_start(); // Start Session
-  $error = ''; // Variable to store error message
-  if(isset($_POST['login'])) {
-    if(empty($_POST['username']) || empty($_POST['password'])) {
-      $error = "Username or Password is invalid";
-    } else {
-      //Define $username and $password, server and db
-      $username = $_POST['username'];
-      $password = $_POST['password'];
-      $servername = "localhost";
-      $username = "root";
-      $password = "root";
-      $dbname = "web";
-      //Connection to server by passing server name, user_id and password as parameter
-      $conn = mysqli_connect($servername, $username, $password);
-      //Stop SQL Injection
-      $username = stripslashes($username);
-      $password = stripslashes($password);
-      $username = mysql_real_escape_string($username);
-      $password =mysql_real_escape_string($password);
-      //Database
-      $db = mysqli_select_db($dbname, $conn);
-      //SQL Query to fetch information from registered users and find a match
-      $query = mysqli_query("SELECT * FROM login WHERE password = '$password' AND email = '$username'", $conn);
-      $rows = mysqli_num_rows($query);
-      if($rows == 1) {
-        $_SESSION['login_user']=$username; //Initializing Session
-        header['location: index.php'] //Redirecting to another page - need to look into if this is right
-      } else {
-        $error = "Username or Password is invalid";
-      }
-      mysqli_close($conn); // Close Connection
-      }
-    }
-  }
- ?>
+session_start(); // Starting Session
+$error=''; // Variable To Store Error Message
+if (isset($_POST['submit'])) {
+if (empty($_POST['username']) || empty($_POST['password'])) {
+$error = "Username or Password is invalid";
+}
+else
+{
+// Define $username and $password
+$username=$_POST['username'];
+$password=$_POST['password'];
+$servername = "localhost";
+$username = "root";
+$password = "root";
+$dbname = "web";
+// Establishing Connection with Server by passing server_name, user_id and password as a parameter
+$connection = mysql_connect($servername, $username, $password);
+// To protect MySQL injection for Security purpose
+$username = stripslashes($username);
+$password = stripslashes($password);
+$username = mysql_real_escape_string($username);
+$password = mysql_real_escape_string($password);
+// Selecting Database
+$db = mysql_select_db($dbname, $connection);
+// SQL query to fetch information of registerd users and finds user match.
+$query = mysql_query("select * from user where password='$password' AND email='$username'", $connection);
+$rows = mysql_num_rows($query);
+if ($rows == 1) {
+$_SESSION['login_user']=$username; // Initializing Session
+header("location: index.php"); // Redirecting To Other Page
+} else {
+$error = "Username or Password is invalid";
+}
+mysql_close($connection); // Closing Connection
+}
+}
+?>
