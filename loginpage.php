@@ -1,7 +1,7 @@
 <?php
 include ('login.php');
 if(isset($_SESSION['login-user'])){
-  header("location: index.html")
+  header("location: index.php")
 }
 ?>
 <html>
