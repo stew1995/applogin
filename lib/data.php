@@ -297,7 +297,7 @@ $sql =
 (`Joshua`, `Fowler`,`Male`,`rruizh@istockphoto.com`,`uU5e5XD`,`19961120`,`59 Rusk Drive`,`SW10 0YQ`,`03433324128`,`07603751985`,FALSE),
 (`Anne`, `Bryant`,`Female`,`jlawsoni@google.cn`,`JfWk9amz0`, `19950417`, `30 Grim Lane`,`N13 6JE`,`08001111789`,`07624498591`,TRUE),
 (`Joshua`, `Morrison`,`Male`,`kcarrj@businessinsider.com`,`y4kZef`, `19910311`, `8 Grover Alley`,`TA8 2RB`,`05659370963`,`07804992674`,FALSE),
-(`Stewart`, `Flack`, `Male, `swflack@gmail.com`, `amber1`, `19950813`, `46 Caterhame Drive`, `CR5 1JH`, `01737557533`, `07984654175`, TRUE)
+(`Stewart`, `Flack`, `Male`, `swflack@gmail.com`, `amber1`, `19950813`, `46 Caterhame Drive`, `CR5 1JH`, `01737557533`, `07984654175`, TRUE)
 ";
 
 mysqli_select_db("web");
