@@ -133,8 +133,8 @@ header("location: index.php");
         </div>
         <div id="loginFormWrap">
           <form id="sideBarLogin" action="" method="post">
-            <input id="loginUser" type="text" name="username" value="username">
-            <input id="loginPass" type="password" name="password" value="password">
+            <input id="loginUser" type="text" name="username">
+            <input id="loginPass" type="password" name="password">
 
             <span><?php echo $error; ?></span>
 
