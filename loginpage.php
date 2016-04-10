@@ -153,7 +153,6 @@ header("location: index.php");
 
   <!--Javascript files -->
   <script src="javascript/login.js"></script>
-  <script src="javascript/draftajax.js"></script>
   <script src="javascript/windowSizing.js"></script>
 </body>
 </html>
