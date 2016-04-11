@@ -45,7 +45,7 @@
         </div>
         <?php
           if(isset($_POST)){
-            if($_POST['submitSave'] == "Create Note" && !empty($_POST['noteName'])){
+            if($_POST["submitSave"] == "Create Note" && !empty($_POST['noteName'])){
               if(!file_exists($_POST['noteName'] . ".txt")){
                 $file = tmpfile();
               }
