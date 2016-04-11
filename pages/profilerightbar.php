@@ -1,4 +1,7 @@
-<div class="profileRight">
+<!DOCTYPE html>
+<html>
+</body>
+</html><div class="profileRight">
           <h3>Housing group</h3>
           <p style="text-decoration: underline;">Group Name:
             <form name="groupCreate">
@@ -66,3 +69,5 @@
           <div id="notesContent"> </div>
 
         </div>
+        </body>
+        </html>
