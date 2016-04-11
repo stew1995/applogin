@@ -70,7 +70,7 @@ function showNotes(){
   ajaxGet("lib/createNote.php", function(data){
     document.getElementById("notesContent").innerHTML = data;
 
-}
+});
 window.addEventListener("load", showNotes);
 
 //Profile center
