@@ -37,13 +37,5 @@
   }
 
   //Check to see if $uploadOk has been set to 0 by error
-  if($uploadOk = 0) {
-    echo "the file was no uploaded";
-  } else {
-    if (move_uploaded_file($_FILES["inputFileToLoad"]["tmp_name"], $target_file)) {
-      echo "The file " . basename($_FILES["inputFileToLoad"]["name"]) . "has been uploaded.";
-    } else {
-      echo "There was an error uploading your file";
-    }
-  }
+
 ?>
