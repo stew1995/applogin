@@ -49,7 +49,7 @@ function profileCenter() {
     document.getElementById("textCenter").innerHTML = data;
       ajaxGet("pages/profilesidebar.html", function(data){
         document.getElementById("sideText").innerHTML = data;
-          ajaxGet("pages/profilerightbar.html", function(data){
+          ajaxGet("pages/profilerightbar.php", function(data){
             document.getElementById("rightText").innerHTML = data;
             var si = document.createElement('script');
             si.src = 'javascript/profile.js';
