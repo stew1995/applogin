@@ -27,6 +27,7 @@
               }
               fclose($file);
             }
+          }
           ?>
 <div class="profileRight">
           <h3>Housing group</h3>
