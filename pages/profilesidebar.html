@@ -1,85 +1,157 @@
 <div class="profileSide">
-  <div class="profilePic">
-  <p>picture</p>
-  </div>
-  <div class="tableWrap"> <!-- For when table is bigger than the sidemenu section -->
-    <table>
-      <tr>
-        <th style="width: 35%; border-top-left-radius: 5px; box-shadow: 0px 2px 0px 0px #C0C0C0 inset;">Name</th>
-        <td>Stewart</td>
-        <td style="width: 15%; text-align: right; border-top-right-radius: 5px;">Edit</td>
-      </tr>
-      <tr>
-        <th>Username</th>
-        <td>........</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Password</th>
-        <td>Updated last week</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Email</th>
-        <td>swflack@gmail.com</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Mobile Number</th>
-        <td>07....</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Home Number</th>
-        <td>01....</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Address</th>
-        <td style="font-style: italic;">Click edit to change </td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th></th>
-        <th>University</th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>Course</th>
-        <td>Computing</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Year of Study</th>
-        <td>2</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Accomodation</th>
-        <td>Halls</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th></th>
-        <th>About Yourself</th>
-        <th></th>
-      </tr>
-      <tr>
-        <th>Hobbies</th>
-        <td>...</td>
-        <td style="text-align: right;">Edit<td>
-      </tr>
-      <tr>
-        <th>Interests</th>
-        <td>...</td>
-        <td style="text-align: right;">Edit</td>
-      </tr>
-      <tr>
-        <th>Societies</th>
-        <td>...</td>
-        <td  style="text-align: right;">Edit</td>
-      </tr>
-    </table>
-  </div>
-  <p>To edit the whole profile click <a href="#">here</a></p>
-</div>
+            <div id="loadProfileImage"> </div>
+              <input type="button" id="changeProfilePicture" value="Change Profile Picture"></p>
+            <div id="uploadProfileImage">
+              <input type="file" id="inputFileToLoad">
+              <input type="button" value="Choose Profile Picture" onclick="document.getElementById('inputFileToLoad').click()">
+            </div>
+              <h3 id="basicTitle">Basic Information</h3>
+              <span id="singleNameEdit">
+                <p>Name: <input type="text" id="nameChange">
+                <input id="editName" type="button" value="Change"></p>
+              </span>
+              <span id="singleUsernameEdit">
+                <p>Username: <input type="text" id="usernameChange">
+                <input id="editUsername" type="button" value="Change"></p>
+              </span>
+              <span id="singlePasswordEdit">
+                <p>Password: <input type="text" id="passwordChange">
+                <input id="editPassword" type="button" value="Change"></p>
+              </span>
+              <span id="singleEmailEdit">
+                <p>Email: <input type="text" id="emailChange">
+                <input id="editEmail" type="button" value="Change"></p>
+              </span>
+              <span id="singleMobileEdit">
+                <p>Mobile Number: <input type="text" id="mobileChange">
+                <input id="editMobile" type="button" value="Change"></p>
+              </span>
+              <span id="singleHomeEdit">
+                <p>Home Number: <input type="text" id="homeChange">
+                <input id="editHome" type="button" value="Change"></p>
+              </span>
+              <span id="singleAddressEdit">
+                <p>Address: <input type="text" id="addressChange">
+                <input id="editAddress" type="button" value="Change"></p>
+              </span>
+
+
+              <h3 id="uniTitle">Univeristy Information</h3>
+              <span id="singleCourseEdit">
+                <p>Course: <input type="text" id="courseChange">
+                <input id="editCourse" type="button" value="Change"></p>
+              </span>
+              <span id="singleYearEdit">
+                <p>Year of Study: <input type="text" id="yearStudyChange">
+                <input id="editStudyYear" type="button" value="Change"></p>
+              </span>
+              <span id="singleHousingEdit">
+                <p>Accomodation: <input type="text" id="housingChange">
+                <input id="editHousing" type="button" value="Change"></p>
+              </span>
+
+              <h3 id="aboutTitle">About Yourself</h3>
+              <span id="singleHobbieEdit">
+                <p>Hobbies: <input type="text" id="hobbieChange">
+                <input id="editHobbie" type="button" value="Change"></p>
+              </span>
+              <span id="singleInterestEdit">
+                <p>Interests: <input type="text" id="interestChange">
+                <input id="editInterest" type="button" value="Change"></p>
+              </span>
+              <span id="singleSocietyEdit">
+                <p>Society: <input type="text" id="societyChange">
+                <input id="editSociety" type="button" value="Change"></p>
+              </span>
+
+              <p><input type="button" Value="Done" id="completeChangeBtn"></p>
+
+            <div class="tableWrap"> <!-- For when table is bigger than the sidemenu section -->
+              <table id="myTable">
+                <tr>
+                  <th style="width: 35%; border-top-left-radius: 5px; box-shadow: 0px 2px 0px 0px #C0C0C0 inset;">Name</th>
+                  <td>Stewart</td>
+                  <td style="width: 15%; text-align: right; border-top-right-radius: 5px;"><input id="nameBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th>Username</th>
+                  <td>....</td>
+                  <td><input id="usernameBtn" type="button" value="Edit" class="editButtons" style="background: #ccffff;"></td>
+                </tr>
+                <tr>
+                  <th>Password</th>
+                  <td>Updated last week</td>
+                  <td><input id="passwordBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th>Email</th>
+                  <td>swflack@gmail.com</td>
+                  <td><input id="emailBtn" type="button" value="Edit" class="editButtons" style="background: #ccffff;"></td>
+                </tr>
+                <tr>
+                  <th>Mobile Number</th>
+                  <td>07....</td>
+                  <td><input id="mobileBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th>Home Number</th>
+                  <td>01....</td>
+                  <td><input id="homeBtn" type="button" value="Edit" class="editButtons" style="background: #ccffff;"></td>
+                </tr>
+                <tr>
+                  <th>Address</th>
+                  <td style="font-style: italic;">Click edit to change </td>
+                  <td><input id="addressBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>University</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>Course</th>
+                  <td>Computing</td>
+                  <td><input id="courseBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th>Year of Study</th>
+                  <td>2</td>
+                  <td><input id="yearBtn" type="button" value="Edit" class="editButtons" style="background: #ccffff;"></td>
+                </tr>
+                <tr>
+                  <th>Accomodation</th>
+                  <td>Halls</td>
+                  <td><input id="housingBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+                <tr>
+                  <th></th>
+                  <th>About Yourself</th>
+                  <th></th>
+                </tr>
+                <tr>
+                  <th>Hobbies</th>
+                  <td>...</td>
+                  <td><input id="hobbieBtn" type="button" value="Edit" class="editButtons"><td>
+                </tr>
+                <tr>
+                  <th>Interests</th>
+                  <td>...</td>
+                  <td><input id="interestBtn" type="button" value="Edit" class="editButtons" style="background: #ccffff;"></td>
+                </tr>
+                <tr>
+                  <th>Societies</th>
+                  <td>...</td>
+                  <td><input id="societyBtn" type="button" value="Edit" class="editButtons"></td>
+                </tr>
+              </table>
+
+            </div>
+
+            <div id="editProfileBtns">
+              <p>To edit the whole profile <input type="button" value="Click Here" id="tableButton"></p>
+              <p>Basic Info <input type="button" value="Basic Info Edit" id="editBasicBtn"></p>
+              <p>Uni Info <input type="button" value ="Uni Info Edit" id="editUniBtn"></p>
+              <p>About Yourself <input type="button" value="About Yourself Edit" id="editAboutBtn"></p>
+            </div>
+
+        </div>
