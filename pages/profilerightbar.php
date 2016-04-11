@@ -1,34 +1,7 @@
 <!DOCTYPE html>
 <html>
 </body>
-          <?php
-          if(isset($_POST)){
-            if($_POST['submitSave'] == "Create Note" && !empty($_POST['noteName'])){
-              if(!file_exists($_POST['noteName'] . ".txt")){
-                $file = tmpfile();
-              }
-              $file = fopen($_POST['noteName'] . ".txt", "a+");
-              while(!feof($file)){
-                $old = $old . "<p>" . fgets($file) . "</p>";
-            }
-            $text = $_POST["noteData"];
-            file_put_contents($_POST['noteName'] . ".txt" . $old . $text);
-            fclose($file);
-          }
           
-            if($_POST['submitOpen'] == "Load Note") {
-              if(!file_exists($_POST['noteName'] . ".txt")){
-                exit("Error: Note does not exist");
-              }
-          
-              $file = fopen($_POST['noteName'] . ".txt", "r");
-              while(!feof($file)){
-                echo "<p>" . fgets($file) . "</p>";
-              }
-              fclose($file);
-            }
-          }
-          ?>
 <div class="profileRight">
           <h3>Housing group</h3>
           <p style="text-decoration: underline;">Group Name:
@@ -70,5 +43,33 @@
           <div id="notesContent"> </div>
 
         </div>
+        <?php
+          if(isset($_POST)){
+            if($_POST['submitSave'] == "Create Note" && !empty($_POST['noteName'])){
+              if(!file_exists($_POST['noteName'] . ".txt")){
+                $file = tmpfile();
+              }
+              $file = fopen($_POST['noteName'] . ".txt", "a+");
+              while(!feof($file)){
+                $old = $old . "<p>" . fgets($file) . "</p>";
+            }
+            $text = $_POST["noteData"];
+            file_put_contents($_POST['noteName'] . ".txt" . $old . $text);
+            fclose($file);
+          }
+          
+            if($_POST['submitOpen'] == "Load Note") {
+              if(!file_exists($_POST['noteName'] . ".txt")){
+                exit("Error: Note does not exist");
+              }
+          
+              $file = fopen($_POST['noteName'] . ".txt", "r");
+              while(!feof($file)){
+                echo "<p>" . fgets($file) . "</p>";
+              }
+              fclose($file);
+            }
+          }
+          ?>
         </body>
         </html>
