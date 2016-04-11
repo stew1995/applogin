@@ -34,7 +34,7 @@
             <form name="saveNote" id="createNoteForm" method="post" action="">
               <p>Create a Note: <input type="text" name="noteName" value=""></p>
               <p><textarea id="createNote" name="noteData" col="15" rows="10" value=""> </textarea></p>
-              <p><input type="button" name="submitS ave" value="Create Note" id="createNoteBtn"><p>
+              <p><input type="button" name="submitSave" value="Create Note" id="createNoteBtn"><p>
             </form>
             <form name="openNote" method="post" action="">
               <p>Open Note: <input type="text" name="noteName" value=""></p>
