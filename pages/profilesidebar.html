@@ -2,8 +2,10 @@
             <div id="loadProfileImage"> </div>
               <input type="button" id="changeProfilePicture" value="Change Profile Picture"></p>
             <div id="uploadProfileImage">
-              <input type="file" id="inputFileToLoad">
-              <input type="button" value="Choose Profile Picture" onclick="document.getElementById('inputFileToLoad').click()">
+              <form action="lib/profilePictures/uploadProfile.php" method="post" enctype="multipart/form-data">
+                <input type="file" id="inputFileToLoad" name="inputFileToLoad">
+                <input type="button" value="Choose Profile Picture" name="submitPhoto" onclick="document.getElementById('inputFileToLoad').click()">
+              </form>
             </div>
               <h3 id="basicTitle">Basic Information</h3>
               <span id="singleNameEdit">
