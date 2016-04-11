@@ -65,37 +65,14 @@ function putNameInField(){
 var addHousemateGroup = document.getElementById("addHousemate");
 addHousemateGroup.addEventListener("click", putNameInField);
 //Notes section
-//Need to check creating notes as it creates too many
-function createNote(){
-  for(var x=1;x<10;x++){
-    var note = document.createElement("textarea");
-    note.id= "profileNote"+ x;
-    note.cols = 15;
-    note.rows = 10;
-    note.value = x;
-    note.style.background = "#ffff99";
-    note.style.maxWidth = "88%";
-    note.style.maxHeight = "100px";
-    //note.maxLength = 2000; max number of characters
-    document.getElementById("notesOutput").appendChild(note);
-  }
-}
-var createNoteBtn = document.getElementById("createNoteBtn");
-createNoteBtn.addEventListener("click", createNote);
 
-//Remove note
-function removeNote(){
-  var input = document.getElementById("removeNoteInput").value;
-  var notes = document.getElementById("notesOutput");
-
-
-
-    notes.removeChild(notes.childNodes[1]);
+function showNotes(){
+  ajaxGet("lib/createNote.php", function(data){
+    document.getElementById("notesContent").innerHTML = data;
 
 }
+window.addEventListener("load", showNotes);
 
-var removeNoteBtn = document.getElementById("removeNoteBtn");
-removeNoteBtn.addEventListener("click", removeNote);
 //Profile center
 
 //Makes textarea readOnly and editable
@@ -776,3 +753,17 @@ var editBasicBtn = document.getElementById("editBasicBtn");
 
    var changeSociety = document.getElementById("societyBtn");
    changeSociety.addEventListener("click", showSingleSociety);
+
+   //AJAX Get
+   function ajaxGet(URL, callback) {
+     var ajaxObj = new XMLHttpRequest();
+     ajaxObj.open("GET", URL, true); // The TRUE implies asynchronous
+     ajaxObj.onreadystatechange = function() {
+       if (ajaxObj.status === 200){
+         if (ajaxObj.readyState === 4){
+           callback(ajaxObj.responseText);
+      }
+      }
+     };
+     ajaxObj.send();
+   }
