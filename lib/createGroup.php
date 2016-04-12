@@ -23,10 +23,9 @@ if(isset($_POST['submitCreateGroup'])) {
   }
 
   $sql = "INSERT INTO house (name, description) VALUES('$groupName', '$groupDesc')";
-  $retval = mysqli_query($sql, $conn);
 
-  if(!$retval) {
-    die('Could not enter data: ' . mysqli_error());
+  if(mysqli_query($conn, $sql)) {
+    echo "Error inserting data". mysqli_error($conn);;
   }
 
   echo "Data entered successfully\n";
