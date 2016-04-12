@@ -26,7 +26,7 @@ if(isset($_POST['submitCreateGroup'])) {
   $retval = mysqli_query($sql, $conn);
 
   if(!$retval) {
-    die('Could not enter data: ' . mysqli_connect_error());
+    die('Could not enter data: ' . mysqli_error());
   }
 
   echo "Data entered successfully\n";
