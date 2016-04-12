@@ -1,7 +1,9 @@
 <div class="houseSupport">
               <div id="mainGroupBtns">
-                <input type="button" value="Create New Group" name="createGroupBtn" id="createGroupBtn">
-                <input type="button" value="View Groups" name="viewGroupBtn" id="viewGroupBtn">
+                <form name="mainGroupBtns" action="lib/viewGroups.php" method="post">
+                  <input type="button" value="Create New Group" name="createGroupBtn" id="createGroupBtn">
+                  <input type="button" value="View Groups" name="viewGroupBtn" id="viewGroupBtn">
+                </form>
               </div>
               <div id="createGroupInputs">
                 <form name="createGroup" action="lib/createGroup.php" method="post">
