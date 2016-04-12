@@ -13,6 +13,9 @@ function centerContent() {
         document.getElementById("sideText").innerHTML = data;
           ajaxGet("pages/houserightbar.html", function(data){
             document.getElementById("rightText").innerHTML = data;
+            var si = document.createElement('script');
+            si.src = 'javascript/house.js';
+            document.head.appendChild(si);
           });
       });
   });
