@@ -33,9 +33,7 @@
 
     $sql="SELECT group_id, name, description, datecreated FROM house";
     $result = mysqli_query($conn,$sql);
-
-   echo "</table>";
-    if(mysqli_query($conn, $sql)) {
+        if(mysqli_query($conn, $sql)) {
       echo "Error viewing groups". mysqli_error($conn);;
     }
 
@@ -57,6 +55,7 @@
         echo "</tr>";
     }
   }
+  echo "</table>"
     mysqli_close($conn);
   }
     ?>
