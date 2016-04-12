@@ -1,1 +1,24 @@
-<h1>Halls Sidebar</h1>
+<div class="hallsSide">
+            <h3>Halls Information</h3>
+            <div id="userHallsInfo">
+              <p>Here is where all the information about your halls is kept, everything
+              to do with your flat and room is kept here</p>
+              <p>The Halls of residents building you are staying in is: <input type="nummber" value="James Watson" name="userHallsBuilding" id="userHallsBuilding" readonly ></p>
+              <p>The number of your flat is: <input type="decimal"  name="userHallsFlat" id="userHallsFlat" ><span id="hallsError">*</span></p>
+              <p>Number of housemates: <input type="nummber" value="6" name="userHallsMate" id="userHallsMate" readonly ></p>
+              <p style="font-size: 12px; color: red; margin-top: 30px;"> * The first number is the floor of your room and the the second number is the room on the floor</p>
+            </div>
+            <h1>Surrounds Flats</h1>
+            <div id="userHallsSurround">
+              <p>Do buttons with different hall flats on it depending on what the  users flat number is and shows +- 3/ or that whole floor
+                think of other way this will be done, javascript for the button names, if value- 1.1, button value = 1.2, 1.3, 1.4 2.1 ect </p>
+              <form name="surroundingFlats" id="surroundingFlats">
+                <p style="font-size: 18px">Flat Number <span id="viewSurrFlatRadio"> View </span></p>
+                <p style="font-size: 18px"><span id="surrFlatNum1">1</span><input type="radio" name="flats" value=" " id="surrFlatNum1"></p>
+                <p style="font-size: 18px"><span id="surrFlatNum2">2</span><input type="radio" name="flats" value=" "></p>
+                <p style="font-size: 18px"><span id="surrFlatNum3">3</span><input type="radio" name="flats" value=" "></p>
+                <p style="font-size: 18px"><span id="surrFlatNum4">4</span><input type="radio" name="flats" value=" "></p>
+                <p style="font-size: 18px"><span id="surrFlatNum5">5</span><input type="radio" name="flats" value=" "></p>
+              </form>
+            </div>
+          </div>
