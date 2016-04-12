@@ -55,9 +55,9 @@
         echo "</tr>";
     }
   }
-  echo "</table>"
-    mysqli_close($conn);
-  }
+  echo "</table>";
+  mysqli_close($conn);
+    }
     ?>
   </body>
 </html>
