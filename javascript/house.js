@@ -47,12 +47,12 @@ showCreateGroup.addEventListener("click", showCreateGroupOptions);
 
 //View groups from database
 function showGroups() {
-  getAjax("lib/viewGroup.php", function(data){
+  getAjax("viewGroups.php", function(data){
     document.getElementById("houseGroupsOutput").innerHTML = data;
   });
 }
 
-var viewGroups = document.getElementById("viewGroupBtn");
+var viewGroups = document.getElementById("viewGroupsBtn");
 viewGroups.addEventListener("click", showGroups);
 //Center
 //Create an element of group from the user input
