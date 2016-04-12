@@ -35,6 +35,9 @@ function hallsCenter() {
         document.getElementById("sideText").innerHTML = data;
           ajaxGet("pages/hallsrightbar.html", function(data){
             document.getElementById("rightText").innerHTML = data;
+            var si = document.createElement('script');
+            si.src = 'javascript/halls.js';
+            document.head.appendChild(si);
           });
       });
   });
