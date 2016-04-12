@@ -18,7 +18,7 @@
   <body>
 
     <?php
-    if(isset($_POST['viewGroupBtn'])) {
+    if(isset($_POST['viewGroupsBtn'])) {
      // CREATE NOT NULL ON UNIQUE KEY
     $servername = "localhost";
     $username = "root";
