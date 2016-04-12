@@ -16,8 +16,6 @@
   <body>
 
     <?php
-    if(isset($_POST['viewGroups'])) {
-     // CREATE NOT NULL ON UNIQUE KEY
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -28,6 +26,7 @@
     if(!$conn) {
       die("Connection to database failed: ". mysqli_connect_error());
     }
+    if(isset($_POST['viewGroups'])) {
     $sql="SELECT group_id, name, description, datecreated FROM house";
     $result = mysqli_query($conn,$sql);
     echo "<table>
