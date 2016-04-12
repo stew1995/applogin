@@ -45,6 +45,15 @@ function showCreateGroupOptions(){
 var showCreateGroup = document.getElementById("createGroupBtn");
 showCreateGroup.addEventListener("click", showCreateGroupOptions);
 
+//View groups from database
+function showGroups() {
+  getAjax("viewGroups.php", function(data){
+    document.getElementById("houseGroupsOutput").innerHTML = data;
+  });
+}
+
+var viewGroups = document.getElementById("viewGroupBtn");
+viewGroups.addEventListener("click", showGroups);
 //Center
 //Create an element of group from the user input
 
@@ -62,6 +71,8 @@ function createGroupElem(){
 var create = document.getElementById('submitCreateGroup');
 create.addEventListener("click", createGroup);
 
+
+
 function showHide(text){
   if(text.display === "none"){
     text.display = "block";
@@ -76,4 +87,17 @@ function hideShow(content) {
   } else {
     content.display = "block"
   }
+}
+
+function ajaxGet(URL, callback) {
+  var ajaxObj = new XMLHttpRequest();
+  ajaxObj.open("GET", URL, true); // The TRUE implies asynchronous
+  ajaxObj.onreadystatechange = function() {
+    if (ajaxObj.status === 200){
+      if (ajaxObj.readyState === 4){
+        callback(ajaxObj.responseText);
+   }
+   }
+  };
+  ajaxObj.send();
 }
