@@ -94,7 +94,7 @@ function showHalls(hall){
           document.getElementById("hallsoutput").innerHTML = xhr.responseText;
         }
       };
-      xhr.open("GET", "getHalls.php?q="+hall, true);
+      xhr.open("GET", "lib/getHalls.php?q="+hall, true);
       xhr.send();
   }
 }
