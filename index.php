@@ -8,7 +8,7 @@
   <link rel="stylesheet" type="text/css" href="CSS\registration.css">
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
   <link rel="stylesheet" type="text/css" href="CSS\support.css">
-  
+  <link rel="stylesheet" type="text/css" href="CSS\house.css">
 </head>
   <div class="navigation">
   <nav>
