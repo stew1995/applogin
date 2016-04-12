@@ -1,0 +1,71 @@
+/*Halls CSS*/
+#userHallsInfo {
+  margin: 0 2.5%;
+  height: 300px;
+  padding-top: 5px;
+}
+
+
+#userHallsBuilding {
+
+}
+
+#userHallsFlat {
+  width: 20%;
+}
+
+#userHallsMate {
+  width: 20%;
+}
+
+#hallsError {
+  color: red;
+}
+
+#surroundingFlats {
+  background: white;
+  margin: 0 20%;
+}
+
+.hallsSide input[type="radio"] {
+  float: right;
+  margin-right: 10%;
+}
+
+#surrFlatNum {
+  margin-left: 20%;
+}
+
+#viewSurrFlatRadio {
+  float: right;
+  margin-right: 6%;
+}
+
+
+/*Center*/
+#aboutHallsWrap {
+  background: white;
+  padding-bottom: 20px;
+}
+
+select[name="aboutHallsInformation"] {
+  font-size: 20px;
+  float: right;
+  margin-right: 10%;
+}
+
+#hallsoutput {
+
+}
+
+#hallsOutput {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+#hallsOutput, td, th {
+  border: 1px solid black;
+  padding: 5px;
+}
+
+#hallsOutput, th {text-align: left}
