@@ -98,3 +98,6 @@ function showHalls(hall){
       xhr.send();
   }
 }
+ 
+ var viewHall = document.getElementById("halls");
+ viewHall.addEventListener("change", showHalls(this.value));
