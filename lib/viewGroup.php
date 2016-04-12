@@ -6,19 +6,17 @@
           width: 100%;
           border-collapse: collapse;
       }
-
       table, td, th {
           border: 1px solid black;
           padding: 5px;
       }
-
       th {text-align: left;}
     </style>
   </head>
   <body>
 
     <?php
-    if(isset($_POST['viewGroupsBtn'])) {
+    if(isset($_POST['viewGroups'])) {
      // CREATE NOT NULL ON UNIQUE KEY
     $servername = "localhost";
     $username = "root";
@@ -30,13 +28,8 @@
     if(!$conn) {
       die("Connection to database failed: ". mysqli_connect_error());
     }
-
     $sql="SELECT group_id, name, description, datecreated FROM house";
     $result = mysqli_query($conn,$sql);
-        if(mysqli_query($conn, $sql)) {
-      echo "Error viewing groups". mysqli_error($conn);;
-    }
-
     echo "<table>
     <tr>
     <th>Group ID</th>
@@ -55,9 +48,9 @@
         echo "</tr>";
     }
   }
-  echo "</table>";
-  mysqli_close($conn);
-    }
+    echo "</table>";
+    mysqli_close($conn);
+  }
     ?>
   </body>
 </html>
