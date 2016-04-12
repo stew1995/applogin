@@ -23,7 +23,6 @@ if(isset($_POST['submitCreateGroup'])) {
   }
 
   $sql = "INSERT INTO house (name, description) VALUES('$groupName', '$groupDesc')";
-  mysqli_select_db('web');
   $retval = mysqli_query($sql, $conn);
 
   if(!$retval) {
