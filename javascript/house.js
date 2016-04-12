@@ -47,7 +47,7 @@ showCreateGroup.addEventListener("click", showCreateGroupOptions);
 
 //View groups from database
 function showGroups() {
-  ajaxGet("viewGroups.php", function(data){
+  ajaxGet("lib/viewGroup.php", function(data){
     document.getElementById("houseGroupsOutput").innerHTML = data;
   });
 }
