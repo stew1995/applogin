@@ -1,61 +1,34 @@
-<div class="profilePic">
-<p>picture</p>
-</div>
-<table>
-  <tr>
-    <th style="width: 35%;">Name</th>
-    <td>Stewart</td>
-    <td style="width: 15%; text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Username</th>
-    <td>........</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Password</th>
-    <td>Updated last week</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Email</th>
-    <td>swflack@gmail.com</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Mobile Number</th>
-    <td>07....</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Home Number</th>
-    <td>01....</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Address</th>
-    <td style="font-style: italic;">Click edit to change </td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th></th>
-    <th>University</th>
-    <td></td>
-  </tr>
-  <tr>
-    <th>Course</th>
-    <td>Computing</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Year of Study</th>
-    <td>2</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-  <tr>
-    <th>Accomodation</th>
-    <td>Halls</td>
-    <td style="text-align: right;">Edit</td>
-  </tr>
-</table>
-<p>To edit the whole profile click <a href="#">here</a></p>
+<div class="houseSupport">
+              <div id="mainGroupBtns">
+                <input type="button" value="Create New Group" name="createGroupBtn" id="createGroupBtn">
+                <input type="button" value="View Groups" name="viewGroupBtn" id="viewGroupBtn">
+              </div>
+              <div id="createGroupInputs">
+                <form name="createGroup" action="lib/createGroup.php" method="post">
+                  <p>Name of group: <input type="text" name="createGroupName" id="createGroupName"></p>
+                  <p>Description: <textarea cols="50" rows="10" id="groupDescripiton" name="groupDescription"> </textarea></p>
+                  <p>Who to add: <input type="search" name="addToGroup"></p>
+                  <p>Added to group: <span id="addedToGroup"></span></p>
+                  <p><input type="submit" value="Create Group" name="submitCreateGroup" id="submitCreateGroup">
+                    <input type="button" value="Back" name="createGroupBackBtn"></p>
+                </form>
+              </div>
+              <div id="viewGroupInputs">
+                <form name="viewGroupOptions">
+                  <input type="button" value="Manage" name="manageGroupBtn" id="manageGroupBtn">
+                  <input type="button" value="Edit" name="editGroupBtn" id="editGroupBtn">
+                  <input type="button" value="Remove" name="rvmGroupBtn" id="rvmGroupBtn">
+                  <p id="groupNameInput">Group Name: <input type="search" name="searchGroupInput" id="searchGroupInput"></p>
+                </form>
+              </div>
+              <div id="inputOptions">
+                <p>Original Group Name: <span id="oldGroupName"> </span></p>
+                <form name="editGroupInputs">
+                  <p>New Name: <input type="text" name="editGroupName"><input type="checkbox" name="editGroupNameChk"></p>
+                  <p>User Name: <input type="search" name="userNameGroupInput"><input type="checkbox" name="userNameGroupChk"></p>
+                </form>
+              </div>
+              <p id="groupInformationText">If you want to create a new group then select the Create New Group Button.
+                If you want to view an existing group then you are in or the group admin of
+                then select the View Groups Button</p>
+            </div>
