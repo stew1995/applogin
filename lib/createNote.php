@@ -21,7 +21,7 @@ if(isset($_POST)){
       $old = $old . "<p>" . fgets($file) . "</p>";
   }
   $text = $_POST["noteData"];
-  file_put_contents($_POST['noteName'] . ".txt" . $old . $text);
+  file_put_contents('lib/notes/' . $_POST['noteName'] . ".txt" . $old . $text);
   fclose($file);
 }
 
