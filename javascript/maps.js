@@ -173,6 +173,7 @@ setLoc.addEventListener("click", setLocation);
 function showLocations(location) {
   ajaxGet("lib/showLocations.php?q="+location, function(data){
     document.getElementById("locations").innerHTML = data;
+});
 }
 
 var showLoc = document.getElementById("locationCategory");
@@ -184,6 +185,8 @@ showLoc.addEventListener("onchange", showLocations(this.value));
 
 //AJAX GET
 function ajaxGet(URL, callback) {
+
+
   var ajaxObj = new XMLHttpRequest();
   ajaxObj.open("GET", URL, true); // The TRUE implies asynchronous
   ajaxObj.onreadystatechange = function() {
