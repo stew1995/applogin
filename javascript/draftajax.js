@@ -55,7 +55,7 @@ function profileCenter() {
     document.getElementById("textCenter").innerHTML = data;
       ajaxGet("pages/profilesidebar.html", function(data){
         document.getElementById("sideText").innerHTML = data;
-          ajaxGet("pages/profilerightbar.php", function(data){
+          ajaxGet("pages/profilerightbar.html", function(data){
             document.getElementById("rightText").innerHTML = data;
             var si = document.createElement('script');
             si.src = 'javascript/profile.js';
@@ -64,47 +64,25 @@ function profileCenter() {
       });
   });
 }
+//Social Pad section Ajax
 
-// Messages section AJAX
-
-function messageContent() {
-  messageCentercontent();
-}
-var showMessage = document.getElementById("showMessage");
-showMessage.addEventListener("click", messageContent);
-
-function messageCentercontent() {
-  ajaxGet("pages/messagecenter.html",function(data){
+function showSocialSection() {
+  ajaxGet("pages/socialcenter.html", function(data){
     document.getElementById("textCenter").innerHTML = data;
-      ajaxGet("pages/messagesidebar.html", function(date){
+      ajaxGet("pages/socialsidebar.html", function(data){
         document.getElementById("sideText").innerHTML = data;
-          ajaxGet("pages/messagerightbar.html", function(date){
-            document.getElementById("rightText").innerHTML = data;
-          });
+          ajaxGet("pages/socialrightbar.html", function(data){
+          document.getElementById("rightText").innerHTML = data;
+          var si = document.createElement('script');
+          si.src = 'javascript/social.js';
+          document.head.appendChild(si);
+        });
       });
-  });
-}
+    });
+  }
 
-/* Live Feed AJAX */
-
-function liveContent() {
-  liveCenter();
-}
-var showLive = document.getElementById("showLive");
-showLive.addEventListener("click", liveContent);
-
-function liveCenter() {
-  ajaxGet("pages/livecenter.html", function(data){
-    document.getElementById("textCenter").innerHTML = data;
-      ajaxGet("pages/livesidebar.html", function(data){
-        document.getElementById("sideText").innerHTML = data;
-          ajaxGet("pages/liverightbar.txt", function(data){
-            document.getElementById("rightText").innerHTML = data;
-          });
-      });
-  });
-}
-
+  var showSocial = document.getElementById('socialPad');
+  showSocial.addEventListener("click", showSocialSection);
 // Support main section Ajax
 
 function supportContent() {
@@ -169,11 +147,32 @@ function loginCenter() {
         document.getElementById("sideText").innerHTML = data;
           ajaxGet("pages/loginrightbar.html", function(data){
             document.getElementById("rightText").innerHTML = data;
+            var si = document.createElement('script');
+            si.src = 'javascript/login.js';
+            document.head.appendChild(si);
           });
       });
   });
 }
 
+
+function getMap(){
+  ajaxGet("pages/mapcenter.html", function(data) {
+    document.getElementById('textCenter').innerHTML = data;
+    ajaxGet("pages/mapsidebar.html", function(data) {
+      document.getElementById('textCenter').innerHTML = data;
+      ajaxGet("pages/maprightbar.html", function(data) {
+        document.getElementById('textCenter').innerHTML = data;
+        var si = document.createElement('script');
+        si.src = 'javascript/maps.js';
+        document.head.appendChild(si);
+      });
+    });
+  });
+}
+
+var showMaps = document.getElementById("showMaps");
+showMaps.addEventListener("click", getMap);
 //Get Ajax
 
 
