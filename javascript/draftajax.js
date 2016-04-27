@@ -160,9 +160,9 @@ function getMap(){
   ajaxGet("pages/mapcenter.html", function(data) {
     document.getElementById('textCenter').innerHTML = data;
     ajaxGet("pages/mapsidebar.html", function(data) {
-      document.getElementById('textCenter').innerHTML = data;
+      document.getElementById('sideText').innerHTML = data;
       ajaxGet("pages/maprightbar.html", function(data) {
-        document.getElementById('textCenter').innerHTML = data;
+        document.getElementById('rightText').innerHTML = data;
         var si = document.createElement('script');
         si.src = 'javascript/maps.js';
         document.head.appendChild(si);
