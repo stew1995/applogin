@@ -42,6 +42,18 @@ function showCreatedGroups() {
 var b = document.getElementById("showCreatedGroups");
 b.addEventListener("click", showCreatedGroups);
 
+//PHP LOAD FOR GROUPS
+
+function showGroupsLoad() {
+  ajaxGet("lib/viewGroup.php", function(data){
+    document.getElementById("createdGroupLoad").innerHTML = data;
+
+  });
+}
+
+var showProfileGroups = document.getElementById("showCreatedGroups");
+showProfileGroups.addEventListener("click", showGroupsLoad);
+
 function showCreatedGroupName(){
   var name = document.getElementById("inputGroupName").value;
   var output = document.getElementById("groupNameValue");
@@ -69,11 +81,18 @@ addHousemateGroup.addEventListener("click", putNameInField);
 function showNotes(){
   ajaxGet("lib/createNote.php", function(data){
     document.getElementById("notesContent").innerHTML = data;
-
-})
+  });
 }
 window.addEventListener("load", showNotes);
 
+//Show user bio to edit
+function showBio() {
+  ajaxGet("lib/userBio.php", function(data){
+    document.getElementById("userBio").innerHTML = data;
+  });
+}
+
+window.addEventListener("load", showBio);
 //Profile center
 
 //Makes textarea readOnly and editable
@@ -133,41 +152,6 @@ var pictureUpload = document.getElementById("inputFileToLoad");
 pictureUpload.addEventListener("change", loadImageFileAsURL);
 
 
-/*
-//Show and hide table
-function showTable() {
-  var table = document.getElementById("myTable").style;
-
-    if(table.display === "block") {
-      table.display = "none";
-    }
-    else {
-      table.display = "block";
-    }
-};
-
-var e = document.getElementById("tableButton");
-e.addEventListener("click", showTable);
-*/
-
-
-//Table Edits ----------------------
-//Look into as this way doesnt work
-/*
-function editUsername() {
-  var input = document.getElementsByName("usernameInput").readOnly;
-
-  if(input === true) {
-    input = false;
-  }
-  else {
-    input = true;
-  }
-}
-
-var e = document.getElementById("editUsername");
-e.addEventListener("click", editUsername);
-*/
 
 
 
@@ -508,6 +492,8 @@ function changeAccountDetials() {
 
 var goToSupport = document.getElementById("goToSupport");
 goToSupport.addEventListener("click", changeAccountDetials);
+
+
 
    //AJAX Get
    function ajaxGet(URL, callback) {
