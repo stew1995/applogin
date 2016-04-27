@@ -10,20 +10,56 @@
   background: #E4E4E4;
   box-shadow: 2px 3px 5px grey;
 }
+
+/*Side and Right*/
+#registerSide, #registerCenter, #registerRight {
+  background: white;
+  height: 600px;
+  }
+
+#registerRight {
+
+}
+
+#registerCenterBackgroundFix, #backgroundFix {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+  height: 600px;
+}
+
+
+.registrationForm {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+  height: 600px;
+}
 .registrationForm h1 {
   text-decoration: underline;
 }
-.registrationFormAboutYourself h1 {
-  text-decoration: underline;
-}
-.registrationForm input {
+
+.registrationForm input[type="text"], input[type="password"],input[type="number"] {
   margin-right: 10%;
-  width: 95%;
+  width: 50%;
   border-radius: 5px;
+  float: right;
 }
 
-.registrationFormAboutYourself input[type=text] {
-  width: 80%;
+#registerGender input[type="radio"] {
+  margin: 0 0 0 15%;
+}
+
+#smalltext {
+  font-size: 13px;
+}
+
+#checkValidation {
+  width: 40%;
+  height: 30px;
+  margin: 0 30%;
+  border-radius: 5px;
+  background: white;
+  position: relative;
+  top: 100px;
 }
 
 .registrationFormUni h1 {
@@ -34,11 +70,40 @@
   margin: 2.5%;
 }
 
+
+
+.registerTitle {
+  background: red;
+  background: -webkit-linear-gradient(#f2f2f2, 	#b3b3b3);/* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, 	#b3b3b3); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, 	#b3b3b3); /* For Firefox */
+  background: linear-gradient(#f2f2f2, 	#b3b3b3); /* Standard syntax */
+  height: 100px;
+  border-radius: 5px;
+}
+
+
+.registerTitle h2 {
+  text-align: center;
+  color: black;
+  position: relative;
+  top: 35px
+}
+/*Center*/
 .registration input[type=submit] {
   margin: 0 25% 0 35%;
   width: 25%;
   height: 40px;
 }
+
+#centerSubTitles {
+  text-align: center;
+  border-bottom: 1px solid black;
+}
+.registrationFormAboutYourself input[type=text] {
+  width: 80%;
+}
+
 
 .registrationFormAboutYourself input[type=checkbox] {
   margin-right: 10%;
@@ -58,25 +123,67 @@
 
 #reqname, #reqlname, #reqdob, #reqemail, #reqpass, #reqaddress, #reqpost,
 #reqhome, #reqmobile, #reqsmoker, #reqsocial,#reqmess, #reqgym, #reqcourse,
-#reqyear, #reqaccom, #reqbasic, #requni {display: none;}
+#reqyear, #reqaccom, #reqbasic, #requni, #reqgender {display: none;}
 #reqabout, #reqhobbie, #reqsociety, #reqinterest {display: none;}
 
-#courseList {
-  width: 65%;
+ #courseList {
+  width: 75%;
+  height: 30px;
+  margin: 0 12.5%;
+  font-size: 14px;
 }
 
 #StudyYear {
-  width: 65%;
+  width: 75%;
+  height: 30px;
+  margin: 0 12.5%;
+  font-size: 14px;
 }
+
+
 
 #Accomodation {
-  width: 65%;
+  width: 70%;
+  height: 30px;
+  margin: 0 15%;
+  font-size: 14px;
 }
 
-#hobbieList {
-  width: 65%;
+#hobbieList, #societyList {
+  width: 60%;
+  height: 30px;
+  margin: 0 20%;
+  font-size: 14px;
 }
 
-#societyList {
-  width: 65%;
+.registerSmoke input[type="radio"] {
+  margin: 0 20% 0 0;
+}
+
+.registerSmoke {
+  margin: 0 25%;
+}
+
+.registerSocial  input[type="radio"] {
+  margin: 0 12.5% 0 0;
+}
+
+.registerSocial {
+  margin: 0 2.5%;
+}
+
+.registerMess input[type="radio"] {
+  margin: 0 20% 0 0;
+}
+
+.registerGym input[type="radio"] {
+  margin: 0 20% 0 0;
+}
+
+.registerMess {
+  margin: 0 35%;
+}
+
+.registerGym {
+  margin: 0 20%;
 }
