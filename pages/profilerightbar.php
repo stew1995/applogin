@@ -1,8 +1,9 @@
 <div class="profileRight">
-          <p style="border-bottom: 1px solid black; text-align: center;">Group Name:
+         <p style="border-bottom: 1px solid black; text-align: center;">Group Name:
             <div class="profileGroupBackground">
-              <form name="groupCreate">
+              <form name="groupCreate" action="lib/createGroupProfile.php" action="GET">
                 <input id="inputGroupName" type="text" name="groupName">
+                <textarea name="groupDesc">Description of Group</textarea>
                 <input id="groupNext" type="button" value="Next" name="groupAdd"></p>
 
             </div>
@@ -22,8 +23,7 @@
 
           <div id="createdGroups">
             <div class="groupAddBackgroud">
-              <textarea rows="10" cols="50" class="groupContent">This is where groups that have already been created will go
-                (Hide show will be used)</textarea>
+              <div id="createdGroupLoad"> </div>
               <input type="submit" name="saveGroup" value="Save"> <input type="submit" name="deleteGroup" value="Delete">
             </div>
           </div>
