@@ -9,49 +9,22 @@
   <link rel="stylesheet" type="text/css" href="CSS\login.css">
   <link rel="stylesheet" type="text/css" href="CSS\support.css">
   <link rel="stylesheet" type="text/css" href="CSS\house.css">
-    <link rel="stylesheet" type="text/css" href="CSS\halls.css">
+  <link rel="stylesheet" type="text/css" href="CSS\halls.css">
+  <link rel="stylesheet" type="text/css" href="CSS\maps.css">
+  <link rel="stylesheet" type="text/css" href="CSS\social.css">
 </head>
-  <div class="navigation">
+    <div class="navigation">
   <nav>
     <ul class="firstnav"> <!-- first unordered list -->
       <li id="searchbar"><a>&#128269</a></li>
-      <li id ="showHouse"><a>House</a>
+      <li id="showHouse"><a>House</a></li>
 
-        <ul>
-            <li><a href="#">House Group</a></li>
-
-            <li><a href="#">Estate Agency</a></li>
-        </ul>
-
-      </li>
-
-      <li id="showHalls"><a>Halls</a>
-        <ul>
-          <li><a href="#">Building</a></li>
-          <li><a href="#">Flat</a></li>
-          <li><a href="#">Your Room</a></li>
-        </ul>
-      </li>
-      <li id="showProfile"><a>Profile</a>
-        <ul class="dropdown_content">
-          <li><a href="#">View Profile</a></li>
-          <li><a href="#">Edit Profile</a></li>
-        </ul>
-      </li>
-      <li id="socialPad"><a>Social Pad &rang;</a></li>
-      <div id="navSocial">
-        <li id="showMessage"><a>Messages</a></li>
-        <li id="showLive"><a>Live Feed</a></li>
-      </div>
-
+      <li id="showHalls"><a>Halls</a></li>
+      <li id="showProfile"><a>Profile</a></li>
+      <li id="socialPad"><a>Social Pad</a></li>
+      <li id="showMaps"><a>Maps</a></li>
      <div id="rightnav">
-      <li id="showSupport"><a>Support</a>
-        <ul>
-          <li><a href="#">Maps</a></li>
-          <li><a href="#">Contact Information</a></li>
-          <li><a href="#">Site Map</a></li>
-        </ul>
-      </li>
+      <li id="showSupport"><a>Support</a></li>
       <li id="showRegister"><a>Register</a></li>
       <div id="user"><li><a><input type="text" value="username"><input type="button" value="->" id="nextLogin"></a></li></div>
       <div id="pass"><li><a><input id="password" type="text" value="password"><input type="button" value="->" id="closeLogin"></a></li></div>
@@ -62,7 +35,8 @@
 
     <div class="navSearch" id="topSearch">
        <form>
-         <input class="search_box" type="text" name="search">
+         <input autocomplete="off" class="search_box" type="text" name="query" id="query">
+         <div id="searchResult"> </div>
          <input type="checkbox" name="advancesearch" id='advance'><span class="advance">Advanced Search</span>
       </form>
   </div>
@@ -78,6 +52,8 @@
           <p>Female<input type="checkbox" name="checklist"></p>
           <p>Non-Smoker<input type="checkbox" name="checklist"></p>
           <p>Smoker<input type="checkbox" name="checklist"></p>
+          <p>Halls<input type="checkbox" name="checklist"></p>
+          <p>Group<input type="checkbox" name="checklist"></p>
         </form>
     </div>
   </div>
