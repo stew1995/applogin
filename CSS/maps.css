@@ -1,0 +1,97 @@
+#map {
+  width: 95%;
+  height: 750px;
+  margin: 0 2.5%;
+}
+
+/*Right Side*/
+#mapLocations select {
+  width: 95%;
+  font-size: 25px;
+  margin: 0 2.5%;
+}
+.mapLocationTable {
+  border: 1px solid grey;
+  border-collapse: collapse;
+  width: 95%;
+  margin: 0 2.5%;
+}
+
+.mapLocationTable th{
+  background: cyan;
+  background: -webkit-linear-gradient(#00ffff, #00e6e6); /* For Safari and IE*/
+  background: -o-linear-gradient(#00ffff, #00e6e6); /* For Opera */
+  background: -moz-linear-gradient(#00ffff, #00e6e6); /* For Firefox */
+  background: linear-gradient(#00ffff, #00e6e6); /* Standard syntax */
+  padding: 10px;
+}
+.mapLocationTable td {
+  padding: 15px 10px;
+  font-size: 10px;
+}
+
+.mapLocationTable tr {
+  background: white;
+  background: -webkit-linear-gradient(#ffffff, #e6e6e6); /* For Safari and IE*/
+  background: -o-linear-gradient(#ffffff, #e6e6e6); /* For Opera */
+  background: -moz-linear-gradient(#ffffff, #e6e6e6); /* For Firefox */
+  background: linear-gradient(#ffffff, #e6e6e6); /* Standard syntax */
+
+}
+
+.mapLocationTable tr:nth-child(odd) {
+  background: #c0c0c0;
+  background: -webkit-linear-gradient(#d9d9d9, #c0c0c0); /* For Safari and IE*/
+  background: -o-linear-gradient(#d9d9d9, #c0c0c0); /* For Opera */
+  background: -moz-linear-gradient(#d9d9d9,   #c0c0c0); /* For Firefox */
+  background: linear-gradient(#d9d9d9, #c0c0c0); /* Standard syntax */
+  color: white;
+}
+.mapLocationTable tr:nth-child(even) {
+  color: #c0c0c0;
+}
+
+
+/*Side*/
+#createLocation{
+  margin: 0 2.5%;
+}
+#createLocation input[name="locDone"] {
+  font-size: 30px;
+  width: 75%;
+  padding: 20px 0;
+  margin: 0 12.5%;
+}
+
+#createLocation input[type="text"], input[type="number"]{
+  float: right;
+  width: 70%;
+}
+
+#locDesc{
+  margin: 0 10%;
+  width: 80%;
+  max-width: 80%;
+  max-height: 50px;
+}
+#locations {
+  background: white;
+  height: 120px;
+  display: none;
+}
+
+.locationBackground {
+  background: rgba(204, 204, 255, 0.8);
+  height: 120px;
+  margin: 0 5%;
+}
+
+.backgroundSide {
+  background: white;
+}
+
+.createLocationBackground {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+}
+
