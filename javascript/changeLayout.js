@@ -20,6 +20,10 @@ function changeLayout(){
   var socialsection1 = document.getElementById("socialSection1").checked;
   var socialsection2 = document.getElementById("socialSection2").checked;
   var socialsection3 = document.getElementById("socialSection3").checked;
+  //Maps
+  var mapsection1 = document.getElementById("mapSection1").checked;
+  var mapsection2 = document.getElementById("mapSection2").checked;
+  var mapsection3 = document.getElementById("mapSection3").checked;
   //Support
   var supportsection1 = document.getElementById("supportSection1").checked;
   var supportsection2 = document.getElementById("supportSection2").checked;
@@ -34,10 +38,7 @@ function changeLayout(){
   var centersource = document.getElementById("textCenter");
   var rightsource = document.getElementById("rightText");
 
-  //House Section 1 - default side bar
-  //Section 1 Side
-  //Section 1 Center
-  //Section 1 Right
+
 
   var el = 'pages/', source;
   if (housesection1 === true){
@@ -84,6 +85,15 @@ function changeLayout(){
     source = centersource;
   } else if (supportsection3 === true){
     el += 'supportrightbar.html';
+    source = rightsource;
+  } else if (mapssection1 === true) {
+    el += 'mapsidebar.html';
+    source = sidesource;
+  } else if (mapsection2 === true) {
+    el += 'mapcenter.html';
+    source = centersource;
+  } else if (mapsection3 === true) {
+    el += 'maprightbar.html';
     source = rightsource;
   }
 
