@@ -70,7 +70,8 @@ function showNotes(){
   ajaxGet("lib/createNote.php", function(data){
     document.getElementById("notesContent").innerHTML = data;
 
-});
+})
+}
 window.addEventListener("load", showNotes);
 
 //Profile center
@@ -181,18 +182,6 @@ function editName() {
 
 var d = document.getElementById("editName");
 d.addEventListener("click", editName);
-
-//Edit Username
-
-function editUsername() {
-  var x = document.getElementById("myTable").rows[1].cells;
-  var y = document.getElementById("usernameChange").value;
-
-    x[1].innerHTML = y;
-};
-
-var e = document.getElementById("editUsername");
-e.addEventListener("click", editUsername);
 
 //Change Password
 function editPassword() {
@@ -324,233 +313,6 @@ function editSocieties() {
 var p = document.getElementById("editSociety");
 p.addEventListener("click", editSocieties);
 
-
-function completeChangeBtn() {
-  var name = document.getElementById("singleNameEdit").style;
-  var username = document.getElementById("singleUsernameEdit").style;
-  var password = document.getElementById("singlePasswordEdit").style;
-  var email = document.getElementById("singleEmailEdit").style;
-  var mobile = document.getElementById("singleMobileEdit").style;
-  var home = document.getElementById("singleHomeEdit").style;
-  var address = document.getElementById("singleAddressEdit").style;
-
-  if(name.display === "block" && username.display === "block" &&
-    password.display === "block" && email.display === "block" &&
-    mobile.display === "block" && home.display === "block" &&
-    address.display === "block") {
-  name.display = "none";
-  username.display = "none";
-  password.display = "none";
-  email.display = "none";
-  mobile.display = "none";
-  home.display = "none";
-  address.display = "none";
-  }
-  var course = document.getElementById("singleCourseEdit").style;
-  var year = document.getElementById("singleYearEdit").style;
-  var housing = document.getElementById("singleHousingEdit").style;
-
-  if(course.display === "block" && year.display === "block" && housing.display === "block") {
-  course.display = "none";
-  year.display = "none";
-  housing.display = "none";
-}
-  var hobbies = document.getElementById("singleHobbieEdit").style;
-  var interest = document.getElementById("singleInterestEdit").style;
-  var society = document.getElementById("singleSocietyEdit").style;
-
-  if(hobbies.display === "block" && interest.display === "block" &&
-    society.display === "block") {
-  hobbies.display = "none";
-  interest.display = "none";
-  society.display = "none";
-}
-
-  var doneBasic = document.getElementById("completeChangeBtn").style;
-  var edit = document.getElementById("editProfileBtns").style;
-
-  if(doneBasic.display === "block") {
-    doneBasic.display = "none";
-  } else if (edit.display === "block") {
-      edit.display = "none";
-  }
-
-  var table = document.getElementById("myTable").style;;
-  if(table.display === "none"){
-    table.display = "block";
-  }
-
-}
-
-var completeBtn = document.getElementById("completeChangeBtn");
-completeBtn.addEventListener("click", completeChangeBtn);
-
-//Edit only Basic Infomation
-//See if this section can be simplified
-
-function editBasicInfoShow() {
-  var title = document.getElementById("basicTitle").style;
-  var name = document.getElementById("singleNameEdit").style;
-  var username = document.getElementById("singleUsernameEdit").style;
-  var password = document.getElementById("singlePasswordEdit").style;
-  var email = document.getElementById("singleEmailEdit").style;
-  var mobile = document.getElementById("singleMobileEdit").style;
-  var home = document.getElementById("singleHomeEdit").style;
-  var address = document.getElementById("singleAddressEdit").style;
-
-  var doneBasic = document.getElementById("completeChangeBtn").style;
-  var table = document.getElementById("myTable").style;
-  var edit = document.getElementById("editProfileBtns").style;
-
-  if(name.display === "none" && username.display === "none" &&
-    password.display === "none" && email.display === "none" &&
-    mobile.display === "none" && home.display === "none" &&
-    address.display === "none" && title.display === "none") {
-
-    title.display = "block";
-    name.display = "block";
-    username.display = "block";
-    password.display = "block";
-    email.display = "block";
-    mobile.display = "block";
-    home.display = "block";
-    address.display = "block";
-    doneBasic.display = "block";
-    table.display = "none";
-    edit.display = "none";
-  }
-  else {
-    title.display = "none";
-    name.display = "none";
-    username.display = "none";
-    password.display = "none";
-    email.display = "none";
-    mobile.display = "none";
-    home.display = "none";
-    address.display = "none";
-    doneBasic.display = "none";
-  }
-};
-
-var editBasicBtn = document.getElementById("editBasicBtn");
- editBasicBtn.addEventListener("click", editBasicInfoShow);
-
- //Edit only Uni Info
-
- function editUniInfoShow() {
-   var title = document.getElementById("uniTitle").style;
-   var course = document.getElementById("singleCourseEdit").style;
-   var year = document.getElementById("singleYearEdit").style;
-   var housing = document.getElementById("singleHousingEdit").style;
-   var doneBasic = document.getElementById("completeChangeBtn").style;
-   var table = document.getElementById("myTable").style;
-   var edit = document.getElementById("editProfileBtns").style;
-
-   if(title.display === "none" && course.display === "none" &&
-      year.display === "none" && housing.display === "none") {
-       title.display = "block";
-       course.display = "block";
-       year.display = "block";
-       housing.display = "block";
-       doneBasic.display = "block";
-       table.display = "none";
-       edit.display = "none";
-   }
-   else {
-     title.display = "none";
-     course.display = "none";
-     year.display = "none";
-     housing.display = "none";
-     doneBasic.display = "none";
-   }
- }
-
- var editUniBtn = document.getElementById("editUniBtn");
-  editUniBtn.addEventListener("click", editUniInfoShow);
-
-  //Edit only About Yourself
-
-  function editAboutInfoShow() {
-    var hobbies = document.getElementById("singleHobbieEdit").style;
-    var interest = document.getElementById("singleInterestEdit").style;
-    var society = document.getElementById("singleSocietyEdit").style;
-    var doneBasic = document.getElementById("completeChangeBtn").style;
-    var table = document.getElementById("myTable").style;
-    var edit = document.getElementById("editProfileBtns").style;
-    var title = document.getElementById("aboutTitle").style;
-
-    if(hobbies.display === "none" && interest.display === "none" &&
-      society.display === "none" && title.display === "none") {
-      title.display = "block";
-      hobbies.display = "block";
-      interest.display = "block";
-      society.display = "block";
-      table.display = "none";
-      doneBasic.display = "block";
-      edit.display = "none";
-    }
-    else {
-      title.display = "none";
-      hobbies.display = "none";
-      interest.display = "none";
-      society.display = "none";
-      doneBasic.display = "none";
-    }
-  }
-
-  var editAboutBtn = document.getElementById("editAboutBtn");
-   editAboutBtn.addEventListener("click", editAboutInfoShow);
-
-
-
-   // This needs to be done like the others have been
-
-      function EditProfile() {
-        var table = document.getElementById("myTable").style;
-        var btn = document.getElementById("completeChangeBtn").style;
-        var edit = document.getElementById("editProfileBtns").style;
-
-         if(table.display === "block") {
-             table.display = "none";
-             showSingleName();
-             showSingleUsername();
-             showSinglePasseword();
-             showSingleEmail();
-             showSingleMobile();
-             showSingleHome();
-             showSingleAddress();
-             showSingleCourse();
-             showSingleYear();
-             showSingleHousing();
-             showSingleHobbie();
-             showSingleInterest();
-             showSingleSociety();
-             btn.display = "block";
-           }
-           else {
-             table.display = "block";
-             showSingleName();
-             showSingleUsername();
-             showSinglePasseword();
-             showSingleEmail();
-             showSingleMobile();
-             showSingleHome();
-             showSingleAddress();
-             showSingleCourse();
-             showSingleYear();
-             showSingleHousing();
-             showSingleHobbie();
-             showSingleInterest();
-             showSingleSociety();
-             btn.display = "none";
-           }
-
-      };
-
-      var editBtn = document.getElementById("tableButton");
-      editBtn.addEventListener("click", EditProfile);
-   // Change Induvidual Profile Data
-
  function showSingleName () {
      //Basic Information
      var name = document.getElementById("singleNameEdit").style;
@@ -568,20 +330,6 @@ var editBasicBtn = document.getElementById("editBasicBtn");
    nameChange.addEventListener("click", showSingleName);
 
 
-   function showSingleUsername() {
-     var username = document.getElementById("singleUsernameEdit").style;
-     //var table = document.getElementById("myTable").style;
-        if(username.display === "none") {
-          username.display = "block";
-          //table.display = "none";
-        } else {
-          username.display = "none";
-          //table.display = "block";
-        }
-   };
-
-   var userChange = document.getElementById("usernameBtn");
-   userChange.addEventListener("click", showSingleUsername);
 
    function showSinglePasseword() {
      var password = document.getElementById("singlePasswordEdit").style;
@@ -722,22 +470,6 @@ var editBasicBtn = document.getElementById("editBasicBtn");
    var changeHobbie = document.getElementById("hobbieBtn");
    changeHobbie.addEventListener("click", showSingleHobbie);
 
-   function showSingleInterest() {
-     var interest = document.getElementById("singleInterestEdit").style;
-
-     //var table = document.getElementById("myTable").style;
-        if(interest.display === "none") {
-          interest.display = "block";
-          //table.display = "none";
-        } else {
-          interest.display = "none";
-          //table.display = "block";
-        }
-   };
-
-   var changeInterest = document.getElementById("interestBtn");
-   changeInterest.addEventListener("click", showSingleInterest);
-
    function showSingleSociety() {
      var society = document.getElementById("singleSocietyEdit").style;
 
@@ -753,6 +485,29 @@ var editBasicBtn = document.getElementById("editBasicBtn");
 
    var changeSociety = document.getElementById("societyBtn");
    changeSociety.addEventListener("click", showSingleSociety);
+
+//This changes pages to support page so that the user can change their details
+
+function changeAccountDetials() {
+  ajaxGet("pages/supportcenter.html", function(data){
+    document.getElementById("textCenter").innerHTML = data;
+    ajaxGet("pages/supportsidebar.html", function(data){
+      document.getElementById("sideText").innerHTML = data;
+      ajaxGet("pages/supportrightbar.html", function(data){
+        document.getElementById("rightText").innerHTML = data;
+        var si = document.createElement('script');
+        si.src = 'javascript/support.js';
+        document.head.appendChild(si);
+        var layoutChange = document.createElement('script');
+        layoutChange.src = 'javascript/changeLayout.js';
+        document.head.appendChild(layoutChange);
+      });
+    });
+  });
+}
+
+var goToSupport = document.getElementById("goToSupport");
+goToSupport.addEventListener("click", changeAccountDetials);
 
    //AJAX Get
    function ajaxGet(URL, callback) {
