@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html>
+  <style>
+    #hallsOuput {
+      border: 1px solid black;
+    }
+    #hallsOuput th {
+      background: red;
+    }
+  </style>
 <body>
 <?php
   $q = interval($_GET['q']);
   $conn = mysqli_connect('localhost', 'root', 'root', 'web');
-  if(!conn){
+  if(!$conn){
     die('Could not connect: '. mysqli_error($conn));
   }
 
@@ -12,13 +20,13 @@
   $sql="SELECT * FROM halls WHERE id = '".$q."'";
   $result = mysqli_query($conn, $sql);
 
-  echo "<table id="hallsOutput">";
-  echo "<tr>";
-  echo"<th>Halls ID</th>";
-  echo"<th>Name</th>";
-  echo"<th>Address</th>";
-  echo"<th>Postcode</th>";
-  echo</tr>";
+  echo "<table id='hallsOutput'>
+          <tr>
+            <th>Halls ID</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Postcode</th>
+          </tr>";
           while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>". $row['hall_id'] . "</td>";
