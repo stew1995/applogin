@@ -1,12 +1,27 @@
-.sidemenu .profileSide .profilePic {
-  background: red;
-  width: 50%;
-  height: 150px;
+.sidemenu .profileSide #loadProfileImage {
   margin: 0 25%;
-  color: white;
-  text-align: center;
 }
 
+.sidemenu #uploadProfileImage {
+  display: none;
+  background: white;
+}
+
+#uploadImageForm {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+}
+.sidemenu #inputFileToLoad {
+  display: block;
+}
+
+.sidemenu input[value="Choose Profile Picture"] {
+  margin: 0 25%;
+}
+ .sidemenu #changeProfilePicture {
+   margin: 0 25%;
+   font-size: 15px;
+ }
 .sidemenu .profileSide .tableWrap {
   overflow-x: auto;
 }
@@ -44,19 +59,6 @@
   font-size: 18px;
 }
 
-.editButtons {
-  border-style: none;
-  font-size: 14px;
-  background: white;
-}
-
-.profileSide input[name="usernameInput"] {
-  border-style: none;
-  background: #ccffff;
-}
-
-#editProfileBtns {display: block;}
-
 #completeChangeBtn {
   font-size: 20px;
   width: 50%;
@@ -66,6 +68,14 @@
 
 .profileSide input[value = "Change"]{
   margin-left: 4px;
+}
+
+#goToSupport {
+  width: 50%;
+  margin: 0 25%;
+  margin-top: 50px;
+  height: 50px;
+  border-radius: 5px;
 }
 
 #basicTitle {display: none;}
@@ -87,37 +97,6 @@
 #singleInterestEdit {display:none;}
 #singleSocietyEdit {display: none;}
 
-#editUniInfo p {
-  font-size: 15px;
-}
-
-#editBasicInfo p {
-  font-size: 15px;
-
-}
-
-#editAboutYourself p {
-  font-size: 15px;
-
-}
-
-#editUniInfo input[type="button"] {
-  font-size: 25px;
-  width: 50%;
-  margin: 0 25%;
-}
-
-#editAboutYourself input[type="button"] {
-  font-size: 25px;
-  width: 50%;
-  margin: 0 25%;
-}
-
-#editBasicInfo input[type="button"] {
-  font-size: 25px;
-  width: 50%;
-  margin: 0 25%;
-}
 
 .rightmenu .profileRight h3 {
   text-decoration: underline;
@@ -126,6 +105,24 @@
 .profileRight #groupNext {
   float: right;
   margin-right: 1%;
+}
+
+.profileGroupBackground {
+  background: white;
+  margin: 5px 0;
+}
+
+form[name="groupCreate"] {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+  padding: 5px 0;
+}
+
+.groupAddBackgroud {
+  background: rgba(204, 204, 255, 0.8);
+  margin: 0 5%;
+  padding-top: 10px;
+  padding-bottom: 30px;
 }
 
 .rightmenu .profileRight input[name="friendAdd"] {
@@ -206,8 +203,32 @@
 
 #createdGroups {
   display: none;
+  background: white;
 }
 
+
+#notesOutput, #rmvBtns{
+  margin: 0 5%;
+}
+
+#removeNoteInput {
+  font-size: 13px;
+  width: 30%;
+}
+
+#removeNoteBtn, #createNoteBtn {
+  width: 50%;
+  font-size: 100%;
+  margin: 0 5%;
+}
+
+#createNote {
+  max-width: 88%;
+  max-height: 100px;
+  background: #ffff99;
+}
+
+#
 /*Calendar*/
 #cal {
     -moz-box-shadow:0px 3px 3px rgba(0, 0, 0, 0.25);
