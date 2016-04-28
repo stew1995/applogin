@@ -114,9 +114,9 @@ $sql =
 )";
 //Check if login table is created successfully
 if(mysqli_query($conn, $sql)) {
-  echo "</p> Table user created successfully </p>";
+  echo "</p> Table login created successfully </p>";
 } else {
-  echo "</p> Error creating user table: ". mysqli_error($conn) . "</p>";
+  echo "</p> Error creating login table: ". mysqli_error($conn) . "</p>";
 }
 //Flat Table
 $sql =
