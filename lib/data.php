@@ -53,8 +53,8 @@ $sql =
   hall_id INT UNSIGNED PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL,
   location VARCHAR(200) NOT NULL,
-  postcode VARCHAR(7) NOT NULL
-)";
+    postcode VARCHAR(7) NOT NULL
+  )";
 //check if halls table has been created
 if(mysqli_query($conn, $sql)) {
   echo "</p> Table halls created successfully </p>";
@@ -269,6 +269,41 @@ VALUES ('IT'),
 ('Skate')";
 
 mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn));
+//Course data 
+$sqlcoursedata =
+"INSERT IGNORE INTO `course` (`code`, `name`)
+VALUES (34272, 'Computing'),
+(24213, 'English and History'),
+(56423, 'Animation'),
+(98754, 'Biochemistry'),
+(37615, 'Biology'),
+(87636, 'Business'),
+(18737, 'Business and Economics'),
+(19848, 'Civil Engineering'),
+(43215, 'Computer Engineering'),
+(71810, 'Computer Science'),
+(15431, 'Criminology with Psychology'),
+(12342, 'Dental Hygiene and Dental Therapy'),
+(18863, 'Digital Marketing'),
+(19324, 'Economics'),
+(15015, 'English Literature'),
+(16671, 'Film Studies'),
+(13457, 'Forensic Computing'),
+(13218, 'Geography'),
+(12029, 'Geology'),
+(21045, 'Graphic Design'),
+(23411, 'Hospitality Management with Tourism'),
+(22342, 'Internation Relations'),
+(27913, 'Journalism'),
+(21054, 'Law with Criminology'),
+(27655, 'Mathmatics'),
+(29146, 'Media Studies'),
+(25677, 'Pharmacy'),
+(21988, 'Sociology with Criminology'),
+(24569, 'Sports Science and Management'),
+(31180, 'Television and Film Production');"
+
+mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn));
 
 //Data for halls table
 $sqlhallsdata =
