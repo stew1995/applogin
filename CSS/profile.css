@@ -1,3 +1,4 @@
+/*Side Menu*/
 .sidemenu .profileSide #loadProfileImage {
   margin: 0 25%;
 }
@@ -58,14 +59,6 @@
   background: linear-gradient(#ccffcc, #80ff80); /* Standard syntax */
   font-size: 18px;
 }
-
-#completeChangeBtn {
-  font-size: 20px;
-  width: 50%;
-  margin: 5% 25%;
-  display: none;
-}
-
 .profileSide input[value = "Change"]{
   margin-left: 4px;
 }
@@ -97,6 +90,7 @@
 #singleInterestEdit {display:none;}
 #singleSocietyEdit {display: none;}
 
+/*Right Bar*/
 
 .rightmenu .profileRight h3 {
   text-decoration: underline;
