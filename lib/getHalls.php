@@ -19,8 +19,6 @@
   $sqlshowHalls="SELECT * FROM halls WHERE name = '".$q."'";
   $result = mysqli_query($conn,$sqlshowHalls) or die(mysqli_error($conn));
 
-  
-
   echo "<table id='hallsOutput'>
           <tr>
             <th>Halls ID</th>
@@ -28,7 +26,7 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while($row = mysqli_fetch_array($conn, $sqlshowHalls)) {
+          while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
             echo "<td>". $row['hall_id'] . "</td>";
             echo "<td>". $row['name'] . "</td>";
