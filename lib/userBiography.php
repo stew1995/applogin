@@ -1,4 +1,17 @@
 <html>
+  <script>
+    //Makes textarea readOnly and editable
+    //true and false
+
+    document.getElementById('editBio').onclick = function() {
+       document.getElementById('inputBio').readOnly = false;
+    };
+    
+    document.getElementById("doneBio").onclick = function() {
+      document.getElementById("inputBio").readOnly = true;
+    };
+
+  </script>
 <body>
 
   <textarea id="inputBio" name="bioData" rows="4" cols="50" readonly="textarea"> Enter something about yourself </textarea>
