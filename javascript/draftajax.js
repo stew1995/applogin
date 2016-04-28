@@ -61,7 +61,7 @@ var showProfile = document.getElementById("showProfile");
 showProfile.addEventListener("click", profileContent);
 
 function profileCenter() {
-  ajaxGet("pages/profilecenter.html", function(data){
+  ajaxGet("pages/profilecenter.php", function(data){
     document.getElementById("textCenter").innerHTML = data;
       ajaxGet("pages/profilesidebar.html", function(data){
         document.getElementById("sideText").innerHTML = data;
