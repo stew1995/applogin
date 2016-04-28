@@ -16,9 +16,10 @@
     die('Could not connect: '. mysqli_error($conn));
   }
 
-  mysqli_select_db($conn, "web");
-  $sql="SELECT * FROM halls WHERE id = '".$q."'";
+  $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
   $result = mysqli_query($conn, $sql);
+  mysqli_query($conn, $sqlshowHalls) or die(mysqli_error($conn));
+
 
   echo "<table id='hallsOutput'>
           <tr>
