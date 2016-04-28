@@ -37,7 +37,7 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while($row = mysqli_fetch_array($sqlshowHalls)) {
+          while($row = mysqli_fetch_array($conn, $sqlshowHalls)) {
             echo "<tr>";
             echo "<td>". $row['hall_id'] . "</td>";
             echo "<td>". $row['name'] . "</td>";
