@@ -78,16 +78,6 @@ var addHousemateGroup = document.getElementById("addHousemate");
 addHousemateGroup.addEventListener("click", putNameInField);
 //Profile center
 
-//Makes textarea readOnly and editable
-//true and false
-
-document.getElementById('editBio').onclick = function() {
-   document.getElementById('inputBio').readOnly = false;
-};
-
-document.getElementById("doneBio").onclick = function() {
-  document.getElementById("inputBio").readOnly = true;
-};
 
 
 //Profile side bar table
