@@ -15,11 +15,16 @@
   if(!$conn){
     die('Could not connect: '. mysqli_error($conn));
   }
-
+  mysqli_select_db($conn, "web");
   $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
-  $result = mysqli_query($conn, $sql);
-  mysqli_query($conn, $sqlshowHalls) or die(mysqli_error($conn));
+  $check = mysqli_query($conn, $sqlshowHalls);
+  if(!$check) {
+    die(mysqli_error($conn));
+  } else {
+    echo "Can not get halls data";
+  }
 
+  
 
   echo "<table id='hallsOutput'>
           <tr>
