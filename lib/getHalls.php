@@ -16,7 +16,7 @@
     die('Could not connect: '. mysqli_error($conn));
   }
   mysqli_select_db($conn, "web");
-  $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
+  $sqlshowHalls="SELECT * FROM halls WHERE name = '".$q."'";
   $check = mysqli_query($conn, $sqlshowHalls);
   if(!$check) {
     die(mysqli_error($conn));
