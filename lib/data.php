@@ -200,7 +200,7 @@ if(mysqli_query($conn, $sql)) {
   echo "</p> Error creating table note: ". mysqli_error($conn) . "</p>";
 }
 //Data for hobbie table on load up
-$sql =
+$sqlhobbiedata =
 "INSERT INTO `hobbie` (`name`)
 VALUES (`Drawing`),
 (`Swimming`),
@@ -242,11 +242,7 @@ VALUES (`Drawing`),
 (`Squash`)";
 //check if data has been inserted in to hobbie table
 
-if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli__error($conn));
-} else {
-  die("Could not enter data: ". mysqli__error($conn));
-}
+mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn));
 //Data for society table
 $sql =
 "INSERT INTO `society` (`name`)
