@@ -36,7 +36,7 @@ if(mysqli_query($conn, $sql)) {
 }
 //Course table
 $sql =
-"CCREATE TABLE IF NOT EXISTS course (
+"CREATE TABLE IF NOT EXISTS course (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(5) UNIQUE NOT NULL,
   name VARCHAR(40) NOT NULL
