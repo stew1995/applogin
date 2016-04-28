@@ -243,7 +243,7 @@ VALUES
 ('Squash')";
 //check if data has been inserted in to hobbie table
 
-mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn). 'hobbie');
 //Data for society table
 $sqlsocietydata =
 "INSERT IGNORE INTO `society` (`name`)
@@ -268,7 +268,7 @@ VALUES ('IT'),
 ('Comedy'),
 ('Skate')";
 
-mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn) . 'society');
 //Course data 
 $sqlcoursedata =
 "INSERT IGNORE INTO `course` (`code`, `name`)
@@ -303,7 +303,7 @@ VALUES (34272, 'Computing'),
 (24569, 'Sports Science and Management'),
 (31180, 'Television and Film Production')";
 
-mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn) . 'course');
 
 //Data for halls table
 $sqlhallsdata =
@@ -316,7 +316,7 @@ $sqlhallsdata =
 (7, 'Rees Hall', 'Southsea Terrace,Southsea', 'PO5 3AP'),
 (8, 'Trafalgar Hall', 'Winston Churchill Ave, Portsmouth', 'PO1 2UP')";
 
-mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn). 'halls');
 
 //Data for user table - pre loaded data
 $sqluserdata =
@@ -343,7 +343,7 @@ $sqluserdata =
 ('Joshua', 'Morrison','Male','kcarrj@businessinsider.com','y4kZef', '19910311', '8 Grover Alley','TA8 2RB','05659370963','07804992674',FALSE);
 ";
 
-mysqli_query($conn, $sqluserdata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqluserdata) or die(mysqli_error($conn) . 'user');
 
 
 //Data for location table
@@ -369,7 +369,7 @@ $sqllocationdata =
 ('Portsmouth Habour', 'Train Station')";
 
 
-mysqli_query($conn, $sqllocationdata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqllocationdata) or die(mysqli_error($conn). 'location');
 
 //Data for flat table - 25 records to start, capacity so far is 130
 $sqlflatdata =
@@ -400,7 +400,7 @@ $sqlflatdata =
 ('4.2','7','4'),
 ('4.3','7','5')";
 
-mysqli_query($conn, $sqlflatdata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlflatdata) or die(mysqli_error($conn). 'flat');
 
 //Data for uni table
 $sqlunidata =
@@ -426,7 +426,7 @@ VALUES (5,1,3,'Halls','1.1'),
 (1,8,2,'Halls','4.2'),
 (7,19,1,'Halls','4.2')";
 
-mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn). 'flat');
 
 //Data for house table
 $sqlhousedata =
@@ -434,7 +434,7 @@ $sqlhousedata =
 (6,2, 'Next Year House', 'Need to find a house for next year'),(8,2,'Next Year House', 'Need to find a house for next year'),
 (15,1, 'House Group', 'Looking for a house'),(16,2,'Next Year House', 'Need to find a house for next year')";
 
-mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn));
+mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn). 'house');
 
 mysqli_close($conn);
 ?>
