@@ -10,7 +10,7 @@
   </style>
 <body>
 <?php
-  $q = interval($_GET['q']);
+  $q = intval($_GET['q']);
   $conn = mysqli_connect('localhost', 'root', 'root', 'web');
   if(!$conn){
     die('Could not connect: '. mysqli_error($conn));
