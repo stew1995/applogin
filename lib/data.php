@@ -219,7 +219,7 @@ VALUES (`Drawing`),
 (`Squash`)";
 
 //check if data has been inserted in to hobbie table
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -250,7 +250,7 @@ VALUES (`IT`),
 (`Comedy`),
 (`Skate`)";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -267,7 +267,7 @@ $sql =
 (`6`, `Bateson Hall`, `Bateson Hall, Portsmouth`, `PO1 2BL`),
 (`7`, `Rees Hall`, `Southsea Terrace,Southsea`, `PO5 3AP`)";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -300,7 +300,7 @@ $sql =
 (`Stewart`, `Flack`, `Male`, `swflack@gmail.com`, `amber1`, `19950813`, `46 Caterhame Drive`, `CR5 1JH`, `01737557533`, `07984654175`, TRUE)
 ";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -337,7 +337,7 @@ $sql =
 (`4.2`,`7`,`4`),
 (`4.3`,`7`,`5`)";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -368,7 +368,7 @@ VALUES (5,1,3,`Halls`,`1.1`),
 (1,8,2,`Halls`,`4.2`),
 (7,19,1,`Halls`,`4.2`)";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
@@ -379,7 +379,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1),(6,2),(8,2),(15,1),(16,2)";
 
-mysqli_select_db("web");
+mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli_connect_error());
 } else {
