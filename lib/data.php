@@ -187,8 +187,8 @@ if(mysqli_query($conn, $sql)) {
 //Note Table -- Needs checking
 $sql =
 "CREATE TABLE IF NOT EXISTS note (
-  user_id INT UNSIGNED PRIMARY KEY,
-  note_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  note_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED,
   name VARCHAR(15) NOT NULL,
   data TEXT NOT NULL,
   CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
