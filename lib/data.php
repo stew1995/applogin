@@ -25,7 +25,7 @@ if(mysqli_query($conn, $sql)) {
 //Society
 $sql =
 "CREATE TABLE IF NOT EXISTS society (
-  id INT PRIMARY KEY UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) UNIQUE
 )";
 //Check if society table has been created
