@@ -76,23 +76,6 @@ function putNameInField(){
 
 var addHousemateGroup = document.getElementById("addHousemate");
 addHousemateGroup.addEventListener("click", putNameInField);
-//Notes section
-
-function showNotes(){
-  ajaxGet("lib/createNote.php", function(data){
-    document.getElementById("notesContent").innerHTML = data;
-  });
-}
-window.addEventListener("load", showNotes);
-
-//Show user bio to edit
-function showBio() {
-  ajaxGet("lib/userBiography.php", function(data){
-    document.getElementById("userBio").innerHTML = data;
-  });
-}
-
-window.addEventListener("load", showBio);
 //Profile center
 
 //Makes textarea readOnly and editable
@@ -493,6 +476,23 @@ function changeAccountDetials() {
 var goToSupport = document.getElementById("goToSupport");
 goToSupport.addEventListener("click", changeAccountDetials);
 
+//Notes section
+
+function showNotes(){
+  ajaxGet("lib/createNote.php", function(data){
+    document.getElementById("notesContent").innerHTML = data;
+  });
+}
+window.addEventListener("load", showNotes);
+
+//Show user bio to edit
+function showBio() {
+  ajaxGet("lib/userBiography.php", function(data){
+    document.getElementById("userBio").innerHTML = data;
+  });
+}
+
+window.addEventListener("load", showBio);
 
 
    //AJAX Get
