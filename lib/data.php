@@ -433,8 +433,7 @@ $sqlhousedata =
 "INSERT IGNORE INTO `house` (`group_id`,`user_id`, `name`,`description`) VALUES (1,3, 'House Group', 'Looking for a house'),
 (2,6, 'Next Year House', 'Need to find a house for next year'),(2,8,'Next Year House', 'Need to find a house for next year'),
 (1,15, 'House Group', 'Looking for a house'),(2,16,'Next Year House', 'Need to find a house for next year')";
-name
-description
+
 mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn). 'house');
 
 mysqli_close($conn);
