@@ -310,13 +310,11 @@ function showNotes(){
 window.addEventListener("load", showNotes);
 
 //Show user bio to edit
-function showBio() {
+window.onload = function() {
   ajaxGet("lib/userBiography.php", function(data){
     document.getElementById("userBio").innerHTML = data;
   });
 }
-
-window.addEventListener("load", showBio);
 
 
    //AJAX Get
