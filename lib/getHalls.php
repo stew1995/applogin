@@ -18,6 +18,10 @@
   mysqli_select_db($conn, "web");
   $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
   $result = mysqli_query($conn, $sqlshowHalls);
+  if (!$result) {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
 
   echo "<table id='hallsOutput'>
           <tr>
