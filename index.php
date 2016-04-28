@@ -4,14 +4,6 @@
 <head>
   <link rel="stylesheet" type="text/css" href="CSS\navigation.css">
   <link rel="stylesheet" type="text/css" href="CSS\template.css">
-  <link rel="stylesheet" type="text/css" href="CSS\profile.css">
-  <link rel="stylesheet" type="text/css" href="CSS\registration.css">
-  <link rel="stylesheet" type="text/css" href="CSS\login.css">
-  <link rel="stylesheet" type="text/css" href="CSS\support.css">
-  <link rel="stylesheet" type="text/css" href="CSS\house.css">
-  <link rel="stylesheet" type="text/css" href="CSS\halls.css">
-  <link rel="stylesheet" type="text/css" href="CSS\maps.css">
-  <link rel="stylesheet" type="text/css" href="CSS\social.css">
 </head>
     <div class="navigation">
   <nav>
