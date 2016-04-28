@@ -3,82 +3,68 @@ $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "web";
-
 //Create connection
 $conn = mysqli_connect($servername, $username, $password, $dbname);
 //Check connection
 if(!$conn) {
   die("Connection to database failed: ". mysqli_connect_error());
 }
-
-
 //SQL to Create tables
 //Hobbies
 $sql =
-"CREATE TABLE hobbie (
+"CREATE TABLE IF NOT EXISTS hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) UNIQUE
 )";
-
 //Check if hobbie table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table hobbie successfully created";
 } else {
   echo "Error creating table hobbie". mysqli_error($conn);;
 }
-
 //Society
 $sql =
-"CREATE TABLE society (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+"CREATE TABLE IF NOT EXISTS society (
+  id INT PRIMARY KEY UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) UNIQUE
 )";
-
 //Check if society table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table society successfully created";
 } else {
   echo "Error creating table society". mysqli_error($conn);;
 }
-
 //Course table
-
 $sql =
-"CREATE TABLE course (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+"CCREATE TABLE IF NOT EXISTS course (
+  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(5) UNIQUE NOT NULL,
   name VARCHAR(40) NOT NULL
 )";
-
 //Check if course table has been created
-
 if(mysqli_query($conn, $sql)) {
   echo "Table has been successfully created";
 } else {
   echo "Error creating table course: ". mysqli_error($conn);
 }
-
 //Halls Table
 $sql =
-"CREATE TABLE halls (
-  hall_id INT UNSIGNED PRIMARY KEY,
+"CREATE TABLE IF NOT EXISTS halls (
+  hall_id INT PRIMARY KEY UNSIGNED PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL,
   location VARCHAR(200) NOT NULL,
   postcode VARCHAR(7) NOT NULL
 )";
-
 //check if halls table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table halls created successfully";
 } else {
   echo "Error creating table: ". mysqli_error($conn);
 }
-
 //User table - Hobbie and Society are FK
-
 $sql =
-"CREATE TABLE user (
-  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+"CREATE TABLE IF NOT EXISTS user (
+  id INT PRIMARY KEY UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   fname VARCHAR(20) NOT NULL,
   lname VARCHAR(20) NOT NULL,
   gender VARCHAR(6) NOT NULL,
@@ -95,7 +81,6 @@ $sql =
   CONSTRAINT HobbieFK FOREIGN KEY (hobbie) REFERENCES hobbie(id),
   CONSTRAINT SocietyFK FOREIGN KEY (society) REFERENCES society(id)
 )";
-
 //Check if user table is created successfully
 if(mysqli_query($conn, $sql)) {
   echo "Table user created successfully";
@@ -103,27 +88,54 @@ if(mysqli_query($conn, $sql)) {
   echo "Error creating user table: ". mysqli_error($conn);
 }
 
+//Location Table
 
+$sql =
+"CREATE TABLE IF NOT EXISTS location (
+  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNSIGNED,
+  name VARCHAR(50) UNIQUE NOT NULL,
+  type VARCHAR(50) NOT NULL
+)";
+
+//check if location table has been successfully created
+if(mysqli_query($conn, $sql)) {
+  echo "Table flat created successfully";
+} else {
+  echo "Error creating table flat: ". mysqli_error($conn);
+}
+//Log In Table
+$sql =
+"CREATE TABLE IF NOT EXISTS login (
+  id int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
+  email VARCHAR(50) UNIQUE NOT NULL
+  password VARCHAR(12) NOT NULL,
+  CONSTRAINT loginEmailFK FOREIGN KEY (email) REFERENCES user(email),
+  CONSTRAINT loginPasswordFK FOREIGN KEY (password) REFERENCES user(password)
+)";
+//Check if login table is created successfully
+if(mysqli_query($conn, $sql)) {
+  echo "Table user created successfully";
+} else {
+  echo "Error creating user table: ". mysqli_error($conn);
+}
 //Flat Table
 $sql =
-"CREATE TABLE flat (
+"CREATE TABLE IF NOT EXISTS flat (
   flat_id DECIMAL(2,1) UNSIGNED PRIMARY KEY,
   halls_id INT UNSIGNED NOT NULL,
   capacity INT UNSIGNED NOT NULL,
   CONSTRAINT HallsFK FOREIGN KEY (halls_id) REFERENCES halls(hall_id)
 )";
-
 //check if flat table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table flat created successfully";
 } else {
   echo "Error creating table flat: ". mysqli_error($conn);
 }
-
 //Uni Table
 //In this table think about how the course table will work, maybe include a different one
 $sql =
-"CREATE TABLE uni (
+"CREATE TABLE IF NOT EXISTS uni (
   user_id INT UNSIGNED PRIMARY KEY,
   course INT UNSIGNED,
   study SMALLINT NOT NULL,
@@ -133,42 +145,38 @@ $sql =
   CONSTRAINT CourseFK FOREIGN KEY (course) REFERENCES course(id),
   CONSTRAINT FlatuserFK FOREIGN KEY (flat_id) REFERENCES flat(flat_id)
 )";
-
 //Check if uni table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table uni created successfully";
 } else {
   echo "Error creating table: ". mysqli_error($conn);
 }
-
 //House Table
 $sql =
-"CREATE TABLE house (
+"CREATE TABLE IF NOT EXISTS house (
   user_id INT UNSIGNED PRIMARY KEY,
-  group_id INT UNSIGNED NOT NULL,
+  group_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  name VARCHAR(20) NOT NULL,
+  description TEXT NOT NULL,
   datecreated TIMESTAMP NOT NULL,
   CONSTRAINT HousemateFK FOREIGN KEY (user_id) REFERENCES user(id)
 )";
-
 //check if house table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table house created successfully";
 } else {
   echo "Error creating table house: ". mysqli_error($conn);
 }
-
 //Message Table - LOOK INTO HOW THIS WILL WORK, send = user sending the message, location is where the message is sent to
 $sql =
-"CREATE TABLE message (
+"CREATE TABLE IF NOT EXISTS message (
   id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
   message VARCHAR(200) NOT NULL,
   send INT UNSIGNED NOT NULL,
   location INT UNSIGNED NOT NULL,
-  new BOOLEAN NOT NULL,
   CONSTRAINT SendFK FOREIGN KEY (send) REFERENCES user(id),
   CONSTRAINT ReceiveFK FOREIGN KEY (location) REFERENCES user(id)
 )";
-
 //check if message table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table message created successfully";
@@ -176,6 +184,21 @@ if(mysqli_query($conn, $sql)) {
   echo "Error creating table message: ". mysqli_error($conn);
 }
 
+//Note Table -- Needs checking
+$sql =
+"CREATE TABLE IF NOT EXISTS note (
+  user_id INT UNSIGNED PRIMARY KEY,
+  note_id INT UNSIGNED UNIQUE NOT NULL,
+  name VARCHAR(15) NOT NULL,
+  data TEXT NOT NULL,
+  CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
+)"
+//check if note table has been created
+if(mysqli_query($conn, $sql)) {
+  echo "Table message created successfully";
+} else {
+  echo "Error creating table message: ". mysqli_error($conn);
+}
 //Data for hobbie table on load up
 $sql =
 "INSERT INTO `hobbie` (`name`)
@@ -217,15 +240,13 @@ VALUES (`Drawing`),
 (`Sudoku`),
 (`Astronomy`),
 (`Squash`)";
-
 //check if data has been inserted in to hobbie table
-mysqli_select_db($conn, "web");
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 //Data for society table
 $sql =
 "INSERT INTO `society` (`name`)
@@ -249,14 +270,12 @@ VALUES (`IT`),
 (`Hindu`),
 (`Comedy`),
 (`Skate`)";
-
-mysqli_select_db($conn, "web");
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 //Data for halls table
 $sql =
 "INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (`1`, `Margaret Rule Hall`,`Margaret Rule Hall, Isambard Brunel Rd, Portsmouth`, `PO1 2DS`),
@@ -266,14 +285,13 @@ $sql =
 (`5`, `Trafalgar Hall`, `Trafalgar Hall, Portsmouth, Southsea, Portsmouth`, `PO5 4AY`),
 (`6`, `Bateson Hall`, `Bateson Hall, Portsmouth`, `PO1 2BL`),
 (`7`, `Rees Hall`, `Southsea Terrace,Southsea`, `PO5 3AP`)";
-
-mysqli_select_db($conn, "web");
+(`8`, `Trafalgar Hall`, `Winston Churchill Ave, Portsmouth`, `PO1 2UP`);
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 //Data for user table - pre loaded data
 $sql =
 "INSERT INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
@@ -296,19 +314,44 @@ $sql =
 (`Justin`, `Sullivan`,`Male`,`dpierceg@irs.gov`,`e6qaWkXpb5`,`19940625`,`4919 Gale Center`,`LL62 5BD`,``,`07624408328`,TRUE),
 (`Joshua`, `Fowler`,`Male`,`rruizh@istockphoto.com`,`uU5e5XD`,`19961120`,`59 Rusk Drive`,`SW10 0YQ`,`03433324128`,`07603751985`,FALSE),
 (`Anne`, `Bryant`,`Female`,`jlawsoni@google.cn`,`JfWk9amz0`, `19950417`, `30 Grim Lane`,`N13 6JE`,`08001111789`,`07624498591`,TRUE),
-(`Joshua`, `Morrison`,`Male`,`kcarrj@businessinsider.com`,`y4kZef`, `19910311`, `8 Grover Alley`,`TA8 2RB`,`05659370963`,`07804992674`,FALSE),
-(`Stewart`, `Flack`, `Male`, `swflack@gmail.com`, `amber1`, `19950813`, `46 Caterhame Drive`, `CR5 1JH`, `01737557533`, `07984654175`, TRUE)
+(`Joshua`, `Morrison`,`Male`,`kcarrj@businessinsider.com`,`y4kZef`, `19910311`, `8 Grover Alley`,`TA8 2RB`,`05659370963`,`07804992674`,FALSE);
 ";
-
-mysqli_select_db($conn, "web");
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
 
-//Data for flat table - 25 records to start, capacity so far is 130
+//Data for location table
+$sql =
+"INSERT INTO `location` (`name`,`type`) VALUES
+(`Portsmouth Univeristy Library`,`Univeristy Building`),
+(`Richmond Building`,`Univeristy Building`),
+(`Portland Building`,`Univeristy Building`),
+(`Liongate Building`,`Univeristy Building`),
+(`Buckenham Building`,`Univeristy Building`),
+(`Anglesea Building`,`Univeristy Building`),
+(`Mildam Building`,`Univeristy Building`),
+(`Burnaby Building`,`Univeristy Building`),
+(`Park Building`,`Univeristy Building`),
+(`James Watson`,`Halls of Residence`),
+(`Bateson`,`Halls of Residence`),
+(`Langstone`,`Halls of Residence`),
+(`Harry Law`,`Halls of Residence`),
+(`Rees`,`Halls of Residence`),
+(`Margaret Rule`,`Halls of Residence`),
+(`Fratton Train Station`,`Train Station`),
+(`Portsmouth and Southsea`,`Train Station`),
+(`Portsmouth Habour`, `Train Station`)";
 
+mysqli_select_db("web");
+if(mysqli_query($conn, $sql)) {
+  die("Could not enter data: ". mysqli__error($conn));
+} else {
+  echo "Entered data successfully";
+}
+//Data for flat table - 25 records to start, capacity so far is 130
 $sql =
 "INSERT INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
 (`1.0`,`1`,`6`),
@@ -336,14 +379,12 @@ $sql =
 (`4.1`,`7`,`5`),
 (`4.2`,`7`,`4`),
 (`4.3`,`7`,`5`)";
-
-mysqli_select_db($conn, "web");
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 //Data for uni table
 $sql =
 "INSERT INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
@@ -367,24 +408,22 @@ VALUES (5,1,3,`Halls`,`1.1`),
 (17,16,1,`Halls`,`4.2`),
 (1,8,2,`Halls`,`4.2`),
 (7,19,1,`Halls`,`4.2`)";
-
-mysqli_select_db($conn, "web");
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 //Data for house table
 $sql =
-"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1),(6,2),(8,2),(15,1),(16,2)";
-
-mysqli_select_db($conn, "web");
+"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1, `House Group`, `Looking for a house`),
+(6,2, `Next Year House`, `Need to find a house for next year`),(8,2,`Next Year House`, `Need to find a house for next year`),
+(15,1, `House Group`, `Looking for a house`),(16,2,`Next Year House`, `Need to find a house for next year`)";
+mysqli_select_db("web");
 if(mysqli_query($conn, $sql)) {
-die("Could not enter data: ". mysqli__error($conn));
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
-
 mysqli_close($conn);
 ?>
