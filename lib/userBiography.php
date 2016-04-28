@@ -1,3 +1,4 @@
+<!DOCTYPE HTML>
 <html>
   <script>
     //Makes textarea readOnly and editable
