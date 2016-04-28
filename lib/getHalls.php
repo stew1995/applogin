@@ -19,7 +19,7 @@
   $sqlshowHalls="SELECT * FROM halls WHERE name = '".$q."'";
   $check = mysqli_query($conn, $sqlshowHalls);
   if (!$check) {
-    printf("Error: %s\n", mysqli_error($con));
+    printf("Error: %s\n", mysqli_error($conn));
     exit();
 }
   if(!$check) {
