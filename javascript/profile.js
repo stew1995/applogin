@@ -287,6 +287,11 @@ function changeAccountDetials() {
         var layoutChange = document.createElement('script');
         layoutChange.src = 'javascript/changeLayout.js';
         document.head.appendChild(layoutChange);
+        var css = document.createElement('link');
+        css.rel= 'stylesheet';
+        css.type = 'text/css';
+        css.href = 'CSS/support.css';
+        document.head.appendChild(css);
       });
     });
   });
