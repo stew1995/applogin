@@ -33,7 +33,7 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while($row = mysqli_fetch_array($result)) {
+          while($row = mysqli_fetch_array($conn, $result)) {
             echo "<tr>";
             echo "<td>". $row['hall_id'] . "</td>";
             echo "<td>". $row['name'] . "</td>";
