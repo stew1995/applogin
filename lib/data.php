@@ -14,7 +14,7 @@ if(!$conn) {
 $sql =
 "CREATE TABLE IF NOT EXISTS hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE
+  name VARCHAR(30) 
 )";
 //Check if hobbie table has been created
 if(mysqli_query($conn, $sql)) {
@@ -26,7 +26,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS society (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) UNIQUE
+  name VARCHAR(30) 
 )";
 //Check if society table has been created
 if(mysqli_query($conn, $sql)) {
@@ -93,7 +93,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS location (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(50) UNIQUE NOT NULL,
+  name VARCHAR(50)  NOT NULL,
   type VARCHAR(50) NOT NULL
 )";
 
@@ -188,7 +188,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS note (
   user_id INT UNSIGNED PRIMARY KEY,
-  note_id INT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
+  note_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
   name VARCHAR(15) NOT NULL,
   data TEXT NOT NULL,
   CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
