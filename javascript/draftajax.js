@@ -16,6 +16,11 @@ function centerContent() {
             var si = document.createElement('script');
             si.src = 'javascript/house.js';
             document.head.appendChild(si);
+            var css = document.createElement('link');
+            css.rel= 'stylesheet';
+            css.type = 'text/css';
+            css.href = 'CSS/hoouse.css';
+            document.head.appendChild(css);
           });
       });
   });
@@ -38,6 +43,11 @@ function hallsCenter() {
             var si = document.createElement('script');
             si.src = 'javascript/halls.js';
             document.head.appendChild(si);
+            var css = document.createElement('link');
+            css.rel= 'stylesheet';
+            css.type = 'text/css';
+            css.href = 'CSS/halls.css';
+            document.head.appendChild(css);
           });
       });
   });
@@ -60,6 +70,11 @@ function profileCenter() {
             var si = document.createElement('script');
             si.src = 'javascript/profile.js';
             document.head.appendChild(si);
+            var css = document.createElement('link');
+            css.rel= 'stylesheet';
+            css.type = 'text/css';
+            css.href = 'CSS/profile.css';
+            document.head.appendChild(css);
           });
       });
   });
@@ -76,6 +91,11 @@ function showSocialSection() {
           var si = document.createElement('script');
           si.src = 'javascript/social.js';
           document.head.appendChild(si);
+          var css = document.createElement('link');
+          css.rel= 'stylesheet';
+          css.type = 'text/css';
+          css.href = 'CSS/social.css';
+          document.head.appendChild(css);
         });
       });
     });
@@ -104,6 +124,11 @@ function supportCenter() {
         var layoutChange = document.createElement('script');
         layoutChange.src = 'javascript/changeLayout.js';
         document.head.appendChild(layoutChange);
+        var css = document.createElement('link');
+        css.rel= 'stylesheet';
+        css.type = 'text/css';
+        css.href = 'CSS/support.css';
+        document.head.appendChild(css);
       });
     });
   });
@@ -127,6 +152,11 @@ function registerCenter() {
           var si = document.createElement('script');
           si.src = 'javascript/validation.js';
           document.head.appendChild(si);
+          var css = document.createElement('link');
+          css.rel= 'stylesheet';
+          css.type = 'text/css';
+          css.href = 'CSS/register.css';
+          document.head.appendChild(css);
         });
       });
     });
@@ -150,6 +180,11 @@ function loginCenter() {
             var si = document.createElement('script');
             si.src = 'javascript/login.js';
             document.head.appendChild(si);
+            var css = document.createElement('link');
+            css.rel= 'stylesheet';
+            css.type = 'text/css';
+            css.href = 'CSS/login.css';
+            document.head.appendChild(css);
           });
       });
   });
@@ -160,12 +195,17 @@ function getMap(){
   ajaxGet("pages/mapcenter.html", function(data) {
     document.getElementById('textCenter').innerHTML = data;
     ajaxGet("pages/mapsidebar.html", function(data) {
-      document.getElementById('sideText').innerHTML = data;
+      document.getElementById('textCenter').innerHTML = data;
       ajaxGet("pages/maprightbar.html", function(data) {
-        document.getElementById('rightText').innerHTML = data;
+        document.getElementById('textCenter').innerHTML = data;
         var si = document.createElement('script');
         si.src = 'javascript/maps.js';
         document.head.appendChild(si);
+        var css = document.createElement('link');
+        css.rel= 'stylesheet';
+        css.type = 'text/css';
+        css.href = 'CSS/maps.css';
+        document.head.appendChild(css);
       });
     });
   });
