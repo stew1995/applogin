@@ -430,12 +430,12 @@ mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn). 'flat');
 
 //Data for house table
 $sqlhousedata =
-"INSERT IGNORE INTO `house` (`user_id`, `group_id`, `description`) VALUES
-(3,1,  'Looking for a house'),
-(6,2,  'Need to find a house for next year'),
-(8,2,  'Need to find a house for next year'),
-(15,1,  'Looking for a house'),
-(16,2, 'Need to find a house for next year')";
+"INSERT IGNORE INTO `house` (`user_id`, `group_id`) VALUES
+(3,1),
+(6,2),
+(8,2),
+(15,1),
+(16,2)";
 
 mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn). 'house');
 
