@@ -201,8 +201,9 @@ if(mysqli_query($conn, $sql)) {
 }
 //Data for hobbie table on load up
 $sqlhobbiedata =
-"INSERT INTO `hobbie` (`name`)
+"INSERT IGNORE INTO `hobbie` (`name`)
 VALUES 
+('Drawing'),
 ('Swimming'),
 ('Magic'),
 ('Computer Programming'),
@@ -245,7 +246,7 @@ VALUES
 mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn));
 //Data for society table
 $sqlsocietydata =
-"INSERT INTO `society` (`name`)
+"INSERT IGNORE INTO `society` (`name`)
 VALUES ('IT'),
 ('Law'),
 ('Brazilian Ju-Jitsu'),
@@ -271,7 +272,7 @@ mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn));
 
 //Data for halls table
 $sqlhallsdata =
-"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (1, 'Margaret Rule Hall','Margaret Rule Hall, Isambard Brunel Rd, Portsmouth', 'PO1 2DS'),
+"INSERT IGNORE INTO `halls` (hall_id, name, location, postcode) VALUES (1, 'Margaret Rule Hall','Margaret Rule Hall, Isambard Brunel Rd, Portsmouth', 'PO1 2DS'),
 (2, 'Harry Law Hall', 'Harry Law Hall, Portsmouth', 'PO1 2SP'),
 (3, 'James Watson Hall', 'James Watson Hall, 28 Guildhall Walk, Portsmouth', 'PO1 2DD'),
 (4, 'Langstone', 'Langstone Campus, Furze Lane, Southsea', 'PO4 8LW'),
@@ -284,7 +285,7 @@ mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn));
 
 //Data for user table - pre loaded data
 $sqluserdata =
-"INSERT INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
+"INSERT IGNORE INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
 ('Martha', 'Chapman','Female','clopez0@theguardian.com','D7z6WUN7pbrX','19980522','73 Marquette Junction','FK198PE','02086680851','07984512477', 'FALSE'),
 ('Linda', 'Baker','Female','hgibson1@salon.com','XVxgAcYb','19940717','077 2nd Point','HP225LQ','08006482133','07001876371',TRUE),
 ('Patrick', 'Warren','Male','vday2@qq.com','fzqz89rUCkSI','19950810','21877 Goodland Lane','M20 1QF','','07624604665',FALSE),
@@ -312,7 +313,7 @@ mysqli_query($conn, $sqluserdata) or die(mysqli_error($conn));
 
 //Data for location table
 $sqllocationdata =
-"INSERT INTO `location` (`name`,`type`) VALUES
+"INSERT IGNORE INTO `location` (`name`,`type`) VALUES
 ('Portsmouth Univeristy Library','Univeristy Building'),
 ('Richmond Building','Univeristy Building'),
 ('Portland Building','Univeristy Building'),
@@ -337,7 +338,7 @@ mysqli_query($conn, $sqllocationdata) or die(mysqli_error($conn));
 
 //Data for flat table - 25 records to start, capacity so far is 130
 $sqlflatdata =
-"INSERT INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
+"INSERT IGNORE INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
 ('1.0','1','6'),
 ('1.1','1','6'),
 ('1.2','1','6'),
@@ -368,7 +369,7 @@ mysqli_query($conn, $sqlflatdata) or die(mysqli_error($conn));
 
 //Data for uni table
 $sqlunidata =
-"INSERT INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
+"INSERT IGNORE INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
 VALUES (5,1,3,'Halls','1.1'),
 (2,14,2,'Halls','1.1'),
 (20,13,3,'Halls','1.1'),
@@ -394,7 +395,7 @@ mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn));
 
 //Data for house table
 $sqlhousedata =
-"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1, 'House Group', 'Looking for a house'),
+"INSERT IGNORE INTO `house` (`user_id`,`group_id`) VALUES (3,1, 'House Group', 'Looking for a house'),
 (6,2, 'Next Year House', 'Need to find a house for next year'),(8,2,'Next Year House', 'Need to find a house for next year'),
 (15,1, 'House Group', 'Looking for a house'),(16,2,'Next Year House', 'Need to find a house for next year')";
 
