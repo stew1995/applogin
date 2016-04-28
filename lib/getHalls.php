@@ -17,7 +17,7 @@
   }
   mysqli_select_db($conn, "web");
   $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
-  $result = mysqli_query($conn, $sqlshowHalls) or die(mysqli_error($conn));
+  $result = mysqli_query($conn, $sqlshowHalls);
 
   echo "<table id='hallsOutput'>
           <tr>
