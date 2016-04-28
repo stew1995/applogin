@@ -277,7 +277,7 @@ $sqlhallsdata =
 (4, 'Langstone', 'Langstone Campus, Furze Lane, Southsea', 'PO4 8LW'),
 (5, 'Trafalgar Hall', 'Trafalgar Hall, Portsmouth, Southsea, Portsmouth', 'PO5 4AY'),
 (6, 'Bateson Hall', 'Bateson Hall, Portsmouth', 'PO1 2BL'),
-(7, 'Rees Hall', 'Southsea Terrace,Southsea', 'PO5 3AP')
+(7, 'Rees Hall', 'Southsea Terrace,Southsea', 'PO5 3AP'),
 (8, 'Trafalgar Hall', 'Winston Churchill Ave, Portsmouth', 'PO1 2UP')";
 
 mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn));
