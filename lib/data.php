@@ -156,7 +156,7 @@ $sql =
 "CREATE TABLE IF NOT EXISTS house (
   group_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT UNSIGNED NOT NULL,
-  name VARCHAR(20) NOT NULL,
+  name VARCHAR(30) NOT NULL,
   description TEXT NOT NULL,
   datecreated TIMESTAMP NOT NULL,
   CONSTRAINT HousemateFK FOREIGN KEY (user_id) REFERENCES user(id)
@@ -430,10 +430,10 @@ mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn). 'flat');
 
 //Data for house table
 $sqlhousedata =
-"INSERT IGNORE INTO `house` ("user_id", "group_id", "name", "description") VALUES
+"INSERT IGNORE INTO `house` (`user_id`, `group_id`, `name`, `description`) VALUES
 (3,1, 'House Group', 'Looking for a house'),
 (6,2, 'Next Year House', 'Need to find a house for next year'),
-(8,2,'Next Year House', 'Need to find a house for next year'),
+(8,2, 'Next Year House', 'Need to find a house for next year'),
 (15,1, 'House Group', 'Looking for a house'),
 (16,2,'Next Year House', 'Need to find a house for next year')";
 
