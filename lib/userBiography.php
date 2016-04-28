@@ -13,6 +13,7 @@
 
       if(!file_exists($file)) {
         fopen("userBio" . $n = $n + 1 . ".txt", "a+");
+        file_put_contents('lib/bio/userBio' . $n . ".txt" . $file);
       }
       fclose($file);
     }
@@ -22,3 +23,5 @@
 
 </body>
 </html>
+
+
