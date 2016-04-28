@@ -11,12 +11,13 @@
 <body>
 <?php
   $q = intval($_GET['q']);
+  $hall = $_GET['contactStudentHalls'];
   $conn = mysqli_connect('localhost', 'root', 'root', 'web');
   if(!$conn){
     die('Could not connect: '. mysqli_error($conn));
   }
   mysqli_select_db($conn, "web");
-  $sqlshowHalls="SELECT * FROM halls WHERE id = '".$q."'";
+  $sqlshowHalls="SELECT * FROM halls WHERE id = '".$hall."'";
   $result = mysqli_query($conn, $sqlshowHalls);
 
   echo "<table id='hallsOutput'>
