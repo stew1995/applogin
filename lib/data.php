@@ -107,7 +107,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS login (
   id int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  email VARCHAR(50) UNIQUE NOT NULL
+  email VARCHAR(50) UNIQUE NOT NULL,
   password VARCHAR(12) NOT NULL,
   CONSTRAINT loginEmailFK FOREIGN KEY (email) REFERENCES user(email),
   CONSTRAINT loginPasswordFK FOREIGN KEY (password) REFERENCES user(password)
