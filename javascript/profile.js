@@ -87,7 +87,7 @@ window.addEventListener("load", showNotes);
 
 //Show user bio to edit
 function showBio() {
-  ajaxGet("lib/userBio.php", function(data){
+  ajaxGet("lib/userBiography.php", function(data){
     document.getElementById("userBio").innerHTML = data;
   });
 }
