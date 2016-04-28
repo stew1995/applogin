@@ -154,8 +154,8 @@ if(mysqli_query($conn, $sql)) {
 //House Table
 $sql =
 "CREATE TABLE IF NOT EXISTS house (
-  user_id INT UNSIGNED PRIMARY KEY,
-  group_id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+  group_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  user_id INT UNSIGNED NOT NULL,
   name VARCHAR(20) NOT NULL,
   description TEXT NOT NULL,
   datecreated TIMESTAMP NOT NULL,
