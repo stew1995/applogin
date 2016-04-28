@@ -18,9 +18,9 @@ $sql =
 )";
 //Check if hobbie table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table hobbie successfully created";
+  echo "</p> Table hobbie successfully created </p>";
 } else {
-  echo "Error creating table hobbie". mysqli_error($conn);;
+  echo "</p> Error creating table hobbie". mysqli_error($conn) . "</p>";
 }
 //Society
 $sql =
@@ -30,9 +30,9 @@ $sql =
 )";
 //Check if society table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table society successfully created";
+  echo "</p> Table society successfully created </p>";
 } else {
-  echo "Error creating table society". mysqli_error($conn);;
+  echo "</p> Error creating table society". mysqli_error($conn) ."</p>";
 }
 //Course table
 $sql =
@@ -43,9 +43,9 @@ $sql =
 )";
 //Check if course table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table has been successfully created";
+  echo "</p> Table has been successfully created </p>";
 } else {
-  echo "Error creating table course: ". mysqli_error($conn);
+  echo "</p> Error creating table course: ". mysqli_error($conn) . "</p>";
 }
 //Halls Table
 $sql =
@@ -57,9 +57,9 @@ $sql =
 )";
 //check if halls table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table halls created successfully";
+  echo "</p> Table halls created successfully </p>";
 } else {
-  echo "Error creating table: ". mysqli_error($conn);
+  echo "</p> Error creating table: ". mysqli_error($conn) . "</p>";
 }
 //User table - Hobbie and Society are FK
 $sql =
@@ -83,9 +83,9 @@ $sql =
 )";
 //Check if user table is created successfully
 if(mysqli_query($conn, $sql)) {
-  echo "Table user created successfully";
+  echo "</p> Table user created successfully </p>";
 } else {
-  echo "Error creating user table: ". mysqli_error($conn);
+  echo "</p> Error creating user table: ". mysqli_error($conn) . "</p>";
 }
 
 //Location Table
@@ -99,9 +99,9 @@ $sql =
 
 //check if location table has been successfully created
 if(mysqli_query($conn, $sql)) {
-  echo "Table flat created successfully";
+  echo "</p> Table flat created successfully </p>";
 } else {
-  echo "Error creating table flat: ". mysqli_error($conn);
+  echo "</p> Error creating table flat: ". mysqli_error($conn) . "</p>";
 }
 //Log In Table
 $sql =
@@ -114,9 +114,9 @@ $sql =
 )";
 //Check if login table is created successfully
 if(mysqli_query($conn, $sql)) {
-  echo "Table user created successfully";
+  echo "</p> Table user created successfully </p>";
 } else {
-  echo "Error creating user table: ". mysqli_error($conn);
+  echo "</p> Error creating user table: ". mysqli_error($conn) . "</p>";
 }
 //Flat Table
 $sql =
@@ -128,9 +128,9 @@ $sql =
 )";
 //check if flat table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table flat created successfully";
+  echo "</p> Table flat created successfully </p>";
 } else {
-  echo "Error creating table flat: ". mysqli_error($conn);
+  echo "</p> Error creating table flat: ". mysqli_error($conn) . "</p>";
 }
 //Uni Table
 //In this table think about how the course table will work, maybe include a different one
@@ -147,9 +147,9 @@ $sql =
 )";
 //Check if uni table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table uni created successfully";
+  echo "</p> Table uni created successfully </p>";
 } else {
-  echo "Error creating table: ". mysqli_error($conn);
+  echo "</p> Error creating table: ". mysqli_error($conn) . "</p>";
 }
 //House Table
 $sql =
@@ -163,9 +163,9 @@ $sql =
 )";
 //check if house table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table house created successfully";
+  echo "</p> Table house created successfully </p>";
 } else {
-  echo "Error creating table house: ". mysqli_error($conn);
+  echo "</p> Error creating table house: ". mysqli_error($conn) . "</p>";
 }
 //Message Table - LOOK INTO HOW THIS WILL WORK, send = user sending the message, location is where the message is sent to
 $sql =
@@ -179,9 +179,9 @@ $sql =
 )";
 //check if message table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table message created successfully";
+  echo "</p> Table message created successfully </p>";
 } else {
-  echo "Error creating table message: ". mysqli_error($conn);
+  echo "</p> Error creating table message: ". mysqli_error($conn) . "</p>";
 }
 
 //Note Table -- Needs checking
@@ -195,9 +195,9 @@ $sql =
 )";
 //check if note table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "Table message created successfully";
+  echo "</p> Table message created successfully </p>";
 } else {
-  echo "Error creating table message: ". mysqli_error($conn);
+  echo "</p> Error creating table message: ". mysqli_error($conn) . "</p>";
 }
 //Data for hobbie table on load up
 $sql =
