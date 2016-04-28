@@ -25,7 +25,7 @@ if(mysqli_query($conn, $sql)) {
 //Society
 $sql =
 "CREATE TABLE IF NOT EXISTS society (
-  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(30) UNIQUE
 )";
 //Check if society table has been created
@@ -37,7 +37,7 @@ if(mysqli_query($conn, $sql)) {
 //Course table
 $sql =
 "CCREATE TABLE IF NOT EXISTS course (
-  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   code VARCHAR(5) UNIQUE NOT NULL,
   name VARCHAR(40) NOT NULL
 )";
@@ -50,7 +50,7 @@ if(mysqli_query($conn, $sql)) {
 //Halls Table
 $sql =
 "CREATE TABLE IF NOT EXISTS halls (
-  hall_id INT PRIMARY KEY UNSIGNED PRIMARY KEY,
+  hall_id INT UNSIGNED PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL,
   location VARCHAR(200) NOT NULL,
   postcode VARCHAR(7) NOT NULL
@@ -64,7 +64,7 @@ if(mysqli_query($conn, $sql)) {
 //User table - Hobbie and Society are FK
 $sql =
 "CREATE TABLE IF NOT EXISTS user (
-  id INT PRIMARY KEY UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   fname VARCHAR(20) NOT NULL,
   lname VARCHAR(20) NOT NULL,
   gender VARCHAR(6) NOT NULL,
@@ -92,7 +92,7 @@ if(mysqli_query($conn, $sql)) {
 
 $sql =
 "CREATE TABLE IF NOT EXISTS location (
-  id INT PRIMARY KEY NOT NULL AUTO_INCREMENT UNSIGNED,
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   name VARCHAR(50) UNIQUE NOT NULL,
   type VARCHAR(50) NOT NULL
 )";
@@ -136,7 +136,7 @@ if(mysqli_query($conn, $sql)) {
 //In this table think about how the course table will work, maybe include a different one
 $sql =
 "CREATE TABLE IF NOT EXISTS uni (
-  user_id INT UNSIGNED PRIMARY KEY,
+  user_id INT UNSIGNED PRIMARY KEY ,
   course INT UNSIGNED,
   study SMALLINT NOT NULL,
   accom VARCHAR(7) NOT NULL,
@@ -170,7 +170,7 @@ if(mysqli_query($conn, $sql)) {
 //Message Table - LOOK INTO HOW THIS WILL WORK, send = user sending the message, location is where the message is sent to
 $sql =
 "CREATE TABLE IF NOT EXISTS message (
-  id INT UNSIGNED PRIMARY KEY AUTO_INCREMENT,
+  id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   message VARCHAR(200) NOT NULL,
   send INT UNSIGNED NOT NULL,
   location INT UNSIGNED NOT NULL,
@@ -188,7 +188,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS note (
   user_id INT UNSIGNED PRIMARY KEY,
-  note_id INT UNSIGNED UNIQUE NOT NULL,
+  note_id INT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
   name VARCHAR(15) NOT NULL,
   data TEXT NOT NULL,
   CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
