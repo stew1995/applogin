@@ -202,7 +202,7 @@ if(mysqli_query($conn, $sql)) {
 //Data for hobbie table on load up
 $sqlhobbiedata =
 "INSERT INTO `hobbie` (`name`)
-VALUES (`Drawing`),
+VALUES ('Drawing'),
 (`Swimming`),
 (`Magic`),
 (`Computer Programming`),
