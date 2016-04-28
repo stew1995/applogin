@@ -192,7 +192,7 @@ $sql =
   name VARCHAR(15) NOT NULL,
   data TEXT NOT NULL,
   CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
-)"
+)";
 //check if note table has been created
 if(mysqli_query($conn, $sql)) {
   echo "Table message created successfully";
