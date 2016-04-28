@@ -18,6 +18,10 @@
   mysqli_select_db($conn, "web");
   $sqlshowHalls="SELECT * FROM halls WHERE name = '".$q."'";
   $check = mysqli_query($conn, $sqlshowHalls);
+  if (!$check1_res) {
+    printf("Error: %s\n", mysqli_error($con));
+    exit();
+}
   if(!$check) {
     die(mysqli_error($conn));
   } else {
