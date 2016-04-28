@@ -245,7 +245,7 @@ VALUES (`Drawing`),
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
-  echo "Entered data successfully";
+  die("Could not enter data: ". mysqli__error($conn));
 }
 //Data for society table
 $sql =
