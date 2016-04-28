@@ -241,7 +241,7 @@ VALUES (`Drawing`),
 (`Astronomy`),
 (`Squash`)";
 //check if data has been inserted in to hobbie table
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -270,7 +270,7 @@ VALUES (`IT`),
 (`Hindu`),
 (`Comedy`),
 (`Skate`)";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -286,7 +286,7 @@ $sql =
 (`6`, `Bateson Hall`, `Bateson Hall, Portsmouth`, `PO1 2BL`),
 (`7`, `Rees Hall`, `Southsea Terrace,Southsea`, `PO5 3AP`)
 (`8`, `Trafalgar Hall`, `Winston Churchill Ave, Portsmouth`, `PO1 2UP`)";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -316,7 +316,7 @@ $sql =
 (`Anne`, `Bryant`,`Female`,`jlawsoni@google.cn`,`JfWk9amz0`, `19950417`, `30 Grim Lane`,`N13 6JE`,`08001111789`,`07624498591`,TRUE),
 (`Joshua`, `Morrison`,`Male`,`kcarrj@businessinsider.com`,`y4kZef`, `19910311`, `8 Grover Alley`,`TA8 2RB`,`05659370963`,`07804992674`,FALSE);
 ";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -345,7 +345,7 @@ $sql =
 (`Portsmouth and Southsea`,`Train Station`),
 (`Portsmouth Habour`, `Train Station`)";
 
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -379,7 +379,7 @@ $sql =
 (`4.1`,`7`,`5`),
 (`4.2`,`7`,`4`),
 (`4.3`,`7`,`5`)";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -408,7 +408,7 @@ VALUES (5,1,3,`Halls`,`1.1`),
 (17,16,1,`Halls`,`4.2`),
 (1,8,2,`Halls`,`4.2`),
 (7,19,1,`Halls`,`4.2`)";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
@@ -419,7 +419,7 @@ $sql =
 "INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1, `House Group`, `Looking for a house`),
 (6,2, `Next Year House`, `Need to find a house for next year`),(8,2,`Next Year House`, `Need to find a house for next year`),
 (15,1, `House Group`, `Looking for a house`),(16,2,`Next Year House`, `Need to find a house for next year`)";
-mysqli_select_db("web");
+
 if(mysqli_query($conn, $sql)) {
   die("Could not enter data: ". mysqli__error($conn));
 } else {
