@@ -187,7 +187,7 @@ function backgroundChange(){
 }
 
 var change = document.getElementById("colours");
-change.addEventListener("click", backgroundChange);
+colours.addEventListener("click", backgroundChange);
 
 //Show contact details
 function showUnionDetails(){
@@ -289,6 +289,7 @@ function showDetails(){
   var changeemail = document.getElementById("newemail");
 
   //Input feilds that are hidden
+  var name = document.getElementById("changeName").style;
   var pass = document.getElementById("changePassword").style;
   var email = document.getElementById("changeEmail").style;
   var address = document.getElementById("changeAddress").style;
@@ -300,6 +301,7 @@ function showDetails(){
   var accom = document.getElementById("changeAccom").style;
 
   //Radio buttons to show each input
+  var namebtn = document.getElementById("supportName").checked
   var passbtn = document.getElementById("supportPassword").checked;
   var emailbtn = document.getElementById("supportEmail").checked;
   var addressbtn = document.getElementById("supportAddress").checked;
@@ -319,6 +321,12 @@ function showDetails(){
   //Patterns for Input
   var emailPatt = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
   var passwordPatt = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+
+  if(namebtn == true) {
+    name.display = "block";
+  } else {
+    name.display = "none";
+  }
 
   if(passbtn == true){
     pass.display = "block";
@@ -401,7 +409,8 @@ function showDetails(){
     accom.display = "none";
   }
 }
-
+var supportName = document.getElementById("supportName");
+supportName.addEventListener("click", showDetails);
 var supportPassword = document.getElementById("supportPassword");
 supportPassword.addEventListener("click", showDetails);
 var supportEmail = document.getElementById("supportEmail");
@@ -549,111 +558,6 @@ function doneAccom(){
 var accomChange = document.getElementById("completeAccom");
 accomChange.addEventListener("click", doneAccom);
 
-//Cancel button on each change
-function cancelPassword(){
-  var passbtn = document.getElementById("supportPassword").checked;
-  var pass = document.getElementById("changePassword").style;
-
-  if(passbtn == true){
-    passbtn = false;
-    pass.display = "none";
-  }
-}
-
-var canceldone = document.getElementById("cancelPassword");
-canceldone.addEventListener("click", cancelPassword);
-
-function cancelAddress(){
-  var addressbtn = document.getElementById("supportAddress").checked;
-  var address = document.getElementById("changeAddress").style;
-
-  if(addressbtn == true){
-    addressbtn = false;
-    address.display = "none";
-  }
-}
-
-var addressCancel = document.getElementById("cancelAddress");
-addressCancel.addEventListener("click", cancelAddress);
-
-function cancelMobile(){
-  var mobilebtn = document.getElementById("supportMobile").checked;
-  var mobile = document.getElementById("changeMobile").style;
-
-  if(mobilebtn == true){
-    mobilebtn = false;
-    mobile.display = "none";
-  }
-}
-
-var mobileCancel = document.getElementById("cancelMobile");
-mobileCancel.addEventListener("click", cancelMobile);
-
-function cancelHobbie(){
-  var hobbiebtn = document.getElementById("supportHobbie").checked;
-  var hobbie = document.getElementById("changeHobbie").style;
-
-  if(hobbiebtn == true){
-    hobbiebtn = false;
-    hobbie.display = "none";
-  }
-}
-
-var hobbieCancel = document.getElementById("cancelHobbie");
-hobbieCancel.addEventListener("click", cancelHobbie);
-
-function cancelSociety(){
-  var societybtn = document.getElementById("supportSociety").checked;
-  var society = document.getElementById("changeSociety").style;
-
-  if(societybtn == true){
-    societybtn = false;
-    society.display = "none";
-  }
-}
-
-var societyCancel = document.getElementById("cancelSociety");
-societyCancel.addEventListener("click", cancelSociety);
-
-function cancelYear(){
-  var yearbtn = document.getElementById("supportYear").checked;
-  var year = document.getElementById("changeYear").style;
-
-  if(yearbtn == true){
-    yearbtn = false;
-    year.display = "none";
-  }
-}
-
-var yearCancel = document.getElementById("cancelYear");
-yearCancel.addEventListener("click", cancelYear);
-
-function cancelCourse(){
-  var coursebtn = document.getElementById("supportCourse").checked;
-  var course = document.getElementById("changeCourse").style;
-
-  if(coursebtn == true){
-    coursebtn = false;
-    course.display = "none";
-  }
-}
-
-var courseCancel = document.getElementById("cancelCourse");
-courseCancel.addEventListener("click", cancelCourse);
-
-function cancelAccom(){
-  var accombtn = document.getElementById("supportAccom").checked;
-  var accom = document.getElementById("changeAccom").style;
-
-  if(accombtn == true){
-    accombtn = false;
-    accom.display = "none";
-  }
-}
-
-var accomCancel = document.getElementById("cancelAccom");
-accomCancel.addEventListener("click", cancelAccom);
-
 //Search Preferences
 
 function showSearchPref(){
@@ -697,6 +601,7 @@ function showHouseLayout(){
   var layoutprofile = document.getElementById("layoutProfile").style;
   var layouthalls = document.getElementById("layoutHalls").style;
   var layouthouse = document.getElementById("layoutHouse").style;
+  var layoutmaps = document.getElementById("layoutMaps").style;
   var choices = document.getElementById("layoutChoices").style;
 
   if(layouthouse.display === "block") {
@@ -707,6 +612,7 @@ function showHouseLayout(){
     layoutsocial.display = "none";
     layouthalls.display = "none";
     layoutprofile.display = "none";
+    layoutmaps.display = "none";
     choices.display = "none";
   }
 }
@@ -720,6 +626,7 @@ function showHallsLayout(){
   var layoutprofile = document.getElementById("layoutProfile").style;
   var layouthalls = document.getElementById("layoutHalls").style;
   var layouthouse = document.getElementById("layoutHouse").style;
+  var layoutmaps = document.getElementById("layoutMaps").style;
   var choices = document.getElementById("layoutChoices").style;
 
   if(layouthalls.display === "block") {
@@ -730,6 +637,7 @@ function showHallsLayout(){
     layoutprofile.display = "none";
     layoutsupport.display = "none";
     layouthouse.display = "none";
+    layoutmaps.display = "none";
     choices.display = "none";
   }
 }
@@ -743,6 +651,7 @@ function showProfileLayout(){
   var layoutsocial = document.getElementById("layoutSocial").style;
   var layouthalls = document.getElementById("layoutHalls").style;
   var layouthouse = document.getElementById("layoutHouse").style;
+  var layoutmaps = document.getElementById("layoutMaps").style;
   var choices = document.getElementById("layoutChoices").style;
 
   if(layout.display === "block") {
@@ -753,6 +662,7 @@ function showProfileLayout(){
     layoutsocial.display = "none";
     layouthalls.display = "none";
     layouthouse.display = "none";
+    layoutmaps.display = "none";
     choices.display = "none";
   }
 }
@@ -766,6 +676,7 @@ function showSocialLayout(){
   var layoutprofile = document.getElementById("layoutProfile").style;
   var layouthalls = document.getElementById("layoutHalls").style;
   var layouthouse = document.getElementById("layoutHouse").style;
+  var layoutmaps = document.getElementById("layoutMaps").style;
   var choices = document.getElementById("layoutChoices").style;
 
   if(layout.display === "block") {
@@ -776,6 +687,7 @@ function showSocialLayout(){
     layoutprofile.display = "none";
     layouthalls.display = "none";
     layouthouse.display = "none";
+    layoutmaps.display = "none";
     choices.display = "none";
   }
 }
@@ -783,12 +695,41 @@ function showSocialLayout(){
 var showSocial = document.getElementById("layoutSocialBtn");
 showSocial.addEventListener("click", showSocialLayout);
 
+function showMapsLayout() {
+  var layoutsupport = document.getElementById("layoutSupport").style;
+  var layoutsocial = document.getElementById("layoutSocial").style;
+  var layoutprofile = document.getElementById("layoutProfile").style;
+  var layouthalls = document.getElementById("layoutHalls").style;
+  var layouthouse = document.getElementById("layoutHouse").style;
+  var layout = document.getElementById("layoutMaps").style;
+  var choices = document.getElementById("layoutChoices").style;
+
+  if(layout.display === "block") {
+    layout.display = "none";
+  } else {
+    layout.display = "block";
+    layoutsupport.display = "none";
+    layoutprofile.display = "none";
+    layouthalls.display = "none";
+    layouthouse.display = "none";
+    layoutsocial.display = "none";
+    choices.display = "none";
+  }
+}
+
+var showMaps = document.getElementById("layoutMapsBtn");
+showMaps.addEventListener("click", showMapsLayout);
+
+
+
+
 function showSupportLayout(){
   var layoutsupport = document.getElementById("layoutSupport").style;
   var layoutsocial = document.getElementById("layoutSocial").style;
   var layoutprofile = document.getElementById("layoutProfile").style;
   var layouthalls = document.getElementById("layoutHalls").style;
   var layouthouse = document.getElementById("layoutHouse").style;
+  var layoutmaps = document.getElementById("layoutMaps").style;
   var choices = document.getElementById("layoutChoices").style;
 
   if(layoutsupport.display === "block") {
@@ -799,6 +740,7 @@ function showSupportLayout(){
     layoutprofile.display = "none";
     layouthalls.display = "none";
     layouthouse.display = "none";
+    layoutmaps.display = "none";
     choices.display = "none";
   }
 }
@@ -870,3 +812,42 @@ function layoutSupportOptions(){
 
 var supportChoice = document.getElementById("contentLayoutSupport");
 supportChoice.addEventListener("click", layoutSupportOptions);
+
+function layoutMapsOptions(){
+  var section1 = document.getElementById("mapSection1");
+  var section2 = document.getElementById("mapSection2");
+  var section3 = document.getElementById("mapSection3");
+  var choices = document.getElementById("layoutChoices").style;
+  if(section1.checked == true||section2.checked == true||section3.checked == true){
+    choices.display = "block";
+}
+}
+
+var mapsChoice = document.getElementById("contentLayoutMaps");
+mapsChoice.addEventListener("click", layoutMapsOptions);
+
+//Show halls in database when the user clicks
+function showHallsSupport(value) {
+  ajaxGet("lib/getHalls.ph?q="+value, function(data){
+    document.getElementById("supportHallsShow").innerHTML = data;
+  });
+}
+
+var showHalls = document.getElementById("contactStudentHalls");
+showHalls.addEventListener("change", showHallsSupport(this.value));
+
+//AJAXGET
+function ajaxGet(URL, callback) {
+
+
+  var ajaxObj = new XMLHttpRequest();
+  ajaxObj.open("GET", URL, true); // The TRUE implies asynchronous
+  ajaxObj.onreadystatechange = function() {
+    if (ajaxObj.status === 200){
+      if (ajaxObj.readyState === 4){
+        callback(ajaxObj.responseText);
+   }
+   }
+  };
+  ajaxObj.send();
+}
