@@ -25,7 +25,7 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while($row = mysqli_fetch_array($result)) {
+          while($row = mysqli_fetch_assoc($result)) {
             echo "<tr>";
             echo "<td>". $row['name'] . "</td>";
             echo "<td>". $row['location'] . "</td>";
