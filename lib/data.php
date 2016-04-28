@@ -43,7 +43,7 @@ $sql =
 )";
 //Check if course table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "</p> Table has been successfully created </p>";
+  echo "</p> Table course has been successfully created </p>";
 } else {
   echo "</p> Error creating table course: ". mysqli_error($conn) . "</p>";
 }
@@ -142,7 +142,7 @@ $sql =
   accom VARCHAR(7) NOT NULL,
   flat_id DECIMAL(2,1) UNSIGNED,
   CONSTRAINT UserFK FOREIGN KEY (user_id) REFERENCES user(id),
-  CONSTRAINT CourseFK FOREIGN KEY (course) REFERENCES course(id),
+  CONSTRAINT UniCourseFK FOREIGN KEY (course) REFERENCES course(id),
   CONSTRAINT FlatuserFK FOREIGN KEY (flat_id) REFERENCES flat(flat_id)
 )";
 //Check if uni table has been created
