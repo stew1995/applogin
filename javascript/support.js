@@ -828,7 +828,7 @@ mapsChoice.addEventListener("click", layoutMapsOptions);
 
 //Show halls in database when the user clicks
 function showHallsSupport(value) {
-  ajaxGet("lib/getHalls.ph?q="+value, function(data){
+  ajaxGet("lib/getHalls.php?q="+value, function(data){
     document.getElementById("supportHallsShow").innerHTML = data;
   });
 }
