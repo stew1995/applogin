@@ -99,9 +99,9 @@ $sql =
 
 //check if location table has been successfully created
 if(mysqli_query($conn, $sql)) {
-  echo "</p> Table flat created successfully </p>";
+  echo "</p> Table location created successfully </p>";
 } else {
-  echo "</p> Error creating table flat: ". mysqli_error($conn) . "</p>";
+  echo "</p> Error creating table location: ". mysqli_error($conn) . "</p>";
 }
 //Log In Table
 $sql =
@@ -195,9 +195,9 @@ $sql =
 )";
 //check if note table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "</p> Table message created successfully </p>";
+  echo "</p> Table note created successfully </p>";
 } else {
-  echo "</p> Error creating table message: ". mysqli_error($conn) . "</p>";
+  echo "</p> Error creating table note: ". mysqli_error($conn) . "</p>";
 }
 //Data for hobbie table on load up
 $sql =
