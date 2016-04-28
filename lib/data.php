@@ -221,7 +221,7 @@ VALUES (`Drawing`),
 //check if data has been inserted in to hobbie table
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+  die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -252,7 +252,7 @@ VALUES (`IT`),
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -269,7 +269,7 @@ $sql =
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -302,7 +302,7 @@ $sql =
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -339,7 +339,7 @@ $sql =
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -370,7 +370,7 @@ VALUES (5,1,3,`Halls`,`1.1`),
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
@@ -381,7 +381,7 @@ $sql =
 
 mysqli_select_db($conn, "web");
 if(mysqli_query($conn, $sql)) {
-  die("Could not enter data: ". mysqli_connect_error());
+die("Could not enter data: ". mysqli__error($conn));
 } else {
   echo "Entered data successfully";
 }
