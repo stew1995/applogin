@@ -108,7 +108,7 @@ $sql =
 "CREATE TABLE IF NOT EXISTS login (
   id int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
   user_id INT UNSIGNED NOT NULL,
-  CONSTRAINT loginUserFK FOREIGN KEY (user_id) REFERENCES user(id),
+  CONSTRAINT loginUserFK FOREIGN KEY (user_id) REFERENCES user(id)
 )";
 //Check if login table is created successfully
 if(mysqli_query($conn, $sql)) {
@@ -152,10 +152,8 @@ if(mysqli_query($conn, $sql)) {
 //House Table
 $sql =
 "CREATE TABLE IF NOT EXISTS house (
-  group_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+  group_id INT UNSIGNED PRIMARY KEY,
   user_id INT UNSIGNED NOT NULL,
-  name VARCHAR(20) NOT NULL,
-  description TEXT NOT NULL,
   datecreated TIMESTAMP NOT NULL,
   CONSTRAINT HousemateFK FOREIGN KEY (user_id) REFERENCES user(id)
 )";
@@ -426,9 +424,9 @@ mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn) . 'Uni');
 
 //Data for house table
 $sqlhousedata =
-"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1, 'House Group', 'Looking for a house'),
-(6,2, 'Next Year House', 'Need to find a house for next year'),(8,2,'Next Year House', 'Need to find a house for next year'),
-(15,1, 'House Group', 'Looking for a house'),(16,2,'Next Year House', 'Need to find a house for next year')";
+"INSERT INTO `house` (`group_id`,`user_id`) VALUES (1,3),
+(2,6),(2,8),
+(1,15),(2,16)";
 
 mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn) . 'House');
 
