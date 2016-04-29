@@ -833,8 +833,7 @@ function showHallsSupport(value) {
     });
   }
 
-var showHalls = document.getElementById("contactStudentHalls");
-showHalls.addEventListener("change", showHallsSupport(this.value));
+
 
 //AJAXGET
 function ajaxGet(URL, callback) {
