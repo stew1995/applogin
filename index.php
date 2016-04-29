@@ -1,11 +1,5 @@
-
-<!DOCTYPE html>
-<html>
-<head>
-  <link rel="stylesheet" type="text/css" href="CSS\navigation.css">
-  <link rel="stylesheet" type="text/css" href="CSS\template.css">
-</head>
-    <div class="navigation">
+<body>
+  <div class="navigation">
   <nav>
     <ul class="firstnav"> <!-- first unordered list -->
       <li id="searchbar"><a>&#128269</a></li>
@@ -27,9 +21,9 @@
 
     <div class="navSearch" id="topSearch">
        <form>
-         <input autocomplete="off" class="search_box" type="text" name="query" id="query" onkeyup="search()">
-         <div id="searchResult"> </div>
+         <input autocomplete="off" class="search_box" type="text" name="query" id="query">
          <input type="checkbox" name="advancesearch" id='advance'><span class="advance">Advanced Search</span>
+         <div id="searchResult"> </div>
       </form>
   </div>
 
