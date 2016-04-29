@@ -35,43 +35,34 @@ if(isset($_POST['checkValidation'])){
   
   //Get course ID for table 
   
-  $getCourse = mysqli_query($conn, "SELECT id FROM course WHERE name ='$course'");
-  
+  $getCourse = "SELECT id FROM course WHERE name ='$course'";
+  mysqli_query($conn, $getCourse) or die(mysqli_error($conn));
   
   $getHobbie = "SELECT id FROM course WHERE name ='$hobbie'";
+  mysqli_query($conn, $getHobbie) or die(mysqli_error($conn));
   
   $getSociety = "SELECT id FROM course WHERE name ='$society'";
-  
+  mysqli_query($conn, $getSociety) or die(mysqli_error($conn));
   
 
   if($name != '' && $surname != '' && $email != '' && $password != '' && $gender != ''
       && $address != '' && $postcode != ''){
-    $sql =
+    $sqlregister =
     "INSERT INTO user (fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$address',
-            '$postcode', '$homenumber', '$mobile', '$hobbie', '$society', '$smoker')";
+            '$postcode', '$homenumber', '$mobile', '$getHobbie', '$getSociety', '$smoker')";
   }
   //Check if user registered data has been inputted correctly
-  mysqli_select_db("web");
-  if(mysqli_query($conn, $sql)) {
-    die("Could not enter data: ". mysqli_connect_error());
-  } else {
-    echo "Entered data successfully";
-  }
+  mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
 
   if($course != ''|| $accom != ''){
-    $sql =
+    $sqluni =
     "INSERT INTO uni (course, study, accom)
-    VALUES ('$course', '$studyYear', '$accom')";
+    VALUES ('$getCourse', '$studyYear', '$accom')";
   }
   //Check if user data entered is correct
-  mysqli_select_db("web");
-  if(mysqli_query($conn, $sql)) {
-    die("Could not enter data: ". mysqli_connect_error());
-  } else {
-    echo "Entered data successfully";
-  }
+  mysqli_query($conn, $sqluni) or die(mysqli_error($conn));
 }
 
 ?>
