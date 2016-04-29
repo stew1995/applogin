@@ -3,16 +3,16 @@
      text-transform:capitalize;
      padding:5px;
 }
-.suggest_link{
-background-color; red;
-border-bottom:1px solid gray;
-}
+
 .small{
      width: 60%;
      margin-left: 55px;
      background-color:white;
      border-bottom:1px solid  #c0c0c0;
      font-size: 18px;
+}
+.small:nth-child(odd) {
+     background: red;
 }
 .suggest_link_over{
 background-color:blue;
