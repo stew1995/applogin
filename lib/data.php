@@ -14,7 +14,7 @@ if(!$conn) {
 $sql =
 "CREATE TABLE IF NOT EXISTS hobbie (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) 
+  name VARCHAR(30) UNIQUE
 )";
 //Check if hobbie table has been created
 if(mysqli_query($conn, $sql)) {
@@ -26,7 +26,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS society (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(30) 
+  name VARCHAR(30) UNIQUE
 )";
 //Check if society table has been created
 if(mysqli_query($conn, $sql)) {
@@ -38,12 +38,12 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS course (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  code VARCHAR(5) UNIQUE NOT NULL,
+  code INT UNIQUE NOT NULL,
   name VARCHAR(40) NOT NULL
 )";
 //Check if course table has been created
 if(mysqli_query($conn, $sql)) {
-  echo "</p> Table course has been successfully created </p>";
+  echo "</p> Table has been successfully created </p>";
 } else {
   echo "</p> Error creating table course: ". mysqli_error($conn) . "</p>";
 }
@@ -54,7 +54,7 @@ $sql =
   name VARCHAR(30) UNIQUE NOT NULL,
   location VARCHAR(200) NOT NULL,
   postcode VARCHAR(7) NOT NULL
-  )";
+)";
 //check if halls table has been created
 if(mysqli_query($conn, $sql)) {
   echo "</p> Table halls created successfully </p>";
@@ -93,7 +93,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS location (
   id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
-  name VARCHAR(50)  NOT NULL,
+  name VARCHAR(50) UNIQUE NOT NULL,
   type VARCHAR(50) NOT NULL
 )";
 
@@ -107,10 +107,8 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS login (
   id int(10) PRIMARY KEY NOT NULL AUTO_INCREMENT,
-  email VARCHAR(50) UNIQUE NOT NULL,
-  password VARCHAR(12) NOT NULL,
-  CONSTRAINT loginEmailFK FOREIGN KEY (email) REFERENCES user(email),
-  CONSTRAINT loginPasswordFK FOREIGN KEY (password) REFERENCES user(password)
+  user_id INT UNSIGNED NOT NULL,
+  CONSTRAINT loginUserFK FOREIGN KEY (user_id) REFERENCES user(id),
 )";
 //Check if login table is created successfully
 if(mysqli_query($conn, $sql)) {
@@ -122,7 +120,7 @@ if(mysqli_query($conn, $sql)) {
 $sql =
 "CREATE TABLE IF NOT EXISTS flat (
   flat_id DECIMAL(2,1) UNSIGNED PRIMARY KEY,
-  halls_id INT UNSIGNED NOT NULL,
+  halls_id INT NOT NULL,
   capacity INT UNSIGNED NOT NULL,
   CONSTRAINT HallsFK FOREIGN KEY (halls_id) REFERENCES halls(hall_id)
 )";
@@ -142,8 +140,8 @@ $sql =
   accom VARCHAR(7) NOT NULL,
   flat_id DECIMAL(2,1) UNSIGNED,
   CONSTRAINT UserFK FOREIGN KEY (user_id) REFERENCES user(id),
-  CONSTRAINT UniCourseFK FOREIGN KEY (course) REFERENCES course(id),
-  CONSTRAINT FlatuserFK FOREIGN KEY (flat_id) REFERENCES flat(flat_id)
+  CONSTRAINT CourseFK FOREIGN KEY (course) REFERENCES course(id),
+  CONSTRAINT FlatuniFK FOREIGN KEY (flat_id) REFERENCES flat(flat_id)
 )";
 //Check if uni table has been created
 if(mysqli_query($conn, $sql)) {
@@ -156,7 +154,7 @@ $sql =
 "CREATE TABLE IF NOT EXISTS house (
   group_id INT UNSIGNED AUTO_INCREMENT PRIMARY KEY,
   user_id INT UNSIGNED NOT NULL,
-  name VARCHAR(30) NOT NULL,
+  name VARCHAR(20) NOT NULL,
   description TEXT NOT NULL,
   datecreated TIMESTAMP NOT NULL,
   CONSTRAINT HousemateFK FOREIGN KEY (user_id) REFERENCES user(id)
@@ -187,8 +185,8 @@ if(mysqli_query($conn, $sql)) {
 //Note Table -- Needs checking
 $sql =
 "CREATE TABLE IF NOT EXISTS note (
-  note_id INT UNSIGNED NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  user_id INT UNSIGNED,
+  user_id INT UNSIGNED PRIMARY KEY,
+  note_id INT UNSIGNED UNIQUE NOT NULL AUTO_INCREMENT,
   name VARCHAR(15) NOT NULL,
   data TEXT NOT NULL,
   CONSTRAINT userNoteFK FOREIGN KEY (user_id) REFERENCES user(id)
@@ -201,9 +199,8 @@ if(mysqli_query($conn, $sql)) {
 }
 //Data for hobbie table on load up
 $sqlhobbiedata =
-"INSERT IGNORE INTO `hobbie` (`name`)
-VALUES 
-('Drawing'),
+"INSERT INTO `hobbie` (`name`)
+VALUES ('Drawing'),
 ('Swimming'),
 ('Magic'),
 ('Computer Programming'),
@@ -243,10 +240,10 @@ VALUES
 ('Squash')";
 //check if data has been inserted in to hobbie table
 
-mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn). 'hobbie');
+mysqli_query($conn, $sqlhobbiedata) or die(mysqli_error($conn));
 //Data for society table
 $sqlsocietydata =
-"INSERT IGNORE INTO `society` (`name`)
+"INSERT INTO `society` (`name`)
 VALUES ('IT'),
 ('Law'),
 ('Brazilian Ju-Jitsu'),
@@ -268,8 +265,8 @@ VALUES ('IT'),
 ('Comedy'),
 ('Skate')";
 
-mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn) . 'society');
-//Course data 
+mysqli_query($conn, $sqlsocietydata) or die(mysqli_error($conn));
+//Data for course table
 $sqlcoursedata =
 "INSERT IGNORE INTO `course` (`code`, `name`)
 VALUES (34272, 'Computing'),
@@ -301,26 +298,25 @@ VALUES (34272, 'Computing'),
 (25677, 'Pharmacy'),
 (21988, 'Sociology with Criminology'),
 (24569, 'Sports Science and Management'),
-(31180, 'Television and Film Production')";
+(31180, 'Television and Film Production');"
 
-mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn) . 'course');
+mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn));
 
 //Data for halls table
 $sqlhallsdata =
-"INSERT IGNORE INTO `halls` (hall_id, name, location, postcode) VALUES (1, 'Margaret Rule Hall','Margaret Rule Hall, Isambard Brunel Rd, Portsmouth', 'PO1 2DS'),
+"INSERT INTO `halls` (hall_id, name, location, postcode) VALUES (1, 'Margaret Rule Hall','Margaret Rule Hall, Isambard Brunel Rd, Portsmouth', 'PO1 2DS'),
 (2, 'Harry Law Hall', 'Harry Law Hall, Portsmouth', 'PO1 2SP'),
 (3, 'James Watson Hall', 'James Watson Hall, 28 Guildhall Walk, Portsmouth', 'PO1 2DD'),
 (4, 'Langstone', 'Langstone Campus, Furze Lane, Southsea', 'PO4 8LW'),
 (5, 'Trafalgar Hall', 'Trafalgar Hall, Portsmouth, Southsea, Portsmouth', 'PO5 4AY'),
 (6, 'Bateson Hall', 'Bateson Hall, Portsmouth', 'PO1 2BL'),
-(7, 'Rees Hall', 'Southsea Terrace,Southsea', 'PO5 3AP'),
-(8, 'Trafalgar Hall', 'Winston Churchill Ave, Portsmouth', 'PO1 2UP')";
+(7, 'Rees Hall', 'Southsea Terrace,Southsea', 'PO5 3AP')";
 
-mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn). 'halls');
+mysqli_query($conn, $sqlhallsdata) or die(mysqli_error($conn));
 
 //Data for user table - pre loaded data
 $sqluserdata =
-"INSERT IGNORE INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
+"INSERT INTO `user`(`fname`,`lname`,`gender`,`email`,`password`,`dob`,`address`,`postcode`,`hnumber`,`mobile`,`smoker`) VALUES
 ('Martha', 'Chapman','Female','clopez0@theguardian.com','D7z6WUN7pbrX','19980522','73 Marquette Junction','FK198PE','02086680851','07984512477', 'FALSE'),
 ('Linda', 'Baker','Female','hgibson1@salon.com','XVxgAcYb','19940717','077 2nd Point','HP225LQ','08006482133','07001876371',TRUE),
 ('Patrick', 'Warren','Male','vday2@qq.com','fzqz89rUCkSI','19950810','21877 Goodland Lane','M20 1QF','','07624604665',FALSE),
@@ -343,12 +339,12 @@ $sqluserdata =
 ('Joshua', 'Morrison','Male','kcarrj@businessinsider.com','y4kZef', '19910311', '8 Grover Alley','TA8 2RB','05659370963','07804992674',FALSE);
 ";
 
-mysqli_query($conn, $sqluserdata) or die(mysqli_error($conn) . 'user');
+mysqli_query($conn, $sqluserdata) or die(mysqli_error($conn));
 
 
 //Data for location table
 $sqllocationdata =
-"INSERT IGNORE INTO `location` (`name`,`type`) VALUES
+"INSERT INTO `location` (`name`,`type`) VALUES
 ('Portsmouth Univeristy Library','Univeristy Building'),
 ('Richmond Building','Univeristy Building'),
 ('Portland Building','Univeristy Building'),
@@ -369,11 +365,11 @@ $sqllocationdata =
 ('Portsmouth Habour', 'Train Station')";
 
 
-mysqli_query($conn, $sqllocationdata) or die(mysqli_error($conn). 'location');
+mysqli_query($conn, $sqllocationdata) or die(mysqli_error($conn));
 
 //Data for flat table - 25 records to start, capacity so far is 130
 $sqlflatdata =
-"INSERT IGNORE INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
+"INSERT INTO `flat` (`flat_id`,`halls_id`,`capacity`) VALUES
 ('1.0','1','6'),
 ('1.1','1','6'),
 ('1.2','1','6'),
@@ -400,11 +396,11 @@ $sqlflatdata =
 ('4.2','7','4'),
 ('4.3','7','5')";
 
-mysqli_query($conn, $sqlflatdata) or die(mysqli_error($conn). 'flat');
+mysqli_query($conn, $sqlflatdata) or die(mysqli_error($conn));
 
 //Data for uni table
 $sqlunidata =
-"INSERT IGNORE INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
+"INSERT INTO `uni` (`user_id`,`course`,`study`,`accom`, `flat_id`)
 VALUES (5,1,3,'Halls','1.1'),
 (2,14,2,'Halls','1.1'),
 (20,13,3,'Halls','1.1'),
@@ -426,18 +422,15 @@ VALUES (5,1,3,'Halls','1.1'),
 (1,8,2,'Halls','4.2'),
 (7,19,1,'Halls','4.2')";
 
-mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn). 'flat');
+mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn) . 'Uni');
 
 //Data for house table
 $sqlhousedata =
-"INSERT IGNORE INTO `house` (`user_id`, `group_id`) VALUES
-(3,1),
-(6,2),
-(8,2),
-(15,1),
-(16,2)";
+"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1, 'House Group', 'Looking for a house'),
+(6,2, 'Next Year House', 'Need to find a house for next year'),(8,2,'Next Year House', 'Need to find a house for next year'),
+(15,1, 'House Group', 'Looking for a house'),(16,2,'Next Year House', 'Need to find a house for next year')";
 
-mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn). 'house');
+mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn) . 'House');
 
 mysqli_close($conn);
 ?>
