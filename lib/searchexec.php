@@ -13,9 +13,21 @@ if(!$conn) {
   $search = $_GET['search'];
   
   //Need to use if statements for the multisearch, with the last being this if nothing is selected, look at rest of search code 
-  
+  //Do statement for study yeart 
+//  $studyyearsql = "SELECT fname, lname, course, study 
+//                  FROM user 
+ //                 INNER JOIN uni 
+//                  ON user.id = uni.user_id
+//                  WHERE fname LIKE ('%".$search."%')
+//                  AND course LIKE ";
   //$result = mysqli_query($conn, "SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
-  $result = mysqli_query($conn, "SELECT fname, lname, accom, study 
+  
+  //Halls search needed 
+  //group search 
+  //smoker true or false 
+  //about yourself questions 
+  //else {
+  $result = mysqli_query($conn, "SELECT fname, lname, course, accom, study 
                                 FROM user  
                                 INNER JOIN uni  
                                 ON user.id = uni.user_id 
