@@ -15,7 +15,7 @@ function getXMLHTTPRequestObject() {
   function search() {
     if(searchReq.readyState == 4 || searchReq.readyState == 0) {
       var str = escape(document.getElementById('query').value);
-      searchReq.open("GET", 'lib/searchexec.php?search=' + str, true);
+      searchReq.open("GET", 'searchexec.php?search=' + str, true);
       searchReq.send(null);
       searchReq.onreadystatechange = handleSearchResults;
     }
@@ -47,3 +47,5 @@ function getXMLHTTPRequestObject() {
           ss.innerHTML += suggest;
         }
       }
+    }
+  }
