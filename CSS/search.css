@@ -16,6 +16,7 @@ border:2px double gray;
      padding:5px;
 }
 .suggest_link{
+     width: 50%;
 background-color:#fff;
 border-bottom:1px solid gray;
 }
