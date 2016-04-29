@@ -13,7 +13,7 @@ if(!$conn) {
   $search = $_GET['search'];
   $result = mysqli_query($conn, "SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
   while($row = mysqli_fetch_array($result)) {
-    echo ''. $row['fname'] . "\n" . $row['lname'] . "\n";
+    echo ''. $row['fname'] . $row['lname'] . "\n";
   }
 }
 ?>
