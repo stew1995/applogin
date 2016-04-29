@@ -50,10 +50,10 @@ if(mysqli_query($conn, $sql)) {
 //Halls Table
 $sql =
 "CREATE TABLE IF NOT EXISTS halls (
-  hall_id INT UNSIGNED PRIMARY KEY,
+  hall_id INT PRIMARY KEY,
   name VARCHAR(30) UNIQUE NOT NULL,
   location VARCHAR(200) NOT NULL,
-    postcode VARCHAR(7) NOT NULL
+  postcode VARCHAR(7) NOT NULL
   )";
 //check if halls table has been created
 if(mysqli_query($conn, $sql)) {
