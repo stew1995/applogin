@@ -21,8 +21,9 @@ border-bottom:1px solid gray;
 .small{
      width: 60%;
      margin-left: 55px;
-background-color:white;
-border-bottom:1px solid  #c0c0c0;
+     background-color:white;
+     border-bottom:1px solid  #c0c0c0;
+     font-size: 18px;
 }
 .suggest_link_over{
 background-color:blue;
