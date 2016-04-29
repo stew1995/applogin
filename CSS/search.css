@@ -20,7 +20,8 @@ background-color:#fff;
 border-bottom:1px solid gray;
 }
 .small{
-background-color:red;
+     width: 50%;
+background-color:white;
 border-bottom:1px solid gray;
 }
 .suggest_link_over{
