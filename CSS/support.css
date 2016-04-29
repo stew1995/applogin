@@ -134,6 +134,10 @@ margin: 0 12.5%;
   background: rgba(204, 204, 255, 0.8);
   margin: -16px 5%;
 }
+#supportHallsShow {
+  width: 95%;
+  height: 50px;
+}
 
 
 
