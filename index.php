@@ -77,6 +77,7 @@
     <script src="javascript/draftajax.js"></script>
     <script src="javascript/windowSizing.js"></script>
     <script src="javascript/navigation.js"></script>
+    <script src="javascript/search.js"></script>
 </body>
 
   
