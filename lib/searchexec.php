@@ -1,5 +1,5 @@
 <?php
-require('conn.php');
+include('conn.php');
 if(isset($_GET['search']) && $_GET['search'] != '') {
   $search = $_GET['search'];
   $result = mysqli_query("SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
