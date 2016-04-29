@@ -27,12 +27,12 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while ($row = mysqli_fetch_array($result)) {
-          echo '<tr>';
-          foreach($row as $field) {
-              echo '<td>' . htmlspecialchars($field) . '</td>';
-          }
-          echo '</tr>';
+          while($row = mysqli_fetch_array($result)) {
+          echo "<tr>";
+          echo "<td>" . $row['name'] . "</td>";
+          echo "<td>" . $row['location'] . "</td>";
+          echo "<td>" . $row['postcode'] . "</td>";
+          echo "</tr>";
           }
   echo "</table>";
   mysqli_close($conn);
