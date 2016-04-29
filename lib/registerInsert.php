@@ -31,8 +31,22 @@ if(isset($_POST['checkValidation'])){
   $outgoing = $_POST['Social'];
   $mess = $_POST['Mess'];
   $gym = $_POST['Gym'];
+  
+  
+  //Get course ID for table 
+  
+  $getCourse 
+  
+  $getAccom 
+  
+  $getHobbie
+  
+  $getSociety
+  
+  
 
-  if($name != ''||$surname != ''||$email != ''){
+  if($name != '' && $surname != '' && $email != '' && $password != '' && $gender != ''
+      && $address != '' && $postcode != ''){
     $sql =
     "INSERT INTO user (fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
