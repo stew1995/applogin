@@ -15,7 +15,7 @@ border:2px double gray;
      padding:5px;
 }
 .suggest_link{
-background-color:#fff;
+background-color; red;
 border-bottom:1px solid gray;
 }
 .small{
@@ -25,11 +25,11 @@ background-color:white;
 border-bottom:1px solid  #c0c0c0;
 }
 .suggest_link_over{
-background-color:#fff;
+background-color:blue;
 border-bottom:1px solid gray;
 }
 .suggest_link:hover{
-background-color:red;
+background-color:green;
 border-bottom:1px solid gray;
 }
 .suggest_link_over:hover{
