@@ -27,7 +27,7 @@
             <th>Address</th>
             <th>Postcode</th>
           </tr>";
-          while ($row = mysqli_fetch_array($results)) {
+          while ($row = mysqli_fetch_array($result)) {
           echo '<tr>';
           foreach($row as $field) {
               echo '<td>' . htmlspecialchars($field) . '</td>';
