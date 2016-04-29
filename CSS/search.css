@@ -7,7 +7,6 @@ border:2px double gray;
 #result{
      width:262px;
      border:1px solid gray;
-     margin-top: -2px;
      border-bottom-width: 0px;
 }
 #result a{
@@ -21,16 +20,16 @@ border-bottom:1px solid gray;
 }
 .small{
      width: 60%;
-     margin-left: 50px;
+     margin-left: 55px;
 background-color:white;
-border-bottom:1px solid gray;
+border-bottom:1px solid  #c0c0c0;
 }
 .suggest_link_over{
 background-color:#fff;
 border-bottom:1px solid gray;
 }
 .suggest_link:hover{
-background-color:#6d84b4;
+background-color:red;
 border-bottom:1px solid gray;
 }
 .suggest_link_over:hover{
