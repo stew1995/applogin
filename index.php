@@ -27,7 +27,7 @@
 
     <div class="navSearch" id="topSearch">
        <form>
-         <input autocomplete="off" class="search_box" type="text" name="query" id="query">
+         <input autocomplete="off" class="search_box" type="text" name="query" id="query" onkeyup="search()">
          <div id="searchResult"> </div>
          <input type="checkbox" name="advancesearch" id='advance'><span class="advance">Advanced Search</span>
       </form>
