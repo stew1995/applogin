@@ -115,10 +115,10 @@ body {
 .navSearch {
   margin-top: -10px;
   background: white;
-  background: -webkit-linear-gradient(#e6e6e6, #ffffff); /* For Safari and IE*/
-  background: -o-linear-gradient(#e6e6e6, #ffffff); /* For Opera */
-  background: -moz-linear-gradient(#e6e6e6, #ffffff); /* For Firefox */
-  background: linear-gradient(#e6e6e6, #ffffff); /* Standard syntax */
+  background: -webkit-linear-gradient(#ffffff, #e6e6e6); /* For Safari and IE*/
+  background: -o-linear-gradient(#ffffff, #e6e6e6); /* For Opera */
+  background: -moz-linear-gradient(#ffffff, #e6e6e6); /* For Firefox */
+  background: linear-gradient(#ffffff, #e6e6e6); /* Standard syntax */
   box-shadow: 2px 3px 5px grey;
   padding: 2px 0px;
   border-bottom-left-radius: 10px;
@@ -130,27 +130,27 @@ body {
   list-style-type: none;
 }
 
-.navSearch input[name="search"] {
+.navSearch #query {
   color: #C0C0C0;
   font-size: 14px;
-  width: 70%;
+  width: 60%;
   line-height: 20px;
-  margin: 5px;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.search {
+#query {
   font-size: 18px;
   border-style: none;
   color: grey;
-  background: #E4E4E4;
+  background: white;;
 }
 
 
 .advance {
-  padding: 0;
   padding: 0 10px;
   font-size: 14px;
-  color: white;
+  color: black;
   text-decoration: underline;
 }
 
@@ -217,4 +217,3 @@ body {
   padding: 5px;
   border-radius: 5px;
 }
-
