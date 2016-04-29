@@ -29,7 +29,6 @@
           </tr>";
           while($row = mysqli_fetch_array($result)) {
             echo "<tr>";
-            echo "<td>". $row['hall_id'] . "</td>";
             echo "<td>". $row['name'] . "</td>";
             echo "<td>". $row['location'] . "</td>";
             echo "<td>". $row['postcode'] . "</td>";
