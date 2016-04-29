@@ -40,10 +40,10 @@ function getXMLHTTPRequestObject() {
       } else {
         ss.InnerHTML - '';
         for(i=0; i < str.length - 1; i++) {
-          var suggest = '<div style="cursor: pointer;" onmouseover = "javascript:suggestOver(this);"';
-          suggest += 'onmouseout = "javascript:suggestOut(this);"';
-          suggest += 'onclick="javascript:setSearch(this.innerHTML);"';
-          suggest += 'class="small">' + str[i] + '</div>';
+              var suggest = '<div style="cursor : pointer;" onmouseover="javascript:suggestOver(this);" ';  
+                suggest += 'onmouseout="javascript:suggestOut(this);" ';  
+                suggest += 'onclick="javascript:setSearch(this.innerHTML);" ';  
+                suggest += 'class="small">' + str[i] + '</div>'; 
           ss.innerHTML += suggest;
         }
       }
