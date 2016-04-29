@@ -17,9 +17,11 @@ if(!$conn) {
       echo "<th>Name</th>";
       echo "<th>Accomodation</th>";
       echo "<th>Year</th>";
-      echo "<th>"
+    echo "</tr>";
   while($row = mysqli_fetch_array($result)) {
-    
+    echo "<tr>";
+      echo "<td>" . $row['fname']. " ". $row['lname'] . "</td>";
+      echo "<td>" . $row['']
       
       echo ''. $row['fname'] . $row['lname'] . "\n";
   }
