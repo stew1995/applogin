@@ -20,10 +20,41 @@ if(!$conn) {
 //                  ON user.id = uni.user_id
 //                  WHERE fname LIKE ('%".$search."%')
 //                  AND study LIKE ";
+
+//echo "<table id='searchresulttable'";
+  //  echo "<tr>";
+    //  echo "<th>Name</th>";
+      //echo "<th>Course</th>";
+//      echo "<th>Accomodation</th>";
+  //    echo "<th>Year</th>";
+  //  echo "</tr>";
+  //while($row = mysqli_fetch_array($studyyearsql)) {
+  //  echo "<tr>";
+  //    echo "<td>" . $row['fname']. " ". $row['lname'] . "</td>";
+  //    echo "<td>" . $row['course']. "</td>";
+  //    echo "<td>" . $row['accom']. "</td>";
+  //    echo "<td>" . $row['study']. "</td>";
+  //  echo "</tr>";
+  //  }
+  //echo "</table>";
   //$result = mysqli_query($conn, "SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
   
   //Halls search needed 
   //$hallsql = "SELECT * FROM hall WHERE name LIKE ('%".$search."%')";
+  
+  //echo "<table id='searchresulttable'";
+  //  echo "<tr>";
+    //  echo "<th>Name</th>";
+      //echo "<th>Address</th>";
+  //  echo "</tr>";
+  //while($row = mysqli_fetch_array($studyyearsql)) {
+  //  echo "<tr>";
+    //    echo "<td>" . $row['name']. "</td>";
+  //    echo "<td>" . $row['location']. " ". $row['postcode'] . "</td>";
+  //  echo "</tr>";
+  //  }
+  //echo "</table>";
+  
   //group search 
   //smoker true or false 
   //about yourself questions 
