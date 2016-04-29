@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="CSS\navigation.css">
+  <link rel="stylesheet" type="text/css" href="CSS\template.css">
+</head>
 <body>
   <div class="navigation">
   <nav>
