@@ -5,7 +5,7 @@ width: 265px;
 border:2px double gray;
 }
 #result{
-     width:262px;
+     width: 50%;
      border:1px solid gray;
      margin-top: -2px;
      border-bottom-width: 0px;
