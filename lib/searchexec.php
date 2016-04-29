@@ -19,10 +19,11 @@ if(!$conn) {
  //                 INNER JOIN uni 
 //                  ON user.id = uni.user_id
 //                  WHERE fname LIKE ('%".$search."%')
-//                  AND course LIKE ";
+//                  AND study LIKE ";
   //$result = mysqli_query($conn, "SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
   
   //Halls search needed 
+  //$hallsql = "SELECT * FROM hall WHERE name LIKE ('%".$search."%')";
   //group search 
   //smoker true or false 
   //about yourself questions 
@@ -35,12 +36,14 @@ if(!$conn) {
   echo "<table id='searchresulttable'";
     echo "<tr>";
       echo "<th>Name</th>";
+      echo "<th>Course</th>";
       echo "<th>Accomodation</th>";
       echo "<th>Year</th>";
     echo "</tr>";
   while($row = mysqli_fetch_array($result)) {
     echo "<tr>";
       echo "<td>" . $row['fname']. " ". $row['lname'] . "</td>";
+      echo "<td>" . $row['course']. "</td>";
       echo "<td>" . $row['accom']. "</td>";
       echo "<td>" . $row['study']. "</td>";
     echo "</tr>";
