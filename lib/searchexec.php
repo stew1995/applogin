@@ -11,6 +11,9 @@ if(!$conn) {
   die("Connection to database failed: ". mysqli_connect_error());
 }if(isset($_GET['search']) && $_GET['search'] != '') {
   $search = $_GET['search'];
+  
+  //Need to use if statements for the multisearch, with the last being this if nothing is selected, look at rest of search code 
+  
   //$result = mysqli_query($conn, "SELECT * FROM user WHERE fname LIKE ('%".$search."%')");
   $result = mysqli_query($conn, "SELECT fname, lname, accom, study 
                                 FROM user  
