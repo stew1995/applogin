@@ -1,11 +1,11 @@
 #main{
 padding:15px;
 margin:0 auto;
-width: 50%;
+width: 265px;
 border:2px double gray;
 }
 #result{
-     width: 50%;
+     width:262px;
      border:1px solid gray;
      margin-top: -2px;
      border-bottom-width: 0px;
@@ -16,12 +16,11 @@ border:2px double gray;
      padding:5px;
 }
 .suggest_link{
-     width: 50%;
 background-color:#fff;
 border-bottom:1px solid gray;
 }
 .small{
-background-color:#fff;
+background-color:red;
 border-bottom:1px solid gray;
 }
 .suggest_link_over{
