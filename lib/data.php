@@ -152,8 +152,8 @@ if(mysqli_query($conn, $sql)) {
 //House Table
 $sql =
 "CREATE TABLE IF NOT EXISTS house (
-  group_id INT UNSIGNED PRIMARY KEY,
-  user_id INT UNSIGNED NOT NULL,
+  user_id INT UNSIGNED PRIMARY KEY,
+  group_id INT UNSIGNED,
   datecreated TIMESTAMP NOT NULL,
   CONSTRAINT HousemateFK FOREIGN KEY (user_id) REFERENCES user(id)
 )";
@@ -424,9 +424,9 @@ mysqli_query($conn, $sqlunidata) or die(mysqli_error($conn) . 'Uni');
 
 //Data for house table
 $sqlhousedata =
-"INSERT INTO `house` (`group_id`,`user_id`) VALUES (1,3),
-(2,6),(2,8),
-(1,15),(2,16)";
+"INSERT INTO `house` (`user_id`,`group_id`) VALUES (3,1),
+(6,2),(8,2),
+(15,1),(16,2)";
 
 mysqli_query($conn, $sqlhousedata) or die(mysqli_error($conn) . 'House');
 
