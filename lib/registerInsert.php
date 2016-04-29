@@ -35,13 +35,12 @@ if(isset($_POST['checkValidation'])){
   
   //Get course ID for table 
   
-  $getCourse 
+  $getCourse = mysqli_query($conn, "SELECT id FROM course WHERE name ='$course'");
   
-  $getAccom 
   
-  $getHobbie
+  $getHobbie = "SELECT id FROM course WHERE name ='$hobbie'";
   
-  $getSociety
+  $getSociety = "SELECT id FROM course WHERE name ='$society'";
   
   
 
