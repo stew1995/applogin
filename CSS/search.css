@@ -1,4 +1,9 @@
-
+  #main{
+  padding:15px;
+  margin:0 auto;
+  width: 265px;
+  border:2px double gray;
+  }
 #result{
      width:262px;
      border:1px solid gray;
