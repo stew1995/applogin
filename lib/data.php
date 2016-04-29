@@ -298,7 +298,7 @@ VALUES (34272, 'Computing'),
 (25677, 'Pharmacy'),
 (21988, 'Sociology with Criminology'),
 (24569, 'Sports Science and Management'),
-(31180, 'Television and Film Production');"
+(31180, 'Television and Film Production')";
 
 mysqli_query($conn, $sqlcoursedata) or die(mysqli_error($conn));
 
