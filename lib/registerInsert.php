@@ -31,48 +31,30 @@ if(isset($_POST['checkValidation'])){
   $postcode = validate_data($_POST['Postcode']);
   $homeNumber = validate_data($_POST['HomeNumber']);
   $mobile = validate_data($_POST['Mobile']);
-  $course = validate_data($_POST['courseList']);
-  $studyYear = validate_data($_POST['yearList']);
+  $course = $_POST['courseList'];
+  $studyYear = $_POST['yearList'];
   $accom = validate_data($_POST['accomList']);
-  $hobbie = validate_data($_POST['Hobbies']);
-  $society = validate_data($_POST['Society']);
+  $hobbie = $_POST['Hobbies'];
+  $society = $_POST['Society'];
   $smoke = validate_data($_POST['Smoker']);
-  $outgoing = validate_data($_POST['Social']);
-  $mess = validate_data($_POST['Mess']);
-  $gym = validate_data($_POST['Gym']);
 
 
-  //Get course ID for table
 
-  $getCourse = "SELECT id FROM course WHERE name ='$course'";
-  mysqli_query($conn, $getCourse) or die(mysqli_error($conn));
-
-  $getHobbie = "SELECT id FROM course WHERE name ='$hobbie'";
-  mysqli_query($conn, $getHobbie) or die(mysqli_error($conn));
-
-  $getSociety = "SELECT id FROM course WHERE name ='$society'";
-  mysqli_query($conn, $getSociety) or die(mysqli_error($conn));
-
-
-  if($name != '' && $surname != '' && $email != '' && $password != '' && $gender != ''
-      && $address != '' && $postcode != ''){
     $sqlregister =
     "INSERT INTO user (fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$address',
-            '$postcode', '$homenumber', '$mobile', '$getHobbie', '$getSociety', '$smoker')";
-  }
+            '$postcode', '$homenumber', '$mobile', '$hobbie', '$society', '$smoker')";
+
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
   //get id of inserted user
   $userID = "SELECT id FROM user WHERE email ='$email'";
 
-  if($course != ''|| $accom != ''){
     $sqluni =
     "INSERT INTO uni (user_id, course, study, accom)
-    VALUES ('$userId', '$getCourse', '$studyYear', '$accom')
-    ";
-  }
+    VALUES ('$userId', '$course', '$studyYear', '$accom')";
+
   //Check if user data entered is correct
   mysqli_query($conn, $sqluni) or die(mysqli_error($conn));
 }
