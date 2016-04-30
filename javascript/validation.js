@@ -10,7 +10,7 @@ function getXMLHTTPRequestObject() {
   //XMLHTTP Object
   var registerXML = getXMLHTTPRequestObject();
 function formValidation(){
-  searchReq.open("GET", 'lib/registerInsert.php',false);
+  searchReq.open("POST", 'lib/registerInsert.php',false);
   searchReq.onreadystatechange = function() {
     if (ajaxObj.status === 200){
       if (ajaxObj.readyState === 4){
@@ -73,7 +73,6 @@ function formValidation(){
         reqbasic.display = "none";
         reqname.display = "none";
 
-        // Database stuff
       }
 
       if(lname.value == "" || !lnamePatt.test(lname.value)) {
