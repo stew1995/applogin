@@ -11,8 +11,8 @@ if(!$conn) {
 }
 
 //INSERT INTO user
-if(isset($_POST['checkValidation'])){
-  function validate_data($data) {
+if(!empty($_POST['checkValidation'])){
+  validate_data($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = strip_tags($data);
@@ -44,7 +44,7 @@ if(isset($_POST['checkValidation'])){
     "INSERT INTO user (fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$address',
-            '$postcode', '$homenumber', '$mobile', '$hobbie', '$society', '$smoker')";
+            '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
 
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
