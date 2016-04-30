@@ -19,18 +19,46 @@ function getXMLHTTPRequestObject() {
     var nonsmokercheck = document.getElementById("nonsmokersearch").checked;
     var smokercheck = document.getElementById("smokersearch").checked;
     var hallscheck = document.getElementById("hallssearch").checked;
-    var groupcheck = document.getElementById("groupsearch").checked;
 
       if(searchReq.readyState == 4 || searchReq.readyState == 0) {
         if(malecheck == false && femalecheck == false && nonsmokercheck == false
            && smokercheck == false && hallscheck == false && groupcheck == false) {
           var str = escape(document.getElementById('query').value);
-          searchReq.open("GET", 'lib/searchexec.php?search=' + str, true);
+          searchReq.open("GET", 'lib/search/searchexec.php?search=' + str, true);
           searchReq.send(null);
           searchReq.onreadystatechange = handleSearchResults;
+        } else if (malecheck == true && femalecheck == false && nonsmokercheck == false
+           && smokercheck == false && hallscheck == false) {
+             var str = escape(document.getElementById('query').value);
+             searchReq.open("GET", 'lib/search/searchusermale.php?search=' + str, true);
+             searchReq.send(null);
+             searchReq.onreadystatechange = handleSearchResults;
+          } else if (malecheck == false && femalecheck == true && nonsmokercheck == false
+             && smokercheck == false && hallscheck == false) {
+               var str = escape(document.getElementById('query').value);
+               searchReq.open("GET", 'lib/search/searchuserfemale.php?search=' + str, true);
+               searchReq.send(null);
+               searchReq.onreadystatechange = handleSearchResults;
+             } else if (malecheck == false && femalecheck == false && nonsmokercheck == true
+                && smokercheck == false && hallscheck == false) {
+                  var str = escape(document.getElementById('query').value);
+                  searchReq.open("GET", 'lib/search/searchnonsmoker.php?search=' + str, true);
+                  searchReq.send(null);
+                  searchReq.onreadystatechange = handleSearchResults;
+                } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
+                   && smokercheck == true && hallscheck == false) {
+                     var str = escape(document.getElementById('query').value);
+                     searchReq.open("GET", 'lib/search/searchsmoker.php?search=' + str, true);
+                     searchReq.send(null);
+                     searchReq.onreadystatechange = handleSearchResults;
+                   } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
+                      && smokercheck == false && hallscheck == true) {
+                        var str = escape(document.getElementById('query').value);
+                        searchReq.open("GET", 'lib/search/searchhall.php?search=' + str, true);
+                        searchReq.send(null);
+                        searchReq.onreadystatechange = handleSearchResults;
+                      }
         }
-    }
-  }
 
   function handleSearchResults() {
     if(searchReq.readyState == 4) {
