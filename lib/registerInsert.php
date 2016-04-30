@@ -11,8 +11,8 @@ if(!$conn) {
 }
 
 //INSERT INTO user
-if(!empty($_POST['checkValidation'])){
-  function validate_data($data) {
+if(isset($_POST['checkValidation'])){
+  function  validate_data($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = strip_tags($data);
@@ -49,11 +49,11 @@ if(!empty($_POST['checkValidation'])){
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
   //get id of inserted user
-  $userID = "SELECT id FROM user WHERE email ='$email'";
+  //$userID = "SELECT id FROM user WHERE email ='$email'";
 
     $sqluni =
-    "INSERT INTO uni (user_id, course, study, accom)
-    VALUES ('$userId', '$course', '$studyYear', '$accom')";
+    "INSERT INTO uni (course, study, accom)
+    VALUES ('$course', '$studyYear', '$accom')";
 
   //Check if user data entered is correct
   mysqli_query($conn, $sqluni) or die(mysqli_error($conn));
