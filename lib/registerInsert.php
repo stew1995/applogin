@@ -12,7 +12,7 @@ if(!$conn) {
 
 //INSERT INTO user
 if(!empty($_POST['checkValidation'])){
-  validate_data($data) {
+  function validate_data($data) {
     $data = trim($data);
     $data = stripslashes($data);
     $data = strip_tags($data);
