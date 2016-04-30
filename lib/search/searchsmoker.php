@@ -32,7 +32,6 @@ if(!$conn) {
       echo "<td>". $row['course'] . "</td>";
       echo "<td>". $row['accom'] . "</td>";
       echo "<td>". $row['study'] . "</td>";
-      echo "<td>". $row['smoker'] . "</td>";
     echo "</tr>";
   }
   echo "</table>" . "\n";
