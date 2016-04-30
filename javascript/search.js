@@ -28,70 +28,70 @@ function getXMLHTTPRequestObject() {
         //Single searching eg just male or just halls
         if(malecheck == false && femalecheck == false && nonsmokercheck == false
            && smokercheck == false && hallscheck == false && societycheck == false
-          && first == false && second == false $$ third == false) {
+          && first == false && second == false && third == false) {
           var str = escape(document.getElementById('query').value);
           searchReq.open("GET", 'lib/search/searchexec.php?search=' + str, true);
           searchReq.send(null);
           searchReq.onreadystatechange = handleSearchResults;
         } else if (malecheck == true && femalecheck == false && nonsmokercheck == false
            && smokercheck == false && hallscheck == false && societycheck == false
-          && first == false && second == false $$ third == false) {
+          && first == false && second == false && third == false) {
              var str = escape(document.getElementById('query').value);
              searchReq.open("GET", 'lib/search/searchusermale.php?search=' + str, true);
              searchReq.send(null);
              searchReq.onreadystatechange = handleSearchResults;
           } else if (malecheck == false && femalecheck == true && nonsmokercheck == false
              && smokercheck == false && hallscheck == false && societycheck == false
-            && first == false && second == false $$ third == false) {
+            && first == false && second == false && third == false) {
                var str = escape(document.getElementById('query').value);
                searchReq.open("GET", 'lib/search/searchuserfemale.php?search=' + str, true);
                searchReq.send(null);
                searchReq.onreadystatechange = handleSearchResults;
              } else if (malecheck == false && femalecheck == false && nonsmokercheck == true
                 && smokercheck == false && hallscheck == false && societycheck == false
-               && first == false && second == false $$ third == false) {
+               && first == false && second == false && third == false) {
                   var str = escape(document.getElementById('query').value);
                   searchReq.open("GET", 'lib/search/searchnonsmoker.php?search=' + str, true);
                   searchReq.send(null);
                   searchReq.onreadystatechange = handleSearchResults;
                 } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                    && smokercheck == true && hallscheck == false && societycheck == false
-                  && first == false && second == false $$ third == false) {
+                  && first == false && second == false && third == false) {
                      var str = escape(document.getElementById('query').value);
                      searchReq.open("GET", 'lib/search/searchsmoker.php?search=' + str, true);
                      searchReq.send(null);
                      searchReq.onreadystatechange = handleSearchResults;
                    } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                       && smokercheck == false && hallscheck == true && societycheck == false
-                     && first == false && second == false $$ third == false) {
+                     && first == false && second == false && third == false) {
                         var str = escape(document.getElementById('query').value);
                         searchReq.open("GET", 'lib/search/searchhall.php?search=' + str, true);
                         searchReq.send(null);
                         searchReq.onreadystatechange = handleSearchResults;
                       } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                          && smokercheck == false && hallscheck == false && societycheck == true
-                        && first == false && second == false $$ third == false) {
+                        && first == false && second == false && third == false) {
                           var str = escape(document.getElementById('query').value);
                           searchReq.open("GET", 'lib/search/searchsociety.php?search=' + str, true);
                           searchReq.send(null);
                           searchReq.onreadystatechange = handleSearchResults;
                         } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                            && smokercheck == false && hallscheck == false && societycheck == false
-                          && first == true && second == false $$ third == false) {
+                          && first == true && second == false && third == false) {
                             var str = escape(document.getElementById('query').value);
                             searchReq.open("GET", 'lib/search/searchfirstyear.php?search=' + str, true);
                             searchReq.send(null);
                             searchReq.onreadystatechange = handleSearchResults;
                           } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                              && smokercheck == false && hallscheck == false && societycheck == false
-                            && first == false && second == true $$ third == false) {
+                            && first == false && second == true && third == false) {
                               var str = escape(document.getElementById('query').value);
                               searchReq.open("GET", 'lib/search/searchsecondyear.php?search=' + str, true);
                               searchReq.send(null);
                               searchReq.onreadystatechange = handleSearchResults;
                             } else if (malecheck == false && femalecheck == false && nonsmokercheck == false
                                && smokercheck == false && hallscheck == false && societycheck == false
-                              && first == false && second == false $$ third == true) {
+                              && first == false && second == false && third == true) {
                                 var str = escape(document.getElementById('query').value);
                                 searchReq.open("GET", 'lib/search/searchthirdyear.php?search=' + str, true);
                                 searchReq.send(null);
