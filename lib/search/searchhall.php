@@ -24,8 +24,6 @@ if(!$conn) {
         echo "<td>". $row['name']. "</td>";
         echo "<td>". $row['location'] . "</td>";
         echo "<td>". $row['postcode'] . "</td>";
-        echo "<td>". $row['accom'] . "</td>";
-        echo "<td>". $row['study'] . "</td>";
       echo "</tr>";
     }
     echo "</table>" . "\n";
