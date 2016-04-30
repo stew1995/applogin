@@ -4,9 +4,11 @@
           <div id="registerCenter">
             <div id="registerCenterBackgroundFix">
               <div class="registration">
+                <form name="aboutRegister" class="registrationFormAboutYourself" method="post" onsubmit='return formValidation();'>
                    <p id="reqabout"><span class="required">* required field.</span></p>
                    <div class="aboutChoices">
                        <p id="centerSubTitles">Hobbies</p>
+                     <form name="Hobbies">
                       <select id="hobbieList">
                         <option value="">Please select the hobbies you do:</option>
                         <option value="25">Acting</option>
@@ -48,12 +50,14 @@
                         <option value="14">Volleyball</option>
                         <option value="31">Water Sports</option>
                       </select>
+                    </form>
                     <div id="hobbieTxt"> </div>
                      <!--<p>Hobbies: <input  type="text" name="Hobbies" id="Hobbie"></p>
                       <p><input type="submit" name="addHobbie" value="+"></p> <!-- Make something so youtype a hobbie in and it adds to a list with a button and shows above or below and allows to add more-->
                       <p id="reqhobbie"><span class="required">*<span id="hobbieErr"> </span></span></p>
 
                         <p id="centerSubTitles">Society</p>
+                        <form name="Society"></p>
                         <select id="societyList">
                           <option value="">Choose the societies your apart of: </option>
                           <option value="6">Art & Design</option>
@@ -78,6 +82,7 @@
                           <option value="14">Rugby</option>
                           <option value="21">Skate</option>
                         </select>
+                      </form>
                       <!--<p>Societies: <input type="text" name="Societies" id="Society"></p>
                       <p><input type="submit" name="addSocieties" value="+"></p>-->
                       <p id="reqsociety"><span class="required">*<span id="societyErr"> </span></span></p>
@@ -101,7 +106,7 @@
                         <p><span id="smalltext">Yes</span><input type="radio" name="Gym" value="YesGym"><span id="smalltext">Maybe</span><input type="radio" name="gym" value="MaybeGym"><span id="smalltext">No</span><input type="radio" name="gym  " value="NoGym">
                           <span id="reqgym"><span class="required">*<span id="gymErr"> </span></span></span></p>
                       </div>
-                      <p><input type="submit" name="checkValidation" value="Complete" id="checkValidation"></p>
+                      <p><input type="submit" name="checkValidation" value="Complete" id="checkValidation" onsubmit=" return formValidation();"></p>
                     </form>
                   </div>
                 </div>
