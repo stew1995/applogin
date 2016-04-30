@@ -55,6 +55,9 @@ function formValidation(){
         reqbasic.display = "block";
         reqname.display = "block";
         return false;
+      } else if (fname.value !== "" || namePatt.test(fname.value)) {
+        reqbasic.display = "none";
+        reqname.display = "none";
       }
 
       if(lname.value == "" || !lnamePatt.test(lname.value)) {
@@ -63,6 +66,9 @@ function formValidation(){
         reqbasic.display = "block";
         reqlname.display = "block";
         return false;
+      } else if (lname.value !== "" || lnamePatt.test(lname.value)) {
+        reqbasic.display = "none";
+        reqlname.display = "none";
       }
 
       if(dob.value == "" || !dobPatt.test(dob.value)) {
@@ -71,7 +77,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqdob.display = "block";
         return false;
-      } 
+      } else if (dob.value !== "" || dobPatt.test(dob.value)) {
+        reqbasic.display = "none";
+        reqdob.display = "none";
+      }
 
       if (email.value == "" || !emailPatt.test(email.value)) {
         emailErr.innerHTML = ("Enter a valid email");
@@ -79,7 +88,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqemail.display = "block";
         return false;
-      } 
+      } else if (email.value !== "" || emailPatt.test(email.value)) {
+        reqbasic.display = "none";
+        reqemail.display = "none";
+      }
 
       if(password.value == "" || !passwordPatt.test(password.value)) {
         passwordErr.innerHTML = ("Enter a valid password");
@@ -87,7 +99,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqpass.display = "block";
         return false;
-      } 
+      } else if (password.value !== "" || passwordPatt.test(password.value)) {
+        reqbasic.display = "none";
+        reqpass.display = "none";
+      }
 
       if(address.value == "" || !addressPatt.test(address.value)) {
         addressErr.innerHTML = ("Enter a valid address");
@@ -95,7 +110,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqaddress.display = "block";
         return false;
-      } 
+      } else if (address.value !== "" || addressPatt.test(address.value)) {
+        reqbasic.display = "none";
+        reqaddress.display = "none";
+      }
 
       if(postcode.value == "" || !postcodePatt.test(postcode.value)) {
         postcodeErr.innerHTML = ("Enter a valid postcode");
@@ -103,7 +121,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqpost.display = "block";
         return false;
-      } 
+      } else if (postcode.value !== "" || postcodePatt.test(postcode.value)) {
+        reqbasic.display = "none";
+        reqpost.display = "none";
+      }
 
       if(home.value == "" || !homePatt.test(home.value)) {
         homeErr.innerHTML = ("Enter a valid home number");
@@ -111,7 +132,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqhome.display = "block";
         return false;
-      } 
+      } else if (home.value !== "" || homePatt.test(home.value)) {
+        reqbasic.display = "none";
+        reqhome.display = "none";
+      }
 
       if(mobile.value == "" || !mobilePatt.test(mobile.value)) {
         mobileErr.innerHTML = ("Enter a valid mobile number");
@@ -119,7 +143,10 @@ function formValidation(){
         reqbasic.display = "block";
         reqmobile.display = "block";
         return false;
-      } 
+      } else if (mobile.value !== "" || mobilePatt.test(mobile.value)) {
+        reqbasic.display = "none";
+        reqmobile.display = "none";
+      }
 
       //Uni Part of registration
       var requni = document.getElementById("requni").style;
@@ -143,7 +170,10 @@ function formValidation(){
       requni.display = "block";
       reqcourse.display = "block";
       return false;
-    } 
+    } else if (course.value !== "") {
+      requni.display = "none";
+      reqcourse.display = "none";
+    }
 
     if(year.value == "") {
       yearErr.innerHTML = ("Select the year you will be attending");
@@ -151,6 +181,9 @@ function formValidation(){
       requni.display = "block";
       reqyear.display = "block";
       return false;
+    } else if (year.value !== "") {
+      requni.display = "none";
+      reqyear.display = "none";
     }
 
     if(accom.value == "") {
@@ -159,7 +192,10 @@ function formValidation(){
       requni.display = "block";
       reqaccom.display = "block";
       return false;
-    } 
+    } else if (accom.value !== "") {
+      requni.display = "none";
+      reqaccom.display = "none";
+    }
 
 
     //About yourself validation
@@ -177,7 +213,10 @@ function formValidation(){
         reqabout.display = "block";
         reqhobbie.display = "block";
         return false;
-      } 
+      } else if (hobbie.value !== "") {
+        reqabout.display = "block";
+        reqhobbie.display = "block";
+      }
 
       if(society.value == "") {
         societyErr.innerHTML = "Choose the societies you are apart of";
@@ -185,7 +224,10 @@ function formValidation(){
         reqabout.display = "block";
         reqsociety.display = "block";
         return false;
-      } 
+      } else if (society.value !== "") {
+        reqabout.display = "none";
+        reqsociety.display = "none";
+      }
 
       var reqabout = document.getElementById("reqabout").style;
       var reqsmoker = document.getElementById("reqsmoker").style;
@@ -220,7 +262,7 @@ function formValidation(){
         reqsocial.display = "block";
         reqabout.display = "block";
         return false
-      } 
+      }
       var reqabout = document.getElementById("reqabout").style;
       var reqmess = document.getElementById("reqmess").style;
       var mess = document.getElementsByName("Mess");
@@ -237,8 +279,8 @@ function formValidation(){
         reqmess.display = "block";
         reqabout.display = "block";
         return false;
-      } 
-      
+      }
+
       var reqabout = document.getElementById("reqabout").style;
       var reqgym = document.getElementById("reqgym").style;
       var gym = document.getElementsByName("Gym");
@@ -255,12 +297,9 @@ function formValidation(){
         reqgym.display = "block";
         reqabout.display = "block";
         return false;
-      } 
-      
+      }
+
       else {
         return true
       }
 }
-
-
-
