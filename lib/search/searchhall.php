@@ -11,7 +11,7 @@ if(!$conn) {
   die("Connection to database failed: ". mysqli_connect_error());
 }if(isset($_GET['search']) && $_GET['search'] != '') {
   $search = $_GET['search'];
-  $resulthall = mysqli_query($conn, "SELECT name, location, postcode FROM hall
+  $resulthall = mysqli_query($conn, "SELECT name, location, postcode FROM halls
                                   WHERE name LIKE ('%".$search."%')");
     echo "<table id='searchresulttable'";
       echo "<tr>";
