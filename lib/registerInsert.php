@@ -41,7 +41,7 @@ if(isset($_POST['checkValidation'])){
 
 
     $sqlregister =
-    "INSERT INTO user (fname, lname, gender, email, password, dob, address,
+    "INSERT INTO user (id, fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$address',
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
