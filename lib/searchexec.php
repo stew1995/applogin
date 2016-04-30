@@ -80,6 +80,6 @@ if(!$conn) {
      echo "</tr>";
      // echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>" . "\n";
   }
-  echo "</table>";
+  echo "</table>" . "\n";
 }
 ?>
