@@ -1,19 +1,5 @@
-function getXMLHTTPRequestObject() {
-  if(window.XMLHttpRequest) {
-    return new XMLHttpRequest();
-  } else if (window.ActiveXObject) {
-    return new ActiveXObject("Microsoft.XMLHTTP");
-  } else {
-    alert("You cannot run the search bar")
-  }
-}
-  //XMLHTTP Object
-  var registerXML = getXMLHTTPRequestObject();
+
 function formValidation(){
-  searchReq.open("POST", 'lib/registerInsert.php',false);
-  searchReq.onreadystatechange = function() {
-    if (ajaxObj.status === 200){
-      if (ajaxObj.readyState === 4){
         //User input from form
       var reqbasic = document.getElementById("reqbasic").style;
       var reqname = document.getElementById("reqname").style;
@@ -68,11 +54,7 @@ function formValidation(){
         fname.focus();
         reqbasic.display = "block";
         reqname.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqname.display = "none";
-
+        return false;
       }
 
       if(lname.value == "" || !lnamePatt.test(lname.value)) {
@@ -80,10 +62,7 @@ function formValidation(){
         lname.focus();
         reqbasic.display = "block";
         reqlname.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqlname.display = "none";
+        return false;
       }
 
       if(dob.value == "" || !dobPatt.test(dob.value)) {
@@ -92,76 +71,55 @@ function formValidation(){
         reqbasic.display = "block";
         reqdob.display = "block";
         return false;
-      } else {
-        reqbasic.display = "none";
-        reqdob.display = "none";
-      }
+      } 
 
       if (email.value == "" || !emailPatt.test(email.value)) {
         emailErr.innerHTML = ("Enter a valid email");
         email.focus();
         reqbasic.display = "block";
         reqemail.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqemail.display = "none";
-      }
+        return false;
+      } 
 
       if(password.value == "" || !passwordPatt.test(password.value)) {
         passwordErr.innerHTML = ("Enter a valid password");
         password.focus();
         reqbasic.display = "block";
         reqpass.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqpass.display = "none";
-      }
+        return false;
+      } 
 
       if(address.value == "" || !addressPatt.test(address.value)) {
         addressErr.innerHTML = ("Enter a valid address");
         address.focus();
         reqbasic.display = "block";
         reqaddress.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqaddress.display = "none";
-      }
+        return false;
+      } 
 
       if(postcode.value == "" || !postcodePatt.test(postcode.value)) {
         postcodeErr.innerHTML = ("Enter a valid postcode");
         postcode.focus();
         reqbasic.display = "block";
         reqpost.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqpost.display = "none";
-      }
+        return false;
+      } 
 
       if(home.value == "" || !homePatt.test(home.value)) {
         homeErr.innerHTML = ("Enter a valid home number");
         home.focus();
         reqbasic.display = "block";
         reqhome.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqhome.display = "none";
-      }
+        return false;
+      } 
 
       if(mobile.value == "" || !mobilePatt.test(mobile.value)) {
         mobileErr.innerHTML = ("Enter a valid mobile number");
         mobile.focus();
         reqbasic.display = "block";
         reqmobile.display = "block";
-        //return false;
-      } else {
-        reqbasic.display = "none";
-        reqmobile.display = "none";
-      }
+        return false;
+      } 
 
       //Uni Part of registration
       var requni = document.getElementById("requni").style;
@@ -184,21 +142,15 @@ function formValidation(){
       course.focus();
       requni.display = "block";
       reqcourse.display = "block";
-      //return false;
-    } else {
-      requni.display = "none";
-      reqcourse.display = "none";
-    }
+      return false;
+    } 
 
     if(year.value == "") {
       yearErr.innerHTML = ("Select the year you will be attending");
       year.focus();
       requni.display = "block";
       reqyear.display = "block";
-      //return false;
-    } else {
-      requni.display = "none";
-      reqyear.display = "none";
+      return false;
     }
 
     if(accom.value == "") {
@@ -206,11 +158,8 @@ function formValidation(){
       accom.focus();
       requni.display = "block";
       reqaccom.display = "block";
-      //return false;
-    } else {
-      requni.display = "none";
-      reqaccom.display = "none";
-    }
+      return false;
+    } 
 
 
     //About yourself validation
@@ -227,22 +176,16 @@ function formValidation(){
         hobbie.focus();
         reqabout.display = "block";
         reqhobbie.display = "block";
-        //return false;
-      } else {
-        reqabout.display = "none";
-        reqhobbie.display = "none";
-      }
+        return false;
+      } 
 
       if(society.value == "") {
         societyErr.innerHTML = "Choose the societies you are apart of";
         society.focus();
         reqabout.display = "block";
         reqsociety.display = "block";
-        //return false;
-      } else {
-        reqabout.display = "none";
-        reqsociety.display = "none";
-      }
+        return false;
+      } 
 
       var reqabout = document.getElementById("reqabout").style;
       var reqsmoker = document.getElementById("reqsmoker").style;
@@ -259,10 +202,8 @@ function formValidation(){
         smokerErr.innerHTML = "Please choose one of the options";
         reqsmoker.display = "block";
         reqabout.display = "block";
-      } else {
-        reqsmoker.display = "none";
-        reqabout.display = "none";
-      }
+        return false;
+      } 
       var reqabout = document.getElementById("reqabout").style;
       var reqsocial = document.getElementById("reqsocial").style;
       var social = document.getElementsByName("Social");
@@ -278,10 +219,8 @@ function formValidation(){
         socialErr.innerHTML = "Please choose one of the options";
         reqsocial.display = "block";
         reqabout.display = "block";
-      } else {
-        reqsocial.display = "none";
-        reqabout.display = "none";
-      }
+        return false
+      } 
       var reqabout = document.getElementById("reqabout").style;
       var reqmess = document.getElementById("reqmess").style;
       var mess = document.getElementsByName("Mess");
@@ -298,10 +237,8 @@ function formValidation(){
         reqmess.display = "block";
         reqabout.display = "block";
         return false;
-      } else {
-        reqmess.display = "none";
-        reqabout.display = "none";
-    }
+      } 
+      
       var reqabout = document.getElementById("reqabout").style;
       var reqgym = document.getElementById("reqgym").style;
       var gym = document.getElementsByName("Gym");
@@ -318,14 +255,12 @@ function formValidation(){
         reqgym.display = "block";
         reqabout.display = "block";
         return false;
-      } else {
-        reqgym.display = "none";
-        reqabout.display = "none";
+      } 
+      
+      else {
+        return true
       }
-      return true
-      }
-
-    }
-  }
-    searchReq.send();
 }
+
+
+
