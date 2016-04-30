@@ -76,7 +76,7 @@ if(!$conn) {
    //   echo $row['course'] ;
   //    echo $row['accom'] ;
    //   echo $row['study'] ;
-      echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>" . "\n";
+      echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>";
   }
   echo "</table>";
 }
