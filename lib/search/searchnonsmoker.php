@@ -15,7 +15,7 @@ if(!$conn) {
                                 FROM user
                                 INNER JOIN uni
                                 ON user.id = uni.user_id
-                                WHERE smoker = 'FALSE'
+                                WHERE smoker = 0
                                 AND fname LIKE ('%".$search."%')");
   echo "<table id='searchresulttable'";
     echo "<tr>";
