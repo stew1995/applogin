@@ -22,7 +22,7 @@ function getXMLHTTPRequestObject() {
 
       if(searchReq.readyState == 4 || searchReq.readyState == 0) {
         if(malecheck == false && femalecheck == false && nonsmokercheck == false
-           && smokercheck == false && hallscheck == false && groupcheck == false) {
+           && smokercheck == false && hallscheck == false) {
           var str = escape(document.getElementById('query').value);
           searchReq.open("GET", 'lib/search/searchexec.php?search=' + str, true);
           searchReq.send(null);
@@ -60,7 +60,7 @@ function getXMLHTTPRequestObject() {
                       }
         }
       }
-    
+
 
   function handleSearchResults() {
     if(searchReq.readyState == 4) {
