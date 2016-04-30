@@ -65,11 +65,11 @@ if(!$conn) {
                                 ON user.id = uni.user_id 
                                 WHERE fname LIKE ('%".$search."%')");
   while($row = mysqli_fetch_array($result)) {
-      echo $row['fname']. " ". $row['lname'];
-      echo $row['course'] ;
-      echo $row['accom'] ;
-      echo $row['study'] ;
-      //echo ''. $row['fname'] . " ". $row['lname'] . "\n";
+   //   echo $row['fname']. " ". $row['lname'];
+   //   echo $row['course'] ;
+  //    echo $row['accom'] ;
+   //   echo $row['study'] ;
+      echo ''. $row['fname'] . " ". $row['lname'] . $row['course'] . " " . $row['accom'] . " " . $row['study'] . "\n";
   }
 }
 ?>
