@@ -12,38 +12,47 @@ if(!$conn) {
 
 //INSERT INTO user
 if(isset($_POST['checkValidation'])){
-  $name = $_POST['FName'];
-  $surname = $_POST['LName'];
-  $gender = $_POST['Gender'];
-  $dob = $_POST['DOB'];
-  $email = $_POST['Email'];
-  $password = $_POST['Password'];
-  $address = $_POST['Address'];
-  $postcode = $_POST['Postcode'];
-  $homeNumber = $_POST['HomeNumber'];
-  $mobile = $_POST['Mobile'];
-  $course = $_POST['courseList'];
-  $studyYear = $_POST['yearList'];
-  $accom = $_POST['accomList'];
-  $hobbie = $_POST['Hobbies'];
-  $society = $_POST['Society'];
-  $smoke = $_POST['Smoker'];
-  $outgoing = $_POST['Social'];
-  $mess = $_POST['Mess'];
-  $gym = $_POST['Gym'];
-  
-  
-  //Get course ID for table 
-  
+  validate_data($data) {
+    $data = trim($data);
+    $data = stripslashes($data);
+    $data = strip_tags($data);
+    $data = htmlspecialchars($data);
+    $data = mysqli_real_escape_string($data);
+    return $data;
+}
+
+  $name = validate_data($_POST['FName']);
+  $surname = validate_data($_POST['LName']);
+  $gender = validate_data($_POST['Gender']);
+  $dob = validate_data($_POST['DOB']);
+  $email = validate_data($_POST['Email']);
+  $password = validate_data($_POST['Password']);
+  $address = validate_data($_POST['Address']);
+  $postcode = validate_data($_POST['Postcode']);
+  $homeNumber = validate_data($_POST['HomeNumber']);
+  $mobile = validate_data($_POST['Mobile']);
+  $course = validate_data($_POST['courseList']);
+  $studyYear = validate_data($_POST['yearList']);
+  $accom = validate_data($_POST['accomList']);
+  $hobbie = validate_data($_POST['Hobbies']);
+  $society = validate_data($_POST['Society']);
+  $smoke = validate_data($_POST['Smoker']);
+  $outgoing = validate_data($_POST['Social']);
+  $mess = validate_data($_POST['Mess']);
+  $gym = validate_data($_POST['Gym']);
+
+
+  //Get course ID for table
+
   $getCourse = "SELECT id FROM course WHERE name ='$course'";
   mysqli_query($conn, $getCourse) or die(mysqli_error($conn));
-  
+
   $getHobbie = "SELECT id FROM course WHERE name ='$hobbie'";
   mysqli_query($conn, $getHobbie) or die(mysqli_error($conn));
-  
+
   $getSociety = "SELECT id FROM course WHERE name ='$society'";
   mysqli_query($conn, $getSociety) or die(mysqli_error($conn));
-  
+
 
   if($name != '' && $surname != '' && $email != '' && $password != '' && $gender != ''
       && $address != '' && $postcode != ''){
@@ -55,11 +64,14 @@ if(isset($_POST['checkValidation'])){
   }
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
+  //get id of inserted user
+  $userID = "SELECT id FROM user WHERE email ='$email'";
 
   if($course != ''|| $accom != ''){
     $sqluni =
-    "INSERT INTO uni (course, study, accom)
-    VALUES ('$getCourse', '$studyYear', '$accom')";
+    "INSERT INTO uni (user_id, course, study, accom)
+    VALUES ('$userId', '$getCourse', '$studyYear', '$accom')
+    ";
   }
   //Check if user data entered is correct
   mysqli_query($conn, $sqluni) or die(mysqli_error($conn));
