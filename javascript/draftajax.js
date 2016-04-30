@@ -155,7 +155,7 @@ function registerCenter() {
           var css = document.createElement('link');
           css.rel= 'stylesheet';
           css.type = 'text/css';
-          css.href = 'CSS/register.css';
+          css.href = 'CSS/registration.css';
           document.head.appendChild(css);
         });
       });
