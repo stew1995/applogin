@@ -64,20 +64,20 @@ if(!$conn) {
                                 INNER JOIN uni  
                                 ON user.id = uni.user_id 
                                 WHERE fname LIKE ('%".$search."%')");
-
-  while($row = mysqli_fetch_array($result)) {
-       echo "<table id='searchresulttable'";
+  echo "<table id='searchresulttable'";
     echo "<tr>";
      echo "<th>Name</th>";
      echo "<th>Course</th>";
      echo "<th>Accomodation</th>";
-      echo "<th>Study Year</th>";
+    echo "<th>Study Year</th>";
     echo "</tr>";
-   //   echo $row['fname']. " ". $row['lname'];
-   //   echo $row['course'] ;
-  //    echo $row['accom'] ;
-   //   echo $row['study'] ;
-      echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>" . "\n";
+  while($row = mysqli_fetch_array($result)) {
+     echo ''. "<tr>";
+   echo "<td>". $row['fname']. " ". $row['lname'] . "</td>" . "\n";
+     echo "<td>". $row['course'] "</td>" . "\n";
+     echo "<td>". $row['accom'] "</td>" . "\n";
+     echo "<td>". $row['study'] "</td>" . "\n";
+     // echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>" . "\n";
   }
   echo "</table>";
 }
