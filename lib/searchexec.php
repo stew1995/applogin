@@ -73,11 +73,11 @@ if(!$conn) {
     echo "</tr>";
   while($row = mysqli_fetch_array($result)) {
      echo ''. "<tr>";
-   echo "<td>". $row['fname']. " ". $row['lname'] . "</td>";
-     echo "<td>". $row['course'] . "</td>";
-     echo "<td>". $row['accom'] . "</td>";
-     echo "<td>". $row['study'] . "</td>";
-     echo "</tr>"  . "\n";
+      echo "<td>". $row['fname']. " ". $row['lname'] . "</td>";
+       echo "<td>". $row['course'] . "</td>";
+       echo "<td>". $row['accom'] . "</td>";
+      echo "<td>". $row['study'] . "</td>";
+     echo "</tr>";
      // echo ''. "<tr> <td>" . $row['fname'] . " ". $row['lname'] . "</td><td>" . $row['course'] . "</td><td>" . $row['accom'] . "</td><td>" . $row['study'] . "</td></tr>" . "\n";
   }
   echo "</table>";
