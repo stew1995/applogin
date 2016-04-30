@@ -24,7 +24,6 @@ if(!$conn) {
       echo "<th>Course</th>";
       echo "<th>Accomodation</th>";
       echo "<th>Study Year</th>";
-      echo "<th>Smoker</th>";
     echo "</tr>";
   while($row = mysqli_fetch_array($result)) {
     echo ''. "<tr>";
@@ -33,7 +32,6 @@ if(!$conn) {
       echo "<td>". $row['course'] . "</td>";
       echo "<td>". $row['accom'] . "</td>";
       echo "<td>". $row['study'] . "</td>";
-      echo "<td>". $row['smoker'] . "</td>";
     echo "</tr>";
   }
   echo "</table>" . "\n";
