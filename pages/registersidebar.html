@@ -2,7 +2,7 @@
             <h2>Basic Information</h2>
           </div>
           <div id="registerSide">
-            <form name="basicRegister" class="registrationForm" id="basicForm" method="post" action="lib/registerInsert.php">
+            <form name="basicRegister" class="registrationForm" id="basicForm" method="post" action="lib/registerInsert.php" onsubmit=" return formValidation();">
                           <p id="reqbasic"><span class="required">* required field.</span></p>
                           <p >First Name<input type="text" name="FName" id="FName"></p>
                           <p id="reqname"><span class="required">*<span id="nameErr"> </span></span></p>
@@ -25,5 +25,6 @@
                           <p id="reqhome"><span class="required">*<span id="homeErr"> </span></span></p>
                           <p>Mobile<input type="number" name="Mobile" id="Mobile"></p>
                           <p id="reqmobile"><span class="required">*<span id="mobileErr"> </span></span></p>
+                          <p><input type="submit" name="checkValidation" value="Complete" id="checkValidation"></p>
                       </form>
                     </div>
