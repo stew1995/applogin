@@ -15,15 +15,39 @@
 .small:nth-child(odd) {
      background: #f5f5f0;
 }
-.suggest_link_over{
-background-color:blue;
-border-bottom:1px solid gray;
+
+#searchresulttable {
+  border-collapse: collapse;
+  font-family: "Arial", Helvetica, sans-serif;
+
 }
-.suggest_link:hover{
-background-color:green;
-border-bottom:1px solid gray;
+
+#searchresulttable th {
+  background: red;
+  background: -webkit-linear-gradient(#f2f2f2, #6666ff); /* For Safari and IE*/
+  background: -o-linear-gradient(#f2f2f2, #6666ff); /* For Opera */
+  background: -moz-linear-gradient(#f2f2f2, #6666ff); /* For Firefox */
+  background: linear-gradient(#f2f2f2, #6666ff); /* Standard syntax */
+  font-size: 18px;
+  text-align: center;
+  
 }
-.suggest_link_over:hover{
-background-color:#6d84b4;
-border-bottom:1px solid gray;
-}  
+
+#searchresulttable tr {
+  background: -webkit-linear-gradient(#e6e6e6, #ffffff); /* For Safari and IE*/
+  background: -o-linear-gradient(#e6e6e6, #ffffff); /* For Opera */
+  background: -moz-linear-gradient(#e6e6e6, #ffffff); /* For Firefox */
+  background: linear-gradient(#e6e6e6, #ffffff); /* Standard syntax */
+}
+#searchresulttable tr:nth-child(odd) {
+  background: -webkit-linear-gradient(#ffffff, #e6e6e6); /* For Safari and IE*/
+  background: -o-linear-gradient(#ffffff, #e6e6e6); /* For Opera */
+  background: -moz-linear-gradient(#ffffff, #e6e6e6); /* For Firefox */
+  background: linear-gradient(#ffffff, #e6e6e6); /* Standard syntax */
+}
+
+#searchresulttable td {
+  font-size: 16px;
+  text-align: center;
+}
+
