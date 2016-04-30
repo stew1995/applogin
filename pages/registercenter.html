@@ -4,7 +4,7 @@
           <div id="registerCenter">
             <div id="registerCenterBackgroundFix">
               <div class="registration">
-                <form name="aboutRegister" class="registrationFormAboutYourself" method="post" >
+                <form name="aboutRegister" class="registrationFormAboutYourself" method="post" onsubmit='return formValidation();'>
                    <p id="reqabout"><span class="required">* required field.</span></p>
                    <div class="aboutChoices">
                        <p id="centerSubTitles">Hobbies</p>
@@ -106,7 +106,7 @@
                         <p><span id="smalltext">Yes</span><input type="radio" name="Gym" value="YesGym"><span id="smalltext">Maybe</span><input type="radio" name="gym" value="MaybeGym"><span id="smalltext">No</span><input type="radio" name="gym  " value="NoGym">
                           <span id="reqgym"><span class="required">*<span id="gymErr"> </span></span></span></p>
                       </div>
-                          <p><input type="button" name="checkValidation" value="Complete" id="checkValidation" onsubmit="formValidation"></p>
+                      <p><input type="submit" name="checkValidation" value="Complete" id="checkValidation" onsubmit=" return formValidation();"></p>
                     </form>
                   </div>
                 </div>
