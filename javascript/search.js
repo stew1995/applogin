@@ -13,11 +13,22 @@ function getXMLHTTPRequestObject() {
   //called from on key up
   //Start AJAX
   function search() {
+    //Advance search variables
+    var malecheck = document.getElementById("malesearch").checked;
+    var femalecheck = document.getElementById("femalesearch").checked;
+    var nonsmokercheck = document.getElementById("nonsmokersearch").checked;
+    var smokercheck = document.getElementById("smokersearch").checked;
+    var hallscheck = document.getElementById("hallssearch").checked;
+    var groupcheck = document.getElementById("groupsearch").checked;
+
       if(searchReq.readyState == 4 || searchReq.readyState == 0) {
-        var str = escape(document.getElementById('query').value);
-        searchReq.open("GET", 'lib/searchexec.php?search=' + str, true);
-        searchReq.send(null);
-        searchReq.onreadystatechange = handleSearchResults;
+        if(malecheck == false && femalecheck == false && nonsmokercheck == false
+           && smokercheck == false && hallscheck == false && groupcheck == false) {
+          var str = escape(document.getElementById('query').value);
+          searchReq.open("GET", 'lib/searchexec.php?search=' + str, true);
+          searchReq.send(null);
+          searchReq.onreadystatechange = handleSearchResults;
+        }
     }
   }
 
@@ -42,7 +53,7 @@ function getXMLHTTPRequestObject() {
         for(i=0; i < str.length - 1; i++) {
               var suggest = '<div style="cursor : pointer;" onmouseover="javascript:suggestOver(this);" ';
                 suggest += 'onmouseout="javascript:suggestOut(this);" ';
-                suggest += 'onclick="javascript:setsearch(this.innerHTML);" ';
+                suggest += 'onclick="javascript:setSearch(this.innerHTML);" ';
                 suggest += 'class="small">' + str[i] + '</div>';
           ss.innerHTML += suggest;
         }
