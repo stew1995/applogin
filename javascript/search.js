@@ -59,6 +59,8 @@ function getXMLHTTPRequestObject() {
                         searchReq.onreadystatechange = handleSearchResults;
                       }
         }
+      }
+    
 
   function handleSearchResults() {
     if(searchReq.readyState == 4) {
