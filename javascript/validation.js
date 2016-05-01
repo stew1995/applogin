@@ -393,8 +393,8 @@ function changeAccountValidation() {
   !emailPatt.test(retypeemail.value)) {
     retypeemail.style.background = "red";
     retypemail.focus();
-  } else if (retypeemail.value == newemail.value||retypeemail.value !== ""||!mailPatt.test(newemail.value))||
-  emailPatt.test(retypeemail.value) {
+  } else if (retypeemail.value == newemail.value||retypeemail.value !== ""||!mailPatt.test(newemail.value)||
+  emailPatt.test(retypeemail.value)) {
     retypeemail.style.background = "none";
   }
 
