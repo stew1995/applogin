@@ -54,7 +54,7 @@ if(!empty($startingEmail) && ($startingPass)) {
 
       }
     }
-  }
+  } 
 
   if(isset($_POST['submitemail'])) {
     $oldemail = validate_data($_POST['oldemail']);
