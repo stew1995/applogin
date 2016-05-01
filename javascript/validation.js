@@ -381,7 +381,7 @@ function changeAccountValidation() {
     oldemail.style.background = "none";
   }
 
-  if(oldemail.value !== newemail.value||newemail.value == ""||!emailPatt.test(email.value))||!emailPatt.test(newemail.value) {
+  if(oldemail.value !== newemail.value||newemail.value == ""||!emailPatt.test(email.value)||!emailPatt.test(newemail.value)) {
     newemail.style.background = "red";
     newemail.focus();
   } else if (oldemail.value == newemail.value||newemail.value !== ""||!mailPatt.test(email.value))||
