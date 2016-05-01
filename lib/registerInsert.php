@@ -36,7 +36,7 @@ if(!$conn) {
 
     mysqli_select_db('web');
     $sqlregister =
-    "INSERT INTO user (id, fname, lname, gender, email, password, dob, address,
+    "INSERT INTO user (fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$dob', '$address',
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
