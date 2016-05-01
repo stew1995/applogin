@@ -128,7 +128,7 @@ if(!empty($startingEmail) && ($startingPass)) {
 
   //Year
   if(isset($_POST['submityear'])) {
-    $year = validate_data($_POST['yearlist'];
+    $year = validate_data($_POST['yearlist']);
     if(!empty($year)){
       $sql = "UPDATE uni SET study='$year' WHERE fname='$getID'";
       mysqli_query($conn, $sql) or die("Cannot change year data in database" . mysqli_error($conn));
