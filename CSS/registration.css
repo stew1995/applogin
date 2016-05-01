@@ -14,7 +14,7 @@
 /*Side and Right*/
 #registerSide, #registerCenter, #registerRight {
   background: white;
-  height: 600px;
+  height: 670px;
   }
 
 #registerRight {
@@ -24,14 +24,14 @@
 #registerCenterBackgroundFix, #backgroundFix {
   background: rgba(204, 204, 255, 0.8);
   margin: 0 5%;
-  height: 600px;
+  height: 670px;
 }
 
 
 .registrationForm {
   background: rgba(204, 204, 255, 0.8);
   margin: 0 5%;
-  height: 600px;
+  height: 670px;
 }
 .registrationForm h1 {
   text-decoration: underline;
@@ -55,11 +55,10 @@
 #checkValidation {
   width: 40%;
   height: 30px;
+  margin-top: 100px;
   margin: 0 30%;
   border-radius: 5px;
   background: white;
-  position: relative;
-  top: 100px;
 }
 
 .registrationFormUni h1 {
@@ -124,8 +123,14 @@
 #reqname, #reqlname, #reqdob, #reqemail, #reqpass, #reqaddress, #reqpost,
 #reqhome, #reqmobile, #reqsmoker, #reqsocial,#reqmess, #reqgym, #reqcourse,
 #reqyear, #reqaccom, #reqbasic, #requni, #reqgender {display: none;}
-#reqabout, #reqhobbie, #reqsociety, #reqinterest {display: none;}
+#reqabout, #reqhobbie, #reqsociety, #reqinterest, #reqretypeemail {display: none;}
 
+
+#registerRight input[type="text"] {
+  margin: 0 12.5%;
+  width: 75%;
+  border-radius: 5px;
+}
  #courseList {
   width: 75%;
   height: 30px;
@@ -150,40 +155,39 @@
 }
 
 #hobbieList, #societyList {
-  width: 60%;
+  width: 90%;
   height: 30px;
-  margin: 0 20%;
+  margin: 0 5%;
   font-size: 14px;
 }
 
-.registerSmoke input[type="radio"] {
-  margin: 0 20% 0 0;
-}
+
 
 .registerSmoke {
-  margin: 0 25%;
+  margin: 0 33%;
 }
 
 .registerSocial  input[type="radio"] {
-  margin: 0 12.5% 0 0;
+  margin: 0 5 0 0;
 }
 
-.registerSocial {
-  margin: 0 2.5%;
+#regsocial {
+  margin: 0 15% 0 0;
 }
 
-.registerMess input[type="radio"] {
-  margin: 0 20% 0 0;
+#regsocial2 {
+  margin-left: 15%;
+    font-size: 13px;
 }
 
 .registerGym input[type="radio"] {
-  margin: 0 20% 0 0;
+  margin: 0 15% 0 0;
 }
 
 .registerMess {
-  margin: 0 35%;
+  margin: 0 30%;
 }
 
 .registerGym {
-  margin: 0 20%;
+  margin: 0 10%;
 }
