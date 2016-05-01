@@ -91,8 +91,6 @@ function changeLayout(){
 
   if (el && el !== 'pages/' && loc && source){
     ajaxGet(el, function(data){
-      var existing = document.getElementById(loc).innerHTML;
-      document.getElementById(source).innerHTML = existing;
       document.getElementById(loc).innerHTML = data;
     });
   }
