@@ -8,12 +8,13 @@ if(isset($_POST['checkValidation'])){
     $data = htmlspecialchars($data);
     return $data;
 }
+
 $servername = "localhost";
 $username = "root";
 $password = "root";
 $dbname = "web";
 //Create connection
-$conn = mysqli_connect($servername, $username, $password);
+$conn = mysqli_connect($servername, $username, $password, $dbname);
 //Check connection
 if(!$conn) {
   die("Connection to database failed: ". mysqli_connect_error());
@@ -36,13 +37,13 @@ if(!$conn) {
 
     mysqli_select_db('web');
     $sqlregister =
-    "INSERT INTO user (fname, lname, gender, email, password, dob, address,
-                      postcode, hnumber, mobile, hobbie, society, smoker)
+    "INSERT INTO `user` (`fname`, `lname`, `gender`, `email`, `password`, `dob`, `address`,
+                      `postcode`, `hnumber`, `mobile`, `hobbie`, `society`, `smoker`)
     VALUES ('$name', '$surname', '$gender', '$email', '$password', '$dob', '$address',
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
 
   //Check if user registered data has been inputted correctly
-  mysqli_query($sqlregister) or die ("Cannot insert data". mysqli_error($conn));
+  mysqli_query($conn, $sqlregister) or die("cannot put data into database". mysqli_error($conn));
 
 }
 ?>
