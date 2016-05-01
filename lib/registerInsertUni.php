@@ -1,7 +1,7 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
 echo "First";
 //INSERT INTO uni
-if(isset($_POST['submitUniInfo'])){ // needs new button
+if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     function  validate_data($data) {
       $data = trim($data);
       $data = stripslashes($data);
