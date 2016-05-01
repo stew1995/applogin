@@ -46,5 +46,5 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
               echo "Data entered successfully";
             }
       }
-}
+
 ?>
