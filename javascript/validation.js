@@ -342,6 +342,7 @@ function changeAccountValidation() {
 
   if(name.value == "" || !namePatt.test(name.value)) {
     name.style.background = "red";
+    name.focus();
     return false;
   } else if (name.value !== "" || namePatt.test(name.value)) {
     name.style.background = "none";
@@ -349,6 +350,7 @@ function changeAccountValidation() {
 
   if(surname.value == "" || !namePatt.test(surname.value)) {
     surname.style.background = "red";
+    surname.focus();
     return false;
   } else if (surname.value !== "" || namePatt.test(surname.value)) {
     surname.style.background = "none";
@@ -356,6 +358,7 @@ function changeAccountValidation() {
 
   if(password.value == "" || !passwordPatt.test(surname.value)) {
     password.style.background = "red";
+    password.focus();
     return false;
   } else if (password.value !== "" || password.test(surname.value)) {
     password.style.background = "none";
@@ -364,6 +367,7 @@ function changeAccountValidation() {
   if(password.value !== retypepass.value|| retypepass.value == ""||!passwordPatt.test(password.value)||
     !passwordPatt.test(retypepass.value)) {
       retypepass.style.background = "red";
+      retypepass.focus();
       return false;
     } else if (retypepass.value == retypepass.value||passwordPatt.test(password.value)||
       passwordPatt.test(retypepass.value)) {
@@ -372,13 +376,15 @@ function changeAccountValidation() {
 
   if(oldemail.value == ""|| !emailPatt.test(oldemail.value)) {
     oldemail.style.background = "red";
-  } else if (oldemail.value !== ""|| emailPatt.test(oldemail.value)) {
+    oldemail.focus();
+  } else if oldemail.value !== ""|| emailPatt.test(oldemail.value) {
     oldemail.style.background = "none";
   }
 
   if(oldemail.value !== newemail.value||newemail.value == ""||!emailPatt.test(email.value))||
   !emailPatt.test(newemail.value) {
     newemail.style.background = "red";
+    newemail.focus();
   } else if (oldemail.value == newemail.value||newemail.value !== ""||!mailPatt.test(email.value))||
   emailPatt.test(newemail.value) {
     newemail.style.background = "none";
@@ -386,68 +392,73 @@ function changeAccountValidation() {
 
   if(newemail.value !== retypeemail.value||retypeemail.value == ""||!emailPatt.test(newemail.value))||
   !emailPatt.test(retypeemail.value) {
-    newemail.style.background = "red";
+    retypeemail.style.background = "red";
+    retypemail.focus();
   } else if (retypeemail.value == newemail.value||retypeemail.value !== ""||!mailPatt.test(newemail.value))||
   emailPatt.test(retypeemail.value) {
-    newemail.style.background = "none";
+    retypeemail.style.background = "none";
   }
 
   if(address.value == ""||!addressPatt.test(address.value)) {
     address.style.background = "red";
+    address.focus();
   } else if (address.value !=="" ||addressPatt.test(address.value)) {
     address.style.background = "none";
   }
 
   if(postcode.value == ""||!postcodePatt.test(postcode.value)) {
     postcode.style.background = "red";
+    postcode.focus();
   } else if (postcode.value !=="" ||postcodePatt.test(postcode.value)) {
     postcode.style.background = "none";
   }
 
   if(mobile.value == ""||!mobilePatt.test(address.value)) {
     mobile.style.background = "red";
+    mobile.focus();
   } else if (address.value !=="" ||mobilePatt.test(address.value)) {
     mobile.style.background = "none";
   }
 
   if(home.value == ""||!homePatt.test(home.value)) {
     home.style.background = "red";
+    home.focus();
   } else if (home.value !=="" ||homePatt.test(home.value)) {
     home.style.background = "none";
   }
 
-  if(address.value == ""||!addressPatt.test(address.value)) {
-    address.style.background = "red";
-  } else if (address.value !=="" ||addressPatt.test(address.value)) {
-    address.style.background = "none";
-  }
 
   if(hobbie.value == "") {
     hobbie.style.background = "red";
+    hobbie.focus();
   } else if (hobbie.value !=="") {
     hobbie.style.background = "none";
   }
 
   if(society.value == "") {
     society.style.background = "red";
+    society.focus();
   } else if (society.value !=="") {
     society.style.background = "none";
   }
 
   if(year.value == "") {
     year.style.background = "red";
+    year.focus();
   } else if (year.value !=="") {
     year.style.background = "none";
   }
 
   if(course.value == "") {
     course.style.background = "red";
+    course.focus();
   } else if (course.value !=="") {
     course.style.background = "none";
   }
 
   if(accom.value == "") {
     accom.style.background = "red";
+    accom.focus();
   } else if (accom.value !=="") {
     accom.style.background = "none";
   }
