@@ -11,7 +11,7 @@ if(!$conn) {
 }
 
 //INSERT INTO user
-if(isset($_POST['registerBasicInfoBtn'])){
+if(isset($_POST['checkValidation'])){
   function  validate_data($data) {
     $data = trim($data);
     $data = stripslashes($data);
@@ -26,7 +26,7 @@ if(isset($_POST['registerBasicInfoBtn'])){
   $dob = validate_data($_POST['DOB']);
   $email = validate_data($_POST['Email']);
   $password = validate_data($_POST['Password']);
-  $address = validate_data($_POST['Address']);
+  $address = validate_data($_POST['HomeAddress']);
   $postcode = validate_data($_POST['Postcode']);
   $homeNumber = validate_data($_POST['HomeNumber']);
   $mobile = validate_data($_POST['Mobile']);
