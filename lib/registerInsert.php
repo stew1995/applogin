@@ -1,6 +1,6 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
 //INSERT INTO user
-if(isset($_POST['checkValidation'])){
+if(isset($_POST['registerBasicInfoBtn'])){
   function  validate_data($data) {
     $data = trim($data);
     $data = stripslashes($data);
