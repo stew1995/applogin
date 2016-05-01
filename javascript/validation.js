@@ -1,51 +1,51 @@
-
+//Patterns
+var namePatt = /^[a-zA-Z ]*$/;
+var lnamePatt = /^[a-zA-Z ]*$/;
+var dobPatt = /([0-9]{2})\/([0-9]{2})\/([0-9]{3})/;
+var emailPatt = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+var passwordPatt = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
+var addressPatt = /[0-9] [a-zA-Z]/;
+var postcodePatt = /^[A-Z]{1,2}[0-9]{2,3}[A-Z]{2}$/ || /^[A-Z]{1,2}[0-9]{1}[A-Z]{1}[0-9]{1}[A-Z]{2}$/ || /^GIR0[A-Z]{2}$/;
+var homePatt = /^[1-9][0-9]{0,15}$/;
+var mobilePatt = /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/;
 function formValidation(){
         //User input from form
       var reqbasic = document.getElementById("reqbasic").style;
       var reqname = document.getElementById("reqname").style;
       var fname = document.getElementById("FName");
       var fnameErr = document.getElementById("nameErr");
-      var namePatt = /^[a-zA-Z ]*$/;
 
       var reqlname = document.getElementById("reqlname").style;
       var lname = document.getElementById("LName");
       var lnameErr= document.getElementById("lnameErr");
-      var lnamePatt = /^[a-zA-Z ]*$/;
 
       var reqdob = document.getElementById("reqdob").style;
       var dob = document.getElementById("DOB");
       var dobErr = document.getElementById("dobErr");
-      var dobPatt = /([0-9]{2})\/([0-9]{2})\/([0-9]{3})/;
 
       var reqemail = document.getElementById("reqemail").style;
       var email = document.getElementById("Email");
       var emailErr = document.getElementById("emailErr");
-      var emailPatt = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
 
       var reqpass = document.getElementById("reqpass").style;
       var password = document.getElementById("Password");
       var passwordErr = document.getElementById("passwordErr");
-      var passwordPatt = /^[A-Za-z0-9!@#$%^&*()_]{6,20}$/;
 
       var reqaddress = document.getElementById("reqaddress").style;
       var address = document.getElementById("HomeAddress");
       var addressErr = document.getElementById("addressErr");
-      var addressPatt = /[0-9] [a-zA-Z]/;
 
       var reqpost = document.getElementById("reqpost").style;
       var postcode = document.getElementById("Postcode");
       var postcodeErr = document.getElementById("postcodeErr");
-      var postcodePatt = /^[A-Z]{1,2}[0-9]{2,3}[A-Z]{2}$/ || /^[A-Z]{1,2}[0-9]{1}[A-Z]{1}[0-9]{1}[A-Z]{2}$/ || /^GIR0[A-Z]{2}$/;
 
       var reqhome = document.getElementById("reqhome").style;
       var home = document.getElementById("HomeNumber");
       var homeErr = document.getElementById("homeErr");
-      var homePatt = /^[1-9][0-9]{0,15}$/;
 
       var reqmobile = document.getElementById("reqmobile").style;
       var mobile = document.getElementById("Mobile");
       var mobileErr = document.getElementById("mobileErr");
-      var mobilePatt = /^(\+44\s?7\d{3}|\(?07\d{3}\)?)\s?\d{3}\s?\d{3}$/;
 
 
 
@@ -163,6 +163,10 @@ function formValidation(){
       var accomErr = document.getElementById("accomErr");
       var reqaccom = document.getElementById("reqaccom").style;
 
+      var retypemail = document.getElementById("retypeEmail");
+      var retypeemailErr = document.getElementById("retypeemailErr");
+      var reqretypeemail = document.getElementById("reqretypeemail").style;
+
 
     if(course.value == ""){
       courseErr.innerHTML = ("Enter the course you are studying");
@@ -184,6 +188,17 @@ function formValidation(){
     } else if (year.value !== "") {
       requni.display = "none";
       reqyear.display = "none";
+    }
+
+    if(retypemail.value == "") {
+      retypeemailErr.innerHTML = ("Select where you will be staying");
+      retypemail.focus();
+      requni.display = "block";
+      reqretypeemail.display = "block";
+      return false;
+    } else if (retypemail.value !== "") {
+      requni.display = "none";
+      reqretypeemail.display = "none";
     }
 
     if(accom.value == "") {
@@ -245,7 +260,7 @@ function formValidation(){
         reqsmoker.display = "block";
         reqabout.display = "block";
         return false;
-      } 
+      }
       var reqabout = document.getElementById("reqabout").style;
       var reqsocial = document.getElementById("reqsocial").style;
       var social = document.getElementsByName("Social");
@@ -302,4 +317,141 @@ function formValidation(){
       else {
         return true
       }
+}
+
+//Support change validation
+//Support page account settings using regEx above to validate data before changing
+//data in database
+function changeAccountValidation() {
+  var name = document.getElementById("profileName");
+  var surname = document.getElementById("profileLName");
+  var password = document.getElementById("newpassword");
+  var retypepass = document.getElementById("secondnewpassword");
+  var oldemail = document.getElementById("oldemail");
+  var newemail = document.getElementById("newemail");
+  var retypeemail = document.getElementById("secondnewemail");
+  var address = document.getElementById("newaddress");
+  var postcode = document.getElementById("newpostcode");
+  var mobile = document.getElementById("newmobile");
+  var home = document.getElementById("newhome");
+  var hobbie = document.getElementById("hobbieList");
+  var society = document.getElementById("societyList");
+  var year = document.getElementById("StudyYear");
+  var course = document.getElementById("courseList");
+  var accom = document.getElementById("Accomodation");
+
+  if(name.value == "" || !namePatt.test(name.value)) {
+    name.style.background = "red";
+    return false;
+  } else if (name.value !== "" || namePatt.test(name.value)) {
+    name.style.background = "none";
+  }
+
+  if(surname.value == "" || !namePatt.test(surname.value)) {
+    surname.style.background = "red";
+    return false;
+  } else if (surname.value !== "" || namePatt.test(surname.value)) {
+    surname.style.background = "none";
+  }
+
+  if(password.value == "" || !passwordPatt.test(surname.value)) {
+    password.style.background = "red";
+    return false;
+  } else if (password.value !== "" || password.test(surname.value)) {
+    password.style.background = "none";
+  }
+
+  if(password.value !== retypepass.value|| retypepass.value == ""||!passwordPatt.test(password.value)||
+    !passwordPatt.test(retypepass.value)) {
+      retypepass.style.background = "red";
+      return false;
+    } else if (retypepass.value == retypepass.value||passwordPatt.test(password.value)||
+      passwordPatt.test(retypepass.value)) {
+      retypepass.style.background = "none";
+    }
+
+  if(oldemail.value == ""|| !emailPatt.test(oldemail.value)) {
+    oldemail.style.background = "red";
+  } else if oldemail.value !== ""|| emailPatt.test(oldemail.value) {
+    oldemail.style.background = "none";
+  }
+
+  if(oldemail.value !== newemail.value||newemail.value == ""||!emailPatt.test(email.value))||
+  !emailPatt.test(newemail.value) {
+    newemail.style.background = "red";
+  } else if (oldemail.value == newemail.value||newemail.value !== ""||!mailPatt.test(email.value))||
+  emailPatt.test(newemail.value) {
+    newemail.style.background = "none";
+  }
+
+  if(newemail.value !== retypeemail.value||retypeemail.value == ""||!emailPatt.test(newemail.value))||
+  !emailPatt.test(retypeemail.value) {
+    newemail.style.background = "red";
+  } else if (retypeemail.value == newemail.value||retypeemail.value !== ""||!mailPatt.test(newemail.value))||
+  emailPatt.test(retypeemail.value) {
+    newemail.style.background = "none";
+  }
+
+  if(address.value == ""||!addressPatt.test(address.value)) {
+    address.style.background = "red";
+  } else if (address.value !=="" ||addressPatt.test(address.value)) {
+    address.style.background = "none";
+  }
+
+  if(postcode.value == ""||!postcodePatt.test(postcode.value)) {
+    postcode.style.background = "red";
+  } else if (postcode.value !=="" ||postcodePatt.test(postcode.value)) {
+    postcode.style.background = "none";
+  }
+
+  if(mobile.value == ""||!mobilePatt.test(address.value)) {
+    mobile.style.background = "red";
+  } else if (address.value !=="" ||mobilePatt.test(address.value)) {
+    mobile.style.background = "none";
+  }
+
+  if(home.value == ""||!homePatt.test(home.value)) {
+    home.style.background = "red";
+  } else if (home.value !=="" ||homePatt.test(home.value)) {
+    home.style.background = "none";
+  }
+
+  if(address.value == ""||!addressPatt.test(address.value)) {
+    address.style.background = "red";
+  } else if (address.value !=="" ||addressPatt.test(address.value)) {
+    address.style.background = "none";
+  }
+
+  if(hobbie.value == "") {
+    hobbie.style.background = "red";
+  } else if (hobbie.value !=="") {
+    hobbie.style.background = "none";
+  }
+
+  if(society.value == "") {
+    society.style.background = "red";
+  } else if (society.value !=="") {
+    society.style.background = "none";
+  }
+
+  if(year.value == "") {
+    year.style.background = "red";
+  } else if (year.value !=="") {
+    year.style.background = "none";
+  }
+
+  if(course.value == "") {
+    course.style.background = "red";
+  } else if (course.value !=="") {
+    course.style.background = "none";
+  }
+
+  if(accom.value == "") {
+    accom.style.background = "red";
+  } else if (accom.value !=="") {
+    accom.style.background = "none";
+  }
+  else {
+    return true;
+  }
 }
