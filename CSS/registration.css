@@ -37,7 +37,8 @@
   text-decoration: underline;
 }
 
-.registrationForm input[type="text"], input[type="password"],input[type="number"] {
+.registrationForm #FName, #LName, #DOB, #Email, #regPassword, #regHomeAddress,
+#regPostcode, #regHomeNumber, #regMobile {
   margin-right: 10%;
   width: 50%;
   border-radius: 5px;
