@@ -46,7 +46,7 @@ if(!empty($startingEmail) && ($startingPass)) {
     if($oldpassword = $firstPass && !empty($oldpassword) && !empty($firstPass)) {
       echo "Old password and new password match";
     } else {
-      if(isset(($firstPass != $retypePass)) {
+      if(isset($firstPass != $retypePass)) {
         echo "Passwords dont match";
       } else {
         $sql = "UPDATE user SET password='$retypePass' WHERE id=['id']";
