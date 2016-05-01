@@ -17,7 +17,6 @@ if(isset($_POST['checkValidation'])){
     $data = stripslashes($data);
     $data = strip_tags($data);
     $data = htmlspecialchars($data);
-    $data = mysqli_real_escape_string($data);
     return $data;
 }
 
@@ -31,9 +30,6 @@ if(isset($_POST['checkValidation'])){
   $postcode = validate_data($_POST['Postcode']);
   $homeNumber = validate_data($_POST['HomeNumber']);
   $mobile = validate_data($_POST['Mobile']);
-  $course = $_POST['courseList'];
-  $studyYear = $_POST['yearList'];
-  $accom = validate_data($_POST['accomList']);
   $hobbie = $_POST['Hobbies'];
   $society = $_POST['Society'];
   $smoke = validate_data($_POST['Smoker']);
@@ -48,15 +44,6 @@ if(isset($_POST['checkValidation'])){
 
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
-  //get id of inserted user
-  //$userID = "SELECT id FROM user WHERE email ='$email'";
 
-    $sqluni =
-    "INSERT INTO uni (course, study, accom)
-    VALUES ('$course', '$studyYear', '$accom')";
-
-  //Check if user data entered is correct
-  mysqli_query($conn, $sqluni) or die(mysqli_error($conn));
-}
 
 ?>
