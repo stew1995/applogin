@@ -42,7 +42,7 @@ if(!$conn) {
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
 
   //Check if user registered data has been inputted correctly
-  mysqli_query($sqlregister);
+  mysqli_query($sqlregister) or die ("Cannot insert data". mysqli_error($conn));
 
 }
 ?>
