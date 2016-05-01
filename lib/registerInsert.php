@@ -45,5 +45,5 @@ if(isset($_POST['registerBasicInfoBtn'])){
   //Check if user registered data has been inputted correctly
   mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
 
-
+}
 ?>
