@@ -74,7 +74,7 @@
                 </form>
               </div>
 
-              <form name="editaccounddata" onsubmit="return changeAccountValidation();">
+              <form name="editaccounddata" method="POST" action="lib/editProfile.php" onsubmit="return changeAccountValidation();">
 
               <h2 style = "text-align: center;">Change Profile</h2>
               <p>Enter the email and password of your account</p>
@@ -84,7 +84,7 @@
               <div class="changeAccountSupport">
                   <p style="border-bottom: 1px solid black;"><span id="textAlign">Change Name</span><span style="float: right;"><input type="radio" name="account" id="supportName"></span></p>
                   <div id="changeName">
-                    <div id="formbackground" name="changeName" action="" method="post">
+                    <div id="formbackground" name="changeName">
                       <div style="margin: 0 2%;">
                         First Name: <input type="text" id="profileName" name="profileName">
                         Last Name: <input type="text" id="profileLName" name="profileLName">
