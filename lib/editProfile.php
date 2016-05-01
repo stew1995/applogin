@@ -27,11 +27,11 @@ if(!empty($startingEmail) && ($startingPass)) {
     $lname = validate_data($_POST['profileLName']);
     if(!empty($fname)) {
       $fnamesql = "UPDATE user SET fname='$fname' WHERE id='[id]'";
-      mysqli_query($conn, $sql) or die("Cannot change first name data in database" . mysqli_error($conn));
+      mysqli_query($conn, $fnamesql) or die("Cannot change first name data in database" . mysqli_error($conn));
 
     } else if (!empty($lname)) {
       $lnamesql = "UPDATE user SET fname='$lname' WHERE id='[id]'";
-      mysqli_query($conn, $sql) or die("Cannot change last nanme data in database" . mysqli_error($conn));
+      mysqli_query($conn, $lnamesql) or die("Cannot change last nanme data in database" . mysqli_error($conn));
 
   }
 
