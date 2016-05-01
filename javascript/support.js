@@ -189,99 +189,6 @@ function backgroundChange(){
 var change = document.getElementById("colours");
 colours.addEventListener("click", backgroundChange);
 
-//Show contact details
-function showUnionDetails(){
-  //Variables
-  var union = document.getElementById("SUContent").style;
-
-  if(union.display == "block"){
-    union.display = "none";
-  } else {
-    union.display = "block";
-  }
-}
-
-var unionshow = document.getElementById("SU");
-unionshow.addEventListener("click", showUnionDetails);
-
-function showLibraryDetails(){
-  var library = document.getElementById("ULContent").style;
-
-  if(library.display == "block"){
-    library.display = "none";
-  } else {
-    library.display = "block";
-  }
-}
-
-var libraryshow = document.getElementById("UL");
-libraryshow.addEventListener("click", showLibraryDetails);
-
-function showDoctorDetails(){
-  var doctor = document.getElementById("UDContent").style;
-
-  if(doctor.display == "block"){
-    doctor.display = "none";
-  } else {
-    doctor.display = "block";
-  }
-}
-
-var doctorshow = document.getElementById("UD");
-doctorshow.addEventListener("click", showDoctorDetails);
-
-function showPurpledoorDetails(){
-  var purpledoor = document.getElementById("PDContent").style;
-
-  if(purpledoor.display == "block"){
-    purpledoor.display = "none";
-  } else {
-    purpledoor.display = "block";
-  }
-}
-
-var purpledoorshow = document.getElementById("PD");
-purpledoorshow.addEventListener("click", showPurpledoorDetails);
-
-function showHallsDetails(){
-  var studenthalls = document.getElementById("SHContent").style;
-
-  if(studenthalls.display == "block"){
-    studenthalls.display = "none";
-  } else {
-    studenthalls.display = "block";
-  }
-}
-
-var hallsshow = document.getElementById("SH");
-hallsshow.addEventListener("click", showHallsDetails);
-
-function showSecurityDetails(){
-  var security = document.getElementById("SecurContent").style;
-
-  if(security.display == "block"){
-    security.display = "none";
-  } else {
-    security.display = "block";
-  }
-}
-
-var securityshow = document.getElementById("Secur");
-securityshow.addEventListener("click", showSecurityDetails);
-
-function showEstateDetails(){
-  var estate = document.getElementById("EstateContent").style;
-
-  if(estate.display == "block"){
-    estate.display = "none";
-  } else {
-    estate.display = "block";
-  }
-}
-
-var estateshow = document.getElementById("Estate");
-estateshow.addEventListener("click", showEstateDetails);
-
 //Change account detials through support
 function showDetails(){
   //induvidual input feild
@@ -293,24 +200,28 @@ function showDetails(){
   var pass = document.getElementById("changePassword").style;
   var email = document.getElementById("changeEmail").style;
   var address = document.getElementById("changeAddress").style;
+  var postcode = document.getElementById("changePostcode").style;
   var mobile = document.getElementById("changeMobile").style;
   var hobbie = document.getElementById("changeHobbie").style;
   var society = document.getElementById("changeSociety").style;
   var year = document.getElementById("changeYear").style;
   var course = document.getElementById("changeCourse").style;
   var accom = document.getElementById("changeAccom").style;
+  var smoke = document.getElementById("changeSmoke").style;
 
   //Radio buttons to show each input
   var namebtn = document.getElementById("supportName").checked
   var passbtn = document.getElementById("supportPassword").checked;
   var emailbtn = document.getElementById("supportEmail").checked;
   var addressbtn = document.getElementById("supportAddress").checked;
+  var postcodebtn = document.getElementById("supportPostcode").checked;
   var mobilebtn = document.getElementById("supportMobile").checked;
   var hobbiebtn = document.getElementById("supportHobbie").checked;
   var societybtn = document.getElementById("supportSociety").checked;
   var yearbtn = document.getElementById("supportYear").checked;
   var coursebtn = document.getElementById("supportCourse").checked;
   var accombtn = document.getElementById("supportAccom").checked;
+  var smokebtn = document.getElementById("supportSmoke").checked;
 
   //Feilds for verify if needed
   var verifyemail = document.getElementById("verifyemail");
@@ -373,6 +284,12 @@ function showDetails(){
     address.display = "none";
   }
 
+  if(postcodebtn == true) {
+    postcode.display = "block";
+  } else {
+    postcode.display = "none";
+  }
+
   if(mobilebtn == true){
     mobile.display = "block";
   } else {
@@ -408,6 +325,12 @@ function showDetails(){
   } else {
     accom.display = "none";
   }
+
+  if(smokebtn == true) {
+    smoke.display = "block";
+  } else {
+    smoke.display = "none"
+  }
 }
 var supportName = document.getElementById("supportName");
 supportName.addEventListener("click", showDetails);
@@ -437,9 +360,10 @@ var vemailfield = document.getElementById("secondnewemail");
 vemailfield.addEventListener("change", showDetails);
 var vpasswordfield = document.getElementById("secondnewpassword");
 vpasswordfield.addEventListener("change", showDetails);
-
-// Done button on each change -  need to add so it changes the database
-
+var smokefield = document.getElementById("supportSmoke");
+smokefield.addEventListener("change", showDetails);
+var postcodefield = document.getElementById("supportPostcode");
+postcodefield.addEventListener("change", showDetails);// Done button on each change -  need to add so it changes the database
 function donePassword(){
   //Radio buttons to show each input
   var passbtn = document.getElementById("supportPassword").checked;
@@ -557,6 +481,19 @@ function doneAccom(){
 
 var accomChange = document.getElementById("completeAccom");
 accomChange.addEventListener("click", doneAccom);
+
+function doneSmoke(){
+  var smokebtn = document.getElementById("supportSmoke").checked;
+  var smoke = document.getElementById("changeSmoke").style;
+
+  if(smokebtn == true){
+    smokebtn = false;
+    smoke.display = "none";
+  }
+}
+
+var smokeChange = document.getElementById("completeSmoke");
+smokeChange.addEventListener("click", doneSmoke);
 
 //Search Preferences
 
@@ -828,12 +765,13 @@ mapsChoice.addEventListener("click", layoutMapsOptions);
 
 //Show halls in database when the user clicks
 function showHallsSupport(value) {
-    ajaxGet("lib/getHalls.php?q="+value, function(data){
-      document.getElementById("supportHallsShow").innerHTML = data;
-    });
-  }
+  ajaxGet("lib/getHalls.php?q="+value, function(data){
+    document.getElementById("supportHallsShow").innerHTML = data;
+  });
+}
 
-
+var showHalls = document.getElementById("contactStudentHalls");
+showHalls.addEventListener("change", showHallsSupport);
 
 //AJAXGET
 function ajaxGet(URL, callback) {
