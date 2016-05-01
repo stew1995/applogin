@@ -34,9 +34,9 @@ function changeLayout(){
   var right = document.getElementById("layoutRight").checked;
 
   //Source
-  var sidesource = document.getElementById("sideText");
-  var centersource = document.getElementById("textCenter");
-  var rightsource = document.getElementById("rightText");
+  //var sidesource = document.getElementById("sideText");
+//  var centersource = document.getElementById("textCenter");
+//  var rightsource = document.getElementById("rightText");
 
 
 
@@ -89,7 +89,7 @@ function changeLayout(){
     loc = 'rightText';
   }
 
-  if (el && el !== 'pages/' && loc && source){
+  if (el && el !== 'pages/' && loc){
     ajaxGet(el, function(data){
       document.getElementById(loc).innerHTML = data;
     });
