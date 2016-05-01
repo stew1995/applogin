@@ -37,7 +37,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
         echo $row ['id'];
         $sqluni =
         "INSERT INTO uni (user_id, course, study, accom)
-        VALUES (['id'],'$course', '$studyYear', '$accom')";
+        VALUES ('[id]','$course', '$studyYear', '$accom')";
 
         //Check if user data entered is correct
           $check = mysqli_query($conn, $sqluni);
