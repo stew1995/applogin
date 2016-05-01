@@ -24,7 +24,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
   echo "Second";
     $email = validate_data($_POST['retypeEmail']);
     $course = $_POST['courseList'];
-    $studyYear = $_POST['yearList'];
+    $studyYear = $_POST['StudyYear'];
     $accom = validate_data($_POST['accomList']);
 
     //get id of inserted user
