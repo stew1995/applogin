@@ -27,14 +27,14 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     $accom = validate_data($_POST['accomList']);
 
     //get id of inserted user
-    $userID = "SELECT id, email FROM user WHERE email ='$email'";
+    $userID = "SELECT id FROM user WHERE email ='$email'";
     $userCheck = mysqli_query($conn, $userID);
     if(!$userCheck) {
       echo "Could not find email linked to ID in database" . mysqli_error($conn);
     } else {
         $sqluni =
         "INSERT INTO uni (user_id, course, study, accom)
-        VALUES ('$userCheck','$course', '$studyYear', '$accom')";
+        VALUES ('$userID','$course', '$studyYear', '$accom')";
 
         //Check if user data entered is correct
           $check = mysqli_query($conn, $sqluni);
