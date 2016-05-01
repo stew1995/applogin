@@ -166,4 +166,5 @@ if(!empty($startingEmail) && ($startingPass)) {
   }
 }
 }
+}
 ?>
