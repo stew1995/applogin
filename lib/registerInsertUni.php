@@ -20,7 +20,7 @@ if(isset($_POST['submitUniInfo'])){ // needs new button
     if(!$conn) {
       die("Connection to database failed: ". mysqli_connect_error());
     }
-  echo "Second"
+  echo "Second";
     $email = validate_data($_POST['retypeEmail']);
     $course = $_POST['courseList'];
     $studyYear = $_POST['yearList'];
