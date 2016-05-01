@@ -377,7 +377,7 @@ function changeAccountValidation() {
   if(oldemail.value == ""|| !emailPatt.test(oldemail.value)) {
     oldemail.style.background = "red";
     oldemail.focus();
-  } else if oldemail.value !== ""|| emailPatt.test(oldemail.value) {
+  } else if (oldemail.value !== ""|| emailPatt.test(oldemail.value)) {
     oldemail.style.background = "none";
   }
 
