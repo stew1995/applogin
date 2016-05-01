@@ -44,9 +44,9 @@ if(!$conn) {
   //Check if user registered data has been inputted correctly
   $check = mysqli_query($conn, $sqlregister);
   if(!$check) {
-    echo "Data was not inserted" . mysql_error($conn); exit; 
+    echo "Data was not inserted" . mysql_error($conn);
   } else {
-    echo "Data entered successfully"; exit;
+    echo "Data entered successfully"; 
   }
 
 }
