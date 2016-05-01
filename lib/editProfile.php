@@ -11,7 +11,7 @@ function  validate_data($data) {
 //Get the user email for the ID
 $startingEmail = validate_data($_POST['emailID']);
 $startingPass = validate_data($_POST['passwordID']);
-if(!empty($startingEmail && $startingPass)) {
+if(!empty($startingEmail) && ($startingPass)) {
   $getID = "SELECT id FROM user WHERE email='$startingEmail' AND password='$startingPass'";
   if(!mysqli_query($conn, $getID)) {
     die("Can not get user ID" . mysqli_error($conn));
