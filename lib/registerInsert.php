@@ -35,7 +35,6 @@ if(!$conn) {
   $smoke = validate_data($_POST['Smoker']);
 
 
-    mysqli_select_db('web');
     $sqlregister =
     "INSERT INTO `user` (`fname`, `lname`, `gender`, `email`, `password`, `dob`, `address`,
                       `postcode`, `hnumber`, `mobile`, `hobbie`, `society`, `smoker`)
@@ -43,7 +42,12 @@ if(!$conn) {
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
 
   //Check if user registered data has been inputted correctly
-  mysqli_query($sqlregister) or die("cannot put data into database". mysqli_error($conn));
+  $check = mysqli_query($conn, $sqlregister);
+  if(!$check) {
+    echo "Data was not inserted" . mysql_error($conn); exit
+  } else {
+    echo "Data entered successfully"; exit
+  }
 
 }
 ?>
