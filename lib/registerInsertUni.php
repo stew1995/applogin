@@ -33,7 +33,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
       echo "Could not find email linked to ID in database" . mysqli_error($conn);
     } while ($row = mysqli_fetch_assoc($userCheck)){
         $row['id']
-    }
+    } else {
         $sqluni =
         "INSERT INTO uni (user_id, course, study, accom)
         VALUES ($row['id'],'$course', '$studyYear', '$accom')";
