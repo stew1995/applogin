@@ -9,6 +9,7 @@ if(isset($_POST['submitUniInfo'])){ // needs new button
       $data = htmlspecialchars($data);
       return $data;
     }
+    echo "Second";
     $servername = "localhost";
     $username = "root";
     $password = "root";
