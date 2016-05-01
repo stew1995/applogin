@@ -1,7 +1,8 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
-echo "First";
+
 //INSERT INTO uni
 if(isset($_POST['submitUniInfoBtn'])){ // needs new button
+if(!empty($_POST['retypeEmail'])) {
     function  validate_data($data) {
       $data = trim($data);
       $data = stripslashes($data);
@@ -9,7 +10,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
       $data = htmlspecialchars($data);
       return $data;
     }
-    echo "Second";
+
     $servername = "localhost";
     $username = "root";
     $password = "root";
@@ -21,7 +22,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
       die("Connection to database failed: ". mysqli_connect_error());
     }
 
-  echo "Second";
+
     $email = validate_data($_POST['retypeEmail']);
     $course = $_POST['courseList'];
     $studyYear = $_POST['StudyYear'];
@@ -45,6 +46,6 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
               echo "Data entered successfully";
             }
       }
-    
+    }
 }
 ?>
