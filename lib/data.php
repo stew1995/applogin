@@ -134,7 +134,7 @@ if(mysqli_query($conn, $sql)) {
 //In this table think about how the course table will work, maybe include a different one
 $sql =
 "CREATE TABLE IF NOT EXISTS uni (
-  user_id INT UNSIGNED PRIMARY KEY ,
+  user_id INT UNSIGNED,
   course INT UNSIGNED,
   study SMALLINT NOT NULL,
   accom VARCHAR(7) NOT NULL,
