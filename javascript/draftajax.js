@@ -124,6 +124,9 @@ function supportCenter() {
         var layoutChange = document.createElement('script');
         layoutChange.src = 'javascript/changeLayout.js';
         document.head.appendChild(layoutChange);
+        var si = document.createElement('script');
+        si.src = 'javascript/validation.js';
+        document.head.appendChild(si);
         var css = document.createElement('link');
         css.rel= 'stylesheet';
         css.type = 'text/css';
