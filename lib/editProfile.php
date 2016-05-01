@@ -38,7 +38,8 @@ if(!empty($startingEmail) && ($startingPass)) {
   }
 
   //Edit password
-  if(isset($_POST['submitPassword'])){
+  if(isset($_POST['submitPassword'])){ 
+    echo $row ['id'];
     $oldpassword = validate_data($_POST['oldpassword']);
     $firstPass = validate_data($_POST['newpassword']);
     $retypePass = validate_data($_POST['retypenewpassword']);
