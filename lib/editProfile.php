@@ -25,12 +25,12 @@ if(!empty($startingEmail) && ($startingPass)) {
     echo $row ['id'];
     $fname = validate_data($_POST['profileName']);
     $lname = validate_data($_POST['profileLName']);
-    if(!empty($fname)) {
+    if(isset($fname)) {
       echo $row ['id'];
       $fnamesql = "UPDATE user SET fname='$fname' WHERE id=['id']";
       mysqli_query($conn, $fnamesql) or die("Cannot change first name data in database" . mysqli_error($conn));
 
-    } else if (!empty($lname)) {
+    } else if (isset($lname)) {
       echo $row ['id'];
       $lnamesql = "UPDATE user SET fname='$lname' WHERE id=['id']";
       mysqli_query($conn, $lnamesql) or die("Cannot change last nanme data in database" . mysqli_error($conn));
@@ -46,7 +46,7 @@ if(!empty($startingEmail) && ($startingPass)) {
     if($oldpassword = $firstPass && !empty($oldpassword) && !empty($firstPass)) {
       echo "Old password and new password match";
     } else {
-      if($firstPass != $retypePass) {
+      if(isset(($firstPass != $retypePass)) {
         echo "Passwords dont match";
       } else {
         $sql = "UPDATE user SET password='$retypePass' WHERE id=['id']";
