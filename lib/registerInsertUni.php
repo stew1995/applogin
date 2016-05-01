@@ -11,7 +11,7 @@ if(!$conn) {
 }
 
 //INSERT INTO user
-if(isset($_POST['checkValidation'])){ // needs new button
+if(isset($_POST['submitUniInfo'])){ // needs new button
   if(!empty($_POST['retypeEmail'])) {
     function  validate_data($data) {
       $data = trim($data);
