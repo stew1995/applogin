@@ -18,7 +18,7 @@
 }
 
 
-#sideBarLogin input[type="text"], input[type="password"] {
+#sideBarLogin input[type="text"] input[type="password"] {
   margin: 8% 3%;
   border-radius: 5px;
   font-size: 15px;
