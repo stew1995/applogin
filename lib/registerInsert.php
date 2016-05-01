@@ -1,5 +1,6 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
 //INSERT INTO user
+  echo "Data pulled";
 if(isset($_POST['registerBasicInfoBtn'])){
   function  validate_data($data) {
     $data = trim($data);
@@ -34,7 +35,7 @@ if(!$conn) {
   $society = $_POST['Society'];
   $smoke = validate_data($_POST['Smoker']);
 
-  echo "Data pulled";
+
     $sqlregister =
     "INSERT INTO `user` (`fname`, `lname`, `gender`, `email`, `password`, `dob`, `address`,
                       `postcode`, `hnumber`, `mobile`, `hobbie`, `society`, `smoker`)
