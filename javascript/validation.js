@@ -356,11 +356,11 @@ function changeAccountValidation() {
     surname.style.background = "none";
   }
 
-  if(password.value == "" || !passwordPatt.test(surname.value)) {
+  if(password.value == "" || !passwordPatt.test(password.value)) {
     password.style.background = "red";
     password.focus();
     return false;
-  } else if (password.value !== "" || password.test(surname.value)) {
+  } else if (password.value !== "" || password.test(password.value)) {
     password.style.background = "none";
   }
 
