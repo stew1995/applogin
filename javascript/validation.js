@@ -384,13 +384,13 @@ function changeAccountValidation() {
   if(oldemail.value !== newemail.value||newemail.value == ""||!emailPatt.test(email.value)||!emailPatt.test(newemail.value)) {
     newemail.style.background = "red";
     newemail.focus();
-  } else if (oldemail.value == newemail.value||newemail.value !== ""||!mailPatt.test(email.value))||
-  emailPatt.test(newemail.value) {
+  } else if (oldemail.value == newemail.value||newemail.value !== ""||!mailPatt.test(email.value)||
+  emailPatt.test(newemail.value)) {
     newemail.style.background = "none";
   }
 
-  if(newemail.value !== retypeemail.value||retypeemail.value == ""||!emailPatt.test(newemail.value))||
-  !emailPatt.test(retypeemail.value) {
+  if(newemail.value !== retypeemail.value||retypeemail.value == ""||!emailPatt.test(newemail.value)||
+  !emailPatt.test(retypeemail.value)) {
     retypeemail.style.background = "red";
     retypemail.focus();
   } else if (retypeemail.value == newemail.value||retypeemail.value !== ""||!mailPatt.test(newemail.value))||
