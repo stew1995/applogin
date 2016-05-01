@@ -31,12 +31,10 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     $userCheck = mysqli_query($conn, $userID);
     if(!$userCheck) {
       echo "Could not find email linked to ID in database" . mysqli_error($conn);
-    } while ($row = mysqli_fetch_assoc($userCheck)){
-        $row['id'];
-    }
+    }  else {
         $sqluni =
-        "INSERT INTO uni (user_id, course, study, accom)
-        VALUES ('$userCheck','$course', '$studyYear', '$accom')";
+        "INSERT INTO uni ($row=mysqli_fetch_assoc($userCheck), course, study, accom)
+        VALUES ('$row['id],'$course', '$studyYear', '$accom')";
 
         //Check if user data entered is correct
           $check = mysqli_query($conn, $sqluni);
@@ -46,5 +44,5 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
               echo "Data entered successfully";
             }
       }
-
+}
 ?>
