@@ -19,7 +19,7 @@ if(!empty($startingEmail) && ($startingPass)) {
   if(!$checkID) {
     die("Can not get user ID" . mysqli_error($conn));
   } else {
-    $row=mysqli_fetch_assoc($userID);
+    $row= mysqli_fetch_assoc($checkID);
     echo $row ['id'];
   //Edit first and last name
   if(isset($_POST['submitName'])) {
