@@ -2,7 +2,6 @@
 
 //INSERT INTO uni
 if(isset($_POST['submitUniInfoBtn'])){ // needs new button
-if(!empty($_POST['retypeEmail'])) {
     function  validate_data($data) {
       $data = trim($data);
       $data = stripslashes($data);
@@ -41,12 +40,12 @@ if(!empty($_POST['retypeEmail'])) {
         //Check if user data entered is correct
           $check = mysqli_query($conn, $sqluni);
             if(!$check) {
-              echo "Data was not inserted" . mysql_error($conn);
+              echo "Data was not inserted" . mysqli_error($conn);
             } else {
               echo "Data entered successfully";
             }
       }
-    }
+    
     echo "Email field is empty";
 }
 ?>
