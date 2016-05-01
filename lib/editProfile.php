@@ -15,7 +15,7 @@ $startingEmail = validate_data($_POST['emailID']);
 $startingPass = validate_data($_POST['passwordID']);
 if(!empty($startingEmail) && ($startingPass)) {
   $getID = "SELECT id FROM user WHERE email='$startingEmail' AND password='$startingPass'";
-  $checkID  = mysqli_query($conn, $getID)
+  $checkID  = mysqli_query($conn, $getID);
   if(!$checkID) {
     die("Can not get user ID" . mysqli_error($conn));
   } else {
