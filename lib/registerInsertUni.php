@@ -1,5 +1,4 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
-
 //INSERT INTO uni
 if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     function  validate_data($data) {
@@ -35,7 +34,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     } else {
         $sqluni =
         "INSERT INTO uni (user_id, course, study, accom)
-        VALUES ('$userID','$course', '$studyYear', '$accom')";
+        VALUES ('$userCheck','$course', '$studyYear', '$accom')";
 
         //Check if user data entered is correct
           $check = mysqli_query($conn, $sqluni);
@@ -45,7 +44,5 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
               echo "Data entered successfully";
             }
       }
-    
-    echo "Email field is empty";
 }
 ?>
