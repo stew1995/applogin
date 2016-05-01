@@ -22,13 +22,16 @@ if(!empty($startingEmail) && ($startingPass)) {
     echo $row ['id'];
   //Edit first and last name
   if(isset($_POST['submitName'])) {
+    echo $row ['id'];
     $fname = validate_data($_POST['profileName']);
     $lname = validate_data($_POST['profileLName']);
     if(!empty($fname)) {
+      echo $row ['id'];
       $fnamesql = "UPDATE user SET fname='$fname' WHERE id='[id]'";
       mysqli_query($conn, $fnamesql) or die("Cannot change first name data in database" . mysqli_error($conn));
 
     } else if (!empty($lname)) {
+      echo $row ['id'];
       $lnamesql = "UPDATE user SET fname='$lname' WHERE id='[id]'";
       mysqli_query($conn, $lnamesql) or die("Cannot change last nanme data in database" . mysqli_error($conn));
 
