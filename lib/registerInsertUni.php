@@ -47,5 +47,6 @@ if(!empty($_POST['retypeEmail'])) {
             }
       }
     }
+    echo "Email field is empty";
 }
 ?>
