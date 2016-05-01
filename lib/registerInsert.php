@@ -34,7 +34,7 @@ if(!$conn) {
   $society = $_POST['Society'];
   $smoke = validate_data($_POST['Smoker']);
 
-
+  echo "Data pulled" . mysqli_error($conn);
     $sqlregister =
     "INSERT INTO `user` (`fname`, `lname`, `gender`, `email`, `password`, `dob`, `address`,
                       `postcode`, `hnumber`, `mobile`, `hobbie`, `society`, `smoker`)
