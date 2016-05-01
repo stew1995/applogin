@@ -157,7 +157,7 @@
   margin-right: 10px;
 }
 
-#changeName, #changePassword, #changeEmail, #changeAddress, #changeMobile, #changeHobbie, #changeSociety, #changeYear, #changeCourse, #changeAccom {
+#changePostcode, #changeName, #changePassword, #changeEmail, #changeAddress, #changeMobile, #changeHobbie, #changeSociety, #changeYear, #changeCourse, #changeAccom, #changeSmoke{
   display: none;
   background: white;
   padding: 10px 0;
