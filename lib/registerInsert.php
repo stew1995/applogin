@@ -35,7 +35,7 @@ if(isset($_POST['checkValidation'])){
   $smoke = validate_data($_POST['Smoker']);
 
 
-
+    mysqli_select_db('web');
     $sqlregister =
     "INSERT INTO user (id, fname, lname, gender, email, password, dob, address,
                       postcode, hnumber, mobile, hobbie, society, smoker)
@@ -43,7 +43,7 @@ if(isset($_POST['checkValidation'])){
             '$postcode', '$homeNumber', '$mobile', '$hobbie', '$society', '$smoke')";
 
   //Check if user registered data has been inputted correctly
-  mysqli_query($conn, $sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
+  mysqli_query($sqlregister) or die("Cannot insert data to database" . mysqli_error($conn));
 
 }
 ?>
