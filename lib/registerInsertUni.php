@@ -27,7 +27,7 @@ if(isset($_POST['submitUniInfoBtn'])){ // needs new button
     $accom = validate_data($_POST['accomList']);
 
     //get id of inserted user
-    $userID = "SELECT id FROM user WHERE email ='$email'";
+    $userID = "SELECT id, email FROM user WHERE email ='$email'";
     $userCheck = mysqli_query($conn, $userID);
     if(!$userCheck) {
       echo "Could not find email linked to ID in database" . mysqli_error($conn);
