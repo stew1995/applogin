@@ -1,5 +1,5 @@
 <?php // CREATE NOT NULL ON UNIQUE KEY
-
+echo "First";
 //INSERT INTO uni
 if(isset($_POST['submitUniInfo'])){ // needs new button
   if(!empty($_POST['retypeEmail'])) {
@@ -20,7 +20,7 @@ if(isset($_POST['submitUniInfo'])){ // needs new button
     if(!$conn) {
       die("Connection to database failed: ". mysqli_connect_error());
     }
-
+  echo "Second"
     $email = validate_data($_POST['retypeEmail']);
     $course = $_POST['courseList'];
     $studyYear = $_POST['yearList'];
