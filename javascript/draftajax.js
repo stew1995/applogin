@@ -219,6 +219,11 @@ showMaps.addEventListener("click", getMap);
 //Get Ajax
 
 
+window.onload = function() {
+    ajaxGet("lib/database.php", function(data) {
+      ajaxGet("lib/data.php")
+}
+
 function ajaxGet(URL, callback) {
 
 
