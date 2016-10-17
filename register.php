@@ -1,5 +1,5 @@
 <?php
-    $con = mysqli_connect("104.155.19.246", "root", "root", "loginSystem");
+    $con = mysqli_connect("104.199.51.63", "root", "root", "loginSystem");
 
     $name = $_POST["name"];
     $age = $_POST["age"];
